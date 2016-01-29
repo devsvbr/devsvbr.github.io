@@ -1,0 +1,36 @@
+body {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.title-logo {
+  padding-top: 5px;
+}
+
+.social {
+  padding-left: 20px;
+}
+
+.about-topic {
+  padding-top: 20px;
+}
+
+a.icon:link {
+    text-decoration: none;
+}
+
+a.icon:visited {
+    text-decoration: none;
+}
+
+a.icon:hover {
+  text-decoration: none;
+}
+
+a.icon:active {
+  text-decoration: none;
+}

@@ -1,0 +1,11 @@
+# Site settings
+title: DevSV
+description: Blog de nerd
+baseurl: ""
+url: "http://www.devsv.com.br"
+twitter_username: devsvbr
+
+# Build settings
+include: ['_pages']
+kramdown:
+  input: GFM
