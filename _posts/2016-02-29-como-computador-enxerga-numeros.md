@@ -122,27 +122,27 @@ O algoritmo básico de conversão de um número decimal para binário consiste e
 
 Muito confuso? Também acho. Então vamos a um exemplo, que ilustrará a conversão do número 57<sub>10</sub> para binário:
 
-1. Dividimos o número decimal por 2 &rarr; 57 / 2 &rarr; quociente = 28 e resto = 1 = LSB = bit 1:
+1) Dividimos o número decimal por 2 &rarr; 57 / 2 &rarr; quociente = 28 e resto = 1 = LSB = bit 1:
 
 ![imagem da conversão de decimal para binário passo 1]({{ "/img/posts/2016-02-29-decimal-para-binario-1.png" | prepend: site.baseurl }})
 
-2. Dividimos o quociente da última divisão por 2 &rarr; 28 / 2 &rarr; quociente = 14 e resto = 0 = bit 2:
+2) Dividimos o quociente da última divisão por 2 &rarr; 28 / 2 &rarr; quociente = 14 e resto = 0 = bit 2:
 
 ![imagem da conversão de decimal para binário passo 2]({{ "/img/posts/2016-02-29-decimal-para-binario-2.png" | prepend: site.baseurl }})
 
-3. Dividimos o quociente da última divisão por 2 &rarr; 14 / 2 &rarr; quociente = 7 e resto = 0 = bit 3:
+3) Dividimos o quociente da última divisão por 2 &rarr; 14 / 2 &rarr; quociente = 7 e resto = 0 = bit 3:
 
 ![imagem da conversão de decimal para binário passo 3]({{ "/img/posts/2016-02-29-decimal-para-binario-3.png" | prepend: site.baseurl }})
 
-4. Dividimos o quociente da última divisão por 2 &rarr; 7 / 2 &rarr; quociente = 3 e resto = 1 = bit 4:
+4) Dividimos o quociente da última divisão por 2 &rarr; 7 / 2 &rarr; quociente = 3 e resto = 1 = bit 4:
 
 ![imagem da conversão de decimal para binário passo 4]({{ "/img/posts/2016-02-29-decimal-para-binario-4.png" | prepend: site.baseurl }})
 
-5. Dividimos o quociente da última divisão por 2 &rarr; 3 / 2 &rarr; quociente = 1 e resto = 1 = bit 5. Como o quociente é igual a 1, paramos as divisões e consideramos que 1 = MSB = bit 6:
+5) Dividimos o quociente da última divisão por 2 &rarr; 3 / 2 &rarr; quociente = 1 e resto = 1 = bit 5. Como o quociente é igual a 1, paramos as divisões e consideramos que 1 = MSB = bit 6:
 
 ![imagem da conversão de decimal para binário passo 5]({{ "/img/posts/2016-02-29-decimal-para-binario-5.png" | prepend: site.baseurl }})
 
-6. Por fim, montamos o número binário (lembre-se que o LSB é o primeiro bit da direita):
+6) Por fim, montamos o número binário (lembre-se que o LSB é o primeiro bit da direita):
 
 ![imagem da conversão de decimal para binário passo final]({{ "/img/posts/2016-02-29-decimal-para-binario-6.png" | prepend: site.baseurl }})
 
