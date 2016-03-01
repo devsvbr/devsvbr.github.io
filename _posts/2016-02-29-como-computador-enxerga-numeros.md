@@ -82,9 +82,9 @@ A leitura dos números binários é feita sem associações. Basta seguir a sequ
 
 Existem alguns termos relacionados aos números binários que são bem comuns na área de computação. A seguir temos três deles:
 
-`bit`: é o nome dado a cada dígito binário, o nome vem da expressão em inglês "<b>bi</b>nary digi<b>t</b>".
+`bit`: é o nome dado a cada dígito do número binário. Ele vem da expressão em inglês "<b>bi</b>nary digi<b>t</b>".
 
-`LSB (Least Significant Bit)`: representa o bit menos significativo do número inteiro, que é o bit que representa uma unidade;
+`LSB (Least Significant Bit)`: representa o bit menos significativo, que é o bit que representa uma unidade;
 
 `MSB (Most Significant Bit)`: representa o bit mais significativo, que é aquele com o maior valor de posição.
 
@@ -137,6 +137,6 @@ Se quiser fazer um exercício, tente converter o número 111001<sub>2</sub> para
 
 ## Concluindo... ##
 
-Neste post vimos um pouco sobre os números binários. A partir deles o computador é capaz de representar diversos tipos de dados que estamos habituados usar. No próximo post, falarei um pouco sobre a representação binária dos números inteiros que temos contato nas linguagens de programação.
+Neste post vimos um pouco sobre os números binários. A partir deles o computador é capaz de representar os diversos tipos de dados que temos contato enquanto codificamos em linguagens de alto nível. No próximo post, falarei um pouco sobre a representação binária dos números inteiros que usamos nas linguagens de programação.
 
 Até a próxima!!
