@@ -40,13 +40,7 @@ Pensando de forma mais técnica, podemos dizer que representamos números no sis
 
 Com isso podemos representar qualquer número, por exemplo:
 
-<pre>
-<strong>127</strong>     &rarr;    1 &times; 10<sup>2</sup>  +  2 &times; 10<sup>1 </sup>  +  7 &times; 10<sup>0</sup>
-</pre>
-
-<pre>
-<strong>3,14</strong>    &rarr;    3 &times; 10<sup>0</sup>  +  1 &times; 10<sup>-1</sup>  +  4 &times; 10<sup>-2</sup>
-</pre>
+![imagem com exemplo de número decimal]({{ "/img/posts/2016-02-29-decimal.png" | prepend: site.baseurl }})
 
 
 ## E os computadores, como eles enxergam os números? ##
@@ -74,11 +68,7 @@ O sistema binário segue a mesma lógica do sistema decimal. Porém, os números
 
 A seguir temos um exemplo de um número binário e seu equivalente decimal:
 
-<pre>
-<strong>101<sub>2 </sub></strong>    &rarr;    1 &times; 2<sup>2</sup>  +  0 &times; 2<sup>1</sup>  +  1 &times; 2<sup>0</sup>
-<sub>  </sub>              &darr;<sup> </sup>         &darr;<sup> </sup>         &darr;
-<strong>5<sub>10</sub></strong>      &larr;      4<sup> </sup>    +    0<sup> </sup>    +    1
-</pre>
+![imagem com exemplo de número binário]({{ "/img/posts/2016-02-29-binario.png" | prepend: site.baseurl }})
 
 _P.S.:_ Ao longo deste post, deixarei a base subscrita ao lado do número, para diferenciar quem é binário de quem é decimal. Ex.: 100<sub>2</sub> representa um número binário, que é bem diferente do número 100<sub>10</sub> em decimal.
 
@@ -105,13 +95,7 @@ A conversão consiste em multiplicar cada bit pelo seu valor de posição e, em 
 
 Exemplo: Conversão do número 10110<sub>2</sub> para decimal.
 
-<pre>
-<strong>10110<sub>2 </sub></strong>    &rarr;    1 &times; 2<sup>4</sup>  +  0 &times; 2<sup>3</sup>  +  1 &times; 2<sup>2</sup>  +  1 &times; 2<sup>1</sup>  +  0 &times; 2<sup>0</sup>
-<sub>  </sub>                &darr;<sup> </sup>         &darr;<sup> </sup>         &darr;<sup> </sup>         &darr;<sup> </sup>         &darr;
-<sub>  </sub>              1 &times; 16<sup> </sup> +  0 &times; 8<sup> </sup>  +  1 &times; 4<sup> </sup>  +  1 &times; 2<sup> </sup>  +  0 &times; 1
-<sub>  </sub>                &darr;<sup> </sup>         &darr;<sup> </sup>         &darr;<sup> </sup>         &darr;<sup> </sup>         &darr;
-<strong>22<sub>10</sub></strong>       &larr;     16<sup> </sup>    +    0<sup> </sup>    +    4<sup> </sup>    +    2<sup> </sup>    +    0
-</pre>
+![imagem da conversão de binário para decimal]({{ "/img/posts/2016-02-29-binario-para-decimal.png" | prepend: site.baseurl }})
 
 Resultado: 10110<sub>2</sub> = 22<sub>10</sub>.
 
