@@ -102,7 +102,7 @@ Resultado: 10110<sub>2</sub> = 22<sub>10</sub>.
 
 ### Conversão de número decimal para binário. ###
 
-O algoritmo básico de conversão de um número decimal para binário consiste em dividir o número decimal por 2 para, então, efetuar divisões sucessivas do quociente da divisão anterior por 2 até que o quociente seja igual a 1. O número binário é formado pelos restos das divisões sucessivas, sendo o resto da primeira divisão o dígito menos significativo (LSB), e pelo quociente da última divisão, que será o dígito mais significativo (MSB).
+O algoritmo básico de conversão de um número decimal para binário consiste em dividir o número por 2 sucessivamente até que o quociente seja igual a 0. O número binário é formado pelos restos de todas as divisões em sequência, sendo o resto da primeira divisão o bit menos significativo (LSB) e o resto da última divisão o bit mais significativo (MSB).
 
 Muito confuso? Também acho. Então vamos a um exemplo, que ilustrará a conversão do número 57<sub>10</sub> para binário:
 
@@ -122,13 +122,17 @@ Muito confuso? Também acho. Então vamos a um exemplo, que ilustrará a convers
 
 ![imagem da conversão de decimal para binário passo 4]({{ "/img/posts/2016-02-29-decimal-para-binario-4.png" | prepend: site.baseurl }})
 
-5) Dividimos o quociente da última divisão por 2 &rarr; 3 / 2 &rarr; quociente = 1 e resto = 1 = bit 5. Como o quociente é igual a 1, paramos as divisões e consideramos que 1 = MSB = bit 6:
+5) Dividimos o quociente da última divisão por 2 &rarr; 3 / 2 &rarr; quociente = 1 e resto = 1 = bit 5:
 
 ![imagem da conversão de decimal para binário passo 5]({{ "/img/posts/2016-02-29-decimal-para-binario-5.png" | prepend: site.baseurl }})
 
-6) Por fim, montamos o número binário (lembre-se que o LSB é o primeiro bit da direita):
+6) Dividimos o quociente da última divisão por 2 &rarr; 1 / 2 &rarr; quociente = 0 e resto = 1 = bit 6:
 
 ![imagem da conversão de decimal para binário passo final]({{ "/img/posts/2016-02-29-decimal-para-binario-6.png" | prepend: site.baseurl }})
+
+7) Como o quociente da última divisão foi igual 0, paramos as divisões e montamos o número binário (quando escrever o número, lembre-se que o LSB é o primeiro bit da direita):
+
+![imagem da conversão de decimal para binário passo final]({{ "/img/posts/2016-02-29-decimal-para-binario-7.png" | prepend: site.baseurl }})
 
 Resultado: 57<sub>10</sub> = 111001<sub>2</sub>.
 
