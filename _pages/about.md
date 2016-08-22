@@ -15,15 +15,13 @@ Agora, após um período de hiatus, estamos de volta ao jogo e com "estádio" pr
 <h2 class="about-topic">Equipe</h2>
 
 {% for member in site.data.members %}
-  <h3 class="about author-name">{{ member.name }}</h3>
-  <p>
+  <h3 class="about">{{ member.name }}</h3>
+  <ul class="about social">
     {% for link in member.links %}
-    <span class="about social">
-      <a class="icon" href="{{ link.url }}">
-        <img src="{{ link.icon | prepend: site.baseurl }}" alt="{{ link.title }}" title="{{ link.title }}">
-      </a>
-    </span>
+      <li>
+        <a class="{{ link.class }}" href="{{ link.url }}">{{ link.title }}</a>
+      </li>
     {% endfor %}
-  </p>
-  <div class="resume">{{ member.resume }}</div>
+  </ul>
+  <p class="resume">{{ member.resume }}</p>
 {% endfor %}
