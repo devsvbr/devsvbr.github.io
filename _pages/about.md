@@ -18,7 +18,7 @@ Agora, após um período de hiatus, estamos de volta ao jogo e com "estádio" pr
   {% for member in site.data.members %}
     <li class="member">
       <div class="member-picture">
-        <img src="{{ member.picture | prepend: site.baseurl }}" alt="Foto de {{ member.name }}">
+        <img class="img-circle" src="{{ member.picture | prepend: site.baseurl }}" alt="Foto de {{ member.name }}">
       </div>
       <div class="member-info">
         <h3>{{ member.name }}</h3>
