@@ -1,18 +1,16 @@
-<footer>
-  <p class="pull-right">
-    <!-- Twitter -->
-    <span class="social">
-      <a href="https://twitter.com/{{ site.twitter_username }}">
-        <img src="{{ "/img/twitter-icon.png" | prepend: site.baseurl }}" alt="">
-        <span>@{{ site.twitter_username }}</span>
-      </a>
-    </span>
-    <!-- RSS -->
-    <span class="social">
-      <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-        <img src="{{ "/img/feed-icon.png" | prepend: site.baseurl }}" alt="">
-        <span>RSS</span>
-      </a>
-    </span>
-  </p>
+<footer class="footer">
+  <div class="container">
+    <ul class="social pull-right">
+      <!-- Twitter -->
+      <li>
+        <a class="twitter" href="https://twitter.com/{{ site.twitter_username }}">
+          @{{ site.twitter_username }}
+        </a>
+      </li>
+      <!-- RSS -->
+      <li>
+        <a class="rss" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+      </li>
+    </ul>
+  </div>
 </footer>

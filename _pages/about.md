@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Quem Somos?
-icon: /img/about.png
+icon: /img/nav/about.png
 menu: true
 permalink: /about/
 ---
@@ -12,22 +12,25 @@ A ideia de escrever um blog surgiu enquanto frequentávamos o curso técnico em 
 
 Agora, após um período de hiatus, estamos de volta ao jogo e com "estádio" próprio.
 
-<h2 class="about-topic">Legal, mas quem são os indivíduos do DevSV?</h2>
+<h2 class="about-topic">Equipe</h2>
 
-{% for member in site.data.members %}
-
-  <h3 class="about-topic">{{ member.name }}</h3>
-
-  <p>
-    {% for link in member.links %}
-    <span>
-      <a class="icon" href="{{ link.url }}">
-        <img src="{{ link.icon | prepend: site.baseurl }}" alt="{{ link.title }}" title="{{ link.title }}">
-      </a>
-    </span>
-    {% endfor %}
-  </p>
-
-  {{ member.resume }}
-
-{% endfor %}
+<ul class="members">
+  {% for member in site.data.members %}
+    <li class="member">
+      <div class="member-picture">
+        <img class="img-circle" src="{{ member.picture | prepend: site.baseurl }}" alt="Autor {{ member.name }}">
+      </div>
+      <div class="member-info">
+        <h3>{{ member.name }}</h3>
+        <ul class="social">
+          {% for link in member.links %}
+            <li>
+              <a class="{{ link.class }}" href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="resume">{{ member.resume }}</p>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

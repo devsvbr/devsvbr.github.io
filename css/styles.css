@@ -1,6 +1,40 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   padding-top: 80px;
   padding-bottom: 20px;
+  background-color: #F6FAFD;
+}
+
+p {
+  text-align: justify;
+}
+
+a:link, a:visited {
+  color: #2A7AE2;
+}
+
+a:hover, a:active {
+  color: red;
+}
+
+.navbar {
+  background-color: #030535;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #D3EEFD;
+}
+
+.footer ul {
+  margin: 16px 0px;
 }
 
 .center {
@@ -11,26 +45,76 @@ body {
   padding-top: 5px;
 }
 
-.social {
-  padding-left: 20px;
+.member {
+  display: inline-block;
+  margin: 20px 0px;
+  clear: both;
 }
 
-.about-topic {
-  padding-top: 20px;
+.member p {
+  margin: 10px 0px 0px 0px;
 }
 
-a.icon:link {
-    text-decoration: none;
+.member-picture {
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
 }
 
-a.icon:visited {
-    text-decoration: none;
+.member-info {
+  float: left;
+  width: 80%;
+  box-sizing: border-box;
 }
 
-a.icon:hover {
-  text-decoration: none;
+.member-picture img {
+  max-width: 160px;
+  width: 100%;
+  height: 100%;
 }
 
-a.icon:active {
-  text-decoration: none;
+.member-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
 }
+
+.member-info ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.social li {
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.social a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  outline: none;
+}
+
+.rss {
+  background-image: url(/img/social/rss.png);
+}
+
+.github {
+  background-image: url(/img/social/github.png);
+}
+
+.linkedin {
+  background-image: url(/img/social/linkedin.png);
+}
+
+.kaggle {
+  background-image: url(/img/social/kaggle.png);
+}
+
+.twitter {
+  background-image: url(/img/social/twitter.png);
+}
+
