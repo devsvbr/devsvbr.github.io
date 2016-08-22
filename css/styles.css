@@ -13,6 +13,14 @@ p {
   text-align: justify;
 }
 
+a:link, a:visited {
+  color: #2A7AE2;
+}
+
+a:hover, a:active {
+  color: red;
+}
+
 .navbar {
   background-color: #030535;
 }
@@ -56,6 +64,7 @@ p {
   width: 32px;
   height: 32px;
   text-indent: -9999px;
+  outline: none;
 }
 
 .rss {
