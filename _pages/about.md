@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Quem Somos?
-icon: /img/about.png
+icon: /img/nav/about.png
 menu: true
 permalink: /about/
 ---

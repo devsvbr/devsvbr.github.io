@@ -59,22 +59,22 @@ p {
 }
 
 .rss {
-  background-image: url(/img/rss.png);
+  background-image: url(/img/social/rss.png);
 }
 
 .github {
-  background-image: url(/img/github.png);
+  background-image: url(/img/social/github.png);
 }
 
 .linkedin {
-  background-image: url(/img/linkedin.png);
+  background-image: url(/img/social/linkedin.png);
 }
 
 .kaggle {
-  background-image: url(/img/kaggle.png);
+  background-image: url(/img/social/kaggle.png);
 }
 
 .twitter {
-  background-image: url(/img/twitter.png);
+  background-image: url(/img/social/twitter.png);
 }
 
