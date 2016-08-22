@@ -12,11 +12,20 @@ body {
 }
 
 .social {
-  padding-left: 20px;
+  padding-left: 5px;
 }
 
-.about-topic {
+.about {
   padding-top: 20px;
+  float: left;
+}
+
+.author-name {
+  padding-right: 15px;
+}
+
+.resume {
+  clear: left;
 }
 
 a.icon:link {

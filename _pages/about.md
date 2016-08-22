@@ -12,22 +12,18 @@ A ideia de escrever um blog surgiu enquanto frequentávamos o curso técnico em 
 
 Agora, após um período de hiatus, estamos de volta ao jogo e com "estádio" próprio.
 
-<h2 class="about-topic">Legal, mas quem são os indivíduos do DevSV?</h2>
+<h2 class="about-topic">Equipe</h2>
 
 {% for member in site.data.members %}
-
-  <h3 class="about-topic">{{ member.name }}</h3>
-
+  <h3 class="about author-name">{{ member.name }}</h3>
   <p>
     {% for link in member.links %}
-    <span>
+    <span class="about social">
       <a class="icon" href="{{ link.url }}">
         <img src="{{ link.icon | prepend: site.baseurl }}" alt="{{ link.title }}" title="{{ link.title }}">
       </a>
     </span>
     {% endfor %}
   </p>
-
-  {{ member.resume }}
-
+  <div class="resume">{{ member.resume }}</div>
 {% endfor %}
