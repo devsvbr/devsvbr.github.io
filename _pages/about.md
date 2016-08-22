@@ -14,14 +14,23 @@ Agora, após um período de hiatus, estamos de volta ao jogo e com "estádio" pr
 
 <h2 class="about-topic">Equipe</h2>
 
-{% for member in site.data.members %}
-  <h3 class="about">{{ member.name }}</h3>
-  <ul class="about social">
-    {% for link in member.links %}
-      <li>
-        <a class="{{ link.class }}" href="{{ link.url }}">{{ link.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-  <p class="resume">{{ member.resume }}</p>
-{% endfor %}
+<ul class="members">
+  {% for member in site.data.members %}
+    <li class="member">
+      <div class="member-picture">
+        <img src="{{ member.picture | prepend: site.baseurl }}" alt="Foto de {{ member.name }}">
+      </div>
+      <div class="member-info">
+        <h3>{{ member.name }}</h3>
+        <ul class="social">
+          {% for link in member.links %}
+            <li>
+              <a class="{{ link.class }}" href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="resume">{{ member.resume }}</p>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

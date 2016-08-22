@@ -45,18 +45,43 @@ a:hover, a:active {
   padding-top: 5px;
 }
 
-.about {
-  padding-top: 20px;
+.members {
+  position: relative;
+  width: 80%;
+}
+
+.member {
+  display: inline-block;
+  margin: 20px 0px;
+  clear: both;
+}
+
+.member p {
+  margin: 10px 0px 0px 0px;
+}
+
+.member-picture {
   float: left;
 }
 
-.resume {
-  clear: left;
+.member-picture img {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.member-info {
+  margin: 0px 20px;
+}
+
+.member-info h3 {
+  margin: 0px;
+  padding: 0px;
 }
 
 .social li {
   display: inline-block;
-  margin-left: 5px;
+  margin: 0px 5px;
 }
 
 .social a {
