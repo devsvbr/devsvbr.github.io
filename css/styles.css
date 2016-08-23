@@ -69,6 +69,12 @@ a:hover, a:active {
   padding: 0;
 }
 
+@media (max-width: 768px) {
+  .member-picture, .member-info {
+    text-align: center;
+  }
+}
+
 .social li {
   display: inline-block;
   margin-right: 1ch;
