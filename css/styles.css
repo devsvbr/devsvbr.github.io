@@ -50,30 +50,30 @@ li.page-menuitem > a {
 
 .member {
   display: inline-block;
-  margin: 1em 0;
+  padding: 1em 0;
   clear: both;
 }
 
-.member p {
-  margin: 1em 0 0 0;
-}
-
-.member-picture img {
+.member-picture > img {
   max-width: 160px;
   width: 100%;
   height: 100%;
 }
 
-.member-info h3 {
+.member-info > h3 {
   font-size: 1.2em;
   font-weight: bold;
   margin: 0;
   padding: 0;
 }
 
-.member-info ul {
+.member-info > ul {
   margin: 0;
   padding: 0;
+}
+
+.member > p {
+  margin: 1em 0 0 0;
 }
 
 @media (max-width: 768px) {
