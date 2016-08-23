@@ -25,6 +25,10 @@ a:hover, a:active {
   background-color: #030535;
 }
 
+.title-logo {
+  padding-top: 5px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -37,10 +41,6 @@ a:hover, a:active {
   margin: 16px 0;
 }
 
-.title-logo {
-  padding-top: 5px;
-}
-
 .member {
   display: inline-block;
   margin: 1em 0;
@@ -49,18 +49,6 @@ a:hover, a:active {
 
 .member p {
   margin: 1em 0 0 0;
-}
-
-.member-picture {
-  float: left;
-  width: 20%;
-  box-sizing: border-box;
-}
-
-.member-info {
-  float: left;
-  width: 80%;
-  box-sizing: border-box;
 }
 
 .member-picture img {
@@ -83,7 +71,7 @@ a:hover, a:active {
 
 .social li {
   display: inline-block;
-  margin: 0 0.2em;
+  margin-right: 1ch;
 }
 
 .social a {
