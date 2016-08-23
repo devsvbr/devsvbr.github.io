@@ -17,10 +17,10 @@ Agora, após um período de hiatus, estamos de volta ao jogo e com "estádio" pr
 <ul class="members">
   {% for member in site.data.members %}
     <li class="member">
-      <div class="member-picture">
+      <div class="member-picture col-sm-2">
         <img class="img-circle" src="{{ member.picture | prepend: site.baseurl }}" alt="Autor {{ member.name }}">
       </div>
-      <div class="member-info">
+      <div class="member-info col-md-8 col-sm-10">
         <h3>{{ member.name }}</h3>
         <ul class="social">
           {% for link in member.links %}
