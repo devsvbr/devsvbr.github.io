@@ -34,7 +34,7 @@ a:hover, a:active {
 }
 
 .footer ul {
-  margin: 16px 0px;
+  margin: 16px 0;
 }
 
 .center {
@@ -47,12 +47,12 @@ a:hover, a:active {
 
 .member {
   display: inline-block;
-  margin: 20px 0px;
+  margin: 1em 0;
   clear: both;
 }
 
 .member p {
-  margin: 10px 0px 0px 0px;
+  margin: 1em 0 0 0;
 }
 
 .member-picture {
@@ -74,20 +74,20 @@ a:hover, a:active {
 }
 
 .member-info h3 {
-  font-size: 18px;
+  font-size: 1.2em;
   font-weight: bold;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .member-info ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .social li {
   display: inline-block;
-  margin: 0px 5px;
+  margin: 0 0.2em;
 }
 
 .social a {
