@@ -26,7 +26,14 @@ a:hover, a:active {
 }
 
 .title-logo {
-  padding-top: 5px;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+
+li.page-menuitem > a {
+  display: inline-block;
+  padding: 6px 12px;
 }
 
 .footer {
