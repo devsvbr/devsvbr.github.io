@@ -81,15 +81,15 @@ Bom pessoas, por mim eu ficaria aqui escrevendo mais e mais coisas, deixaria est
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Metacaractere</th><th>Nome</th><th>Bate com...</th>
+      <th>Metacaractere</th><th>Nome</th><th>Função</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>.</td><td>ponto</td><td>qualquer caractere</td>
+      <td>.</td><td>ponto</td><td>bate com qualquer caractere</td>
     </tr>
     <tr>
-      <td>[ ]</td><td>colchetes ou lista</td><td>qualquer um dos caracteres listados</td>
+      <td>[ ]</td><td>colchetes ou lista</td><td>bate com qualquer um dos caracteres listados</td>
     </tr>
   </tbody>
 </table>
