@@ -34,11 +34,11 @@ Olhe atentamente quais foram os caracteres que deram matching com o ponto:
 
 ![imagem ilustrando os matchings do ponto]({{ "/img/posts/2017-03-31-matching-nao-3.png" | prepend: site.baseurl }})
 
-O ponto está batendo com "a", com "ã" e com "t". E digo mais: ele bateria com qualquer outro caractere que não fosse uma quebra de linha (algumas implementações que fazem comparação multi-linha consideram a quebra de linha como matching).
+O ponto está batendo com "a", com "ã" e com "t". E digo mais: ele bateria com qualquer outro caractere que não fosse uma quebra de linha (algumas implementações consideram a quebra de linha como matching, mas não é o caso do RegExr).
 
 Vemos que é possível escrever expressões bem mais flexíveis usando o ponto. Mas pro problema que queremos resolver, ele ainda é muito permissivo.
 
-Vamos pensar um pouco... o que é que nós precisamos pra resolver nosso problema?
+Vamos pensar um pouco... O que é que nós precisamos pra resolver nosso problema?
 
 Eu diria que precisamos encontrar algum modo de restringir os caracteres que são considerados matching. Algo como um metacaractere que "só dê matching com `a` ou com `ã`". Concorda?
 
@@ -60,7 +60,7 @@ Antes de seguir pro próximo assunto, eu quero mencionar algumas particularidade
 
   ![imagem ilustrando matching da regex usando lista com faixa]({{ "/img/posts/2017-03-31-colchetes-1.png" | prepend: site.baseurl }})
 
-- O "^" (circunflexo), aparecendo como **primeiro** caractere da lista, **nega** o matching dos itens da lista, em outras palavras, bate com qualquer caractere que **não** esteja na lista. Exemplo: `[^0-9]` bate com qualquer caractere que não seja um dígito numérico entre "0" e "9".
+- O "^" (circunflexo), aparecendo como **primeiro** caractere da lista, **nega** o matching dos itens da lista, em outras palavras, bate com qualquer caractere que **não** esteja listado. Exemplo: `[^0-9]` bate com qualquer caractere que não seja um dígito numérico entre "0" e "9".
 
   ![imagem ilustrando matching da regex usando lista negada]({{ "/img/posts/2017-03-31-colchetes-2.png" | prepend: site.baseurl }})
 
