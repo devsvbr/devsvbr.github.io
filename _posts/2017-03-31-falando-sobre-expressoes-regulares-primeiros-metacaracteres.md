@@ -90,10 +90,10 @@ Bom pessoas, por mim eu ficaria aqui escrevendo mais e mais coisas, deixaria est
   </thead>
   <tbody>
     <tr>
-      <td>.</td><td>ponto</td><td>bate com qualquer caractere</td>
+      <td>.</td><td>ponto</td><td>captura qualquer caractere</td>
     </tr>
     <tr>
-      <td>[ ]</td><td>colchetes ou lista</td><td>bate com qualquer um dos caracteres listados</td>
+      <td>[ ]</td><td>colchetes ou lista</td><td>captura qualquer um dos caracteres listados</td>
     </tr>
   </tbody>
 </table>
