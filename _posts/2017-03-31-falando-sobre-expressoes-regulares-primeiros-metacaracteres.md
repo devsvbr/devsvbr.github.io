@@ -34,11 +34,11 @@ Olhe atentamente quais foram os caracteres que deram matching com o ponto:
 
 ![imagem ilustrando os matchings do ponto]({{ "/img/posts/2017-03-31-matching-nao-3.png" | prepend: site.baseurl }})
 
-O ponto está batendo com "a", com "ã" e com "t". E digo mais: ele bateria com qualquer outro caractere que não fosse uma quebra de linha (algumas implementações que fazem comparação multi-linha consideram a quebra de linha como matching).
+O ponto está batendo com "a", com "ã" e com "t". E digo mais: ele bateria com qualquer outro caractere que não fosse uma quebra de linha (algumas implementações consideram a quebra de linha como matching, mas não é o caso do RegExr).
 
 Vemos que é possível escrever expressões bem mais flexíveis usando o ponto. Mas pro problema que queremos resolver, ele ainda é muito permissivo.
 
-Vamos pensar um pouco... o que é que nós precisamos pra resolver nosso problema?
+Vamos pensar um pouco... O que é que nós precisamos pra resolver nosso problema?
 
 Eu diria que precisamos encontrar algum modo de restringir os caracteres que são considerados matching. Algo como um metacaractere que "só dê matching com `a` ou com `ã`". Concorda?
 
@@ -56,13 +56,17 @@ Muito Bom!
 
 Antes de seguir pro próximo assunto, eu quero mencionar algumas particularidades das listas:
 
-- O caractere "-" (hífen) pode ser usado pra definir uma **faixa** de caracteres. Por exemplo: `[0-9]` bate com os dígitos numéricos de "0" a "9".
+- O caractere "-" (hífen) pode ser usado pra definir uma **faixa** de caracteres. Por exemplo: `[0-9]` bate com qualquer um dos dígitos numéricos da sequência de "0" a "9".
 
   ![imagem ilustrando matching da regex usando lista com faixa]({{ "/img/posts/2017-03-31-colchetes-1.png" | prepend: site.baseurl }})
 
-- O "^" (circunflexo), aparecendo como **primeiro** caractere da lista, **nega** o matching dos itens da lista, em outras palavras, bate com qualquer caractere que **não** esteja na lista. Exemplo: `[^0-9]` bate com qualquer caractere que não seja um dígito numérico entre "0" e "9".
+- O "^" (circunflexo), aparecendo como **primeiro** caractere da lista, **nega** o matching dos itens da lista, em outras palavras, bate com qualquer caractere que **não** esteja listado. Exemplo: `[^0-9]` bate com qualquer caractere que não seja um dígito numérico entre "0" e "9".
 
   ![imagem ilustrando matching da regex usando lista negada]({{ "/img/posts/2017-03-31-colchetes-2.png" | prepend: site.baseurl }})
+
+- O caractere "-" (hífen), aparecendo como **primeiro** ou **último** elemento da lista, é interpretado como um hífen literal. Exemplo: tanto `[abc-]` quanto `[-abc]` batem com os caracteres "-", "a", "b" ou "c".
+
+  ![imagem ilustrando matching da regex usando lista com hifen]({{ "/img/posts/2017-03-31-colchetes-5.png" | prepend: site.baseurl }})
 
 - O caractere "]" (fecha colchetes), aparecendo como **primeiro** caractere da lista, é tratado como um literal. Exemplo: `[]abc]` bate com "]", "a", "b" ou "c".
 
@@ -86,10 +90,10 @@ Bom pessoas, por mim eu ficaria aqui escrevendo mais e mais coisas, deixaria est
   </thead>
   <tbody>
     <tr>
-      <td>.</td><td>ponto</td><td>bate com qualquer caractere</td>
+      <td>.</td><td>ponto</td><td>captura qualquer caractere</td>
     </tr>
     <tr>
-      <td>[ ]</td><td>colchetes ou lista</td><td>bate com qualquer um dos caracteres listados</td>
+      <td>[ ]</td><td>colchetes ou lista</td><td>captura qualquer um dos caracteres listados</td>
     </tr>
   </tbody>
 </table>

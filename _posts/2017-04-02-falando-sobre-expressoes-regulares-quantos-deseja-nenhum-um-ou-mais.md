@@ -16,7 +16,7 @@ Primeiro, vamos fazer a regex capturar o protocolo http:
 
 ![imagem ilustrando matching da url do devsv com http]({{ "/img/posts/2017-04-02-matching-url-2.png" | prepend: site.baseurl }})
 
-Notem que é preciso escapar as barras após o "http:", uma vez que as barras fazem parte da sintaxe do RegExr (tudo o que estiver entre as barras fará parte da regex, portanto uma barra só é considerada literal se for escapada; esta sintaxe não é exclusividade do JavaScript, outras linguagens como Ruby e ferramentas como sed e vi também usam as barras deste modo).
+Notem que é preciso escapar as barras após o "http:", uma vez que elas fazem parte da sintaxe do RegExr (tudo o que estiver entre as barras faz parte da expressão, portanto uma barra só é considerada literal se for escapada; esta sintaxe não é exclusividade do JavaScript, outras linguagens como Ruby e ferramentas como sed e vi também delimitam uma regex com barras).
 
 Próximo objetivo: aceitar o protocolo https:
 
@@ -26,9 +26,9 @@ Muito bom! Mas estamos em um processo incremental e queremos que o "http://www.d
 
 Vamos pensar um pouco... O que precisamos fazer pra bater as duas URLs?
 
-Hmmm... O "http" sempre está lá... já o "s" pode estar presente ou não, tanto faz... o restante da regex está ok...
+Hmmm... O "http" está sempre lá... já o "s" pode estar presente ou não, tanto faz... o restante da regex está ok...
 
-Bingo! Este é o ponto, tanto faz se o "s" aparece ou não aparece na URL, a regex deve dar matching nos 2 casos. Resumindo, o "s" é um elemento **opcional** na URL.
+Bingo! Este é o ponto, tanto faz se o "s" aparece ou não aparece na URL, a regex deve capturar os 2 casos. Resumindo, o "s" é um elemento **opcional** na URL.
 
 O metacaractere que vai nos ajudar nesta tarefa é o "?" (interrogação). Sua função é fazer com que o caractere à sua esquerda se torne **opcional**. Se queremos que "s" seja opcional, usamos a regex "s?":
 
@@ -64,11 +64,11 @@ Voltando ao nosso problema, o vulgo  _"qualquer coisa"_ pode ser escrito como ".
 
 ![imagem ilustrando matching de urls .com.br]({{ "/img/posts/2017-04-02-matching-url-5.png" | prepend: site.baseurl }})
 
-Parece bonito, mas tem um porém. O "ponto seguido de asterisco" aceita **nenhuma** ocorrência de _"qualquer coisa"_, portanto a regex dá matching com a URL "http://www..com.br", veja:
+Parece bonito, mas tem um porém. O "ponto seguido de asterisco" aceita **nenhuma** ocorrência de _"qualquer coisa"_, portanto a URL "http://www..com.br" é capturada no matching, veja:
 
 ![imagem ilustrando matching da url www..com.br]({{ "/img/posts/2017-04-02-matching-url-6.png" | prepend: site.baseurl }})
 
-Existe um outro metacaractere, o "+" (mais), que faz com que a regex aceite **uma ou mais ocorrências** do caractere imediatamente anterior a ele. Muito parecido com o asterisco, a diferença é que ele **não** permite a ausência do caractere.
+Existe um outro metacaractere, o "+" (mais), que faz com que a regex aceite **uma ou mais** repetições do elemento imediatamente anterior a ele. Muito parecido com o asterisco, a diferença é que ele **não** permite a ausência do elemento.
 
 Vejamos como ele se comporta em nossa regex:
 
@@ -89,10 +89,10 @@ Deixe-me apenas atualizar a tabela dos metacaracteres.
   </thead>
   <tbody>
     <tr>
-      <td>.</td><td>ponto</td><td>bate com qualquer caractere</td>
+      <td>.</td><td>ponto</td><td>captura qualquer caractere</td>
     </tr>
     <tr>
-      <td>[ ]</td><td>colchetes ou lista</td><td>bate com qualquer um dos caracteres listados</td>
+      <td>[ ]</td><td>colchetes ou lista</td><td>captura qualquer um dos caracteres listados</td>
     </tr>
     <tr>
       <td>\</td><td>barra invertida</td><td>torna literal o metacaractere à sua direita</td>
@@ -108,13 +108,13 @@ Deixe-me apenas atualizar a tabela dos metacaracteres.
   </thead>
   <tbody>
     <tr>
-      <td>?</td><td>interrogação</td><td>torna o elemento opcional (pode aparecer nenhuma ou uma vez)</td>
+      <td>?</td><td>interrogação</td><td>torna o elemento à sua esquerda opcional</td>
     </tr>
     <tr>
-      <td>*</td><td>asterisco</td><td>torna o elemento opcional, permitindo múltiplas ocorrências (pode aparecer nenhuma, uma ou mais vezes)</td>
+      <td>*</td><td>asterisco</td><td>torna o elemento à sua esquerda opcional e permite múltiplas ocorrências</td>
     </tr>
     <tr>
-      <td>+</td><td>mais</td><td>elemento é obrigatório e permite múltiplas ocorrências (deve aparecer uma ou mais vezes)</td>
+      <td>+</td><td>mais</td><td>elemento à sua esquerda deve aparecer uma ou mais vezes</td>
     </tr>
   </tbody>
 </table>
