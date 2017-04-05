@@ -8,31 +8,46 @@ E aí pessoas!
 
 Depois de um longo tempo de hibernação, estou de volta com uma série de posts onde vou falar um pouco sobre as expressões regulares (ER) e seu uso em algumas ferramentas.
 
-Eu trabalhei um bom tempo com processamento de texto e fiz muito uso de expressões regulares. Não seria exagero dizer que é o principal recurso que eu utilizo para fazer matching de strings. Ela está presente em diversas ferramentas de processamento de texto (grep, sed, awk, ...) e também nas APIs das principais linguagens de programação do mercado. Apesar de ter uma certa experiência, eu estou bem... bem longe de poder dizer que sou um especialista em expressões regulares, eu sou um mero usuário de ER. Mas é um assunto que gosto bastante, por isso estou trazendo pro blog.
+Eu uso muito as expressões regulares em atividades de rotina, principalmente no editor de texto e também  para buscar arquivos baseado no conteúdo. Eu também trabalhei um bom tempo com processamento de texto, parsing e matching de strings, que foi onde realmente pude entender melhor o que é possível fazer com expressões regulares. Mas não se enganem pelas minhas palavras, apesar de eu ter um pouco de experiência, eu estou bem... bem longe de poder dizer que sou um especialista em ER. Mas é um recurso que eu gosto bastante e está presente em tudo que é lugar, desde ferramentas pra edição de texto (como vi, Sublime Text, ...), ferramentas de processamento de texto (como grep, sed, awk, ...), até nas APIs das principais linguagens de programação do mercado. Será bem prazeroso falar sobre o assunto e espero aprender bastante escrevendo, assim como espero que seja proveitoso pra vocês que dispensam um tempo pra ler meus posts.
+
 
 Então, vamos lá. Antes de começar a falar especificamente das expressões regulares, quero parar um pouco pra pensar em algumas atividades de processamento de texto.
 
-Considere primeiro uma ferramenta de busca. Como exemplo, vou usar uma frase filosófica que um grande amigo, o Chico, disse uma vez com toda sua sabedoria:
+Considere uma ferramenta de busca simples, daquelas que eu digo o que quero e ela destaca os resultados encontrados.
+
+Como exemplo, vou usar uma frase filosófica que um grande amigo, o Chico, disse uma vez com toda sua sabedoria:
 
 > Eu gostaria de ser monge, mas a profissão de monge no Brasil não dá dinheiro.
 
 A frase é simplesmente genial. Eu sou um grande fã do Chico por isto, além de ser um grande programador, é um grande filósofo. Quem o conhece sabe que esta é apenas uma dentre muitas frases lendárias que ele já disse ao longo de sua história. Mas o post de hoje não é sobre o Chico, então vamos retomar o foco da ferramenta de busca.
 
-Imagine que queremos fazer uma busca pela palavra _monge_, certo? Uma busca deste tipo nos devolveria 2 resultados, como destacado abaixo:
+Imagine que eu peça pra ferramenta buscar a palavra _monge_, certo? Ela me devolveria o seguinte:
 
 > Eu gostaria de ser `monge`, mas a profissão de `monge` no Brasil não dá dinheiro.
 
-Legal, mas nem sempre queremos um matching direto, podemos procurar apenas por _palavras que começam com a letra d_? Sim claro, neste caso, as palavras que dariam match seriam as destacadas:
+A ferramenta poderia ser do tipo muito avançada e permitir buscas mais flexíveis, como "me retorne todas as palavras que começam com a letra D". Neste caso o retorno seria:
 
 > Eu gostaria `de` ser monge, mas a profissão `de` monge no Brasil não `dá` `dinheiro`.
 
-Agora chega de busca, pense numa ferramenta para edição de texto, como o _sed_. Uma das coisas que podemos fazer com o _sed_ é substituir um trecho de texto por outro. Por exemplo, podemos pedir para ele substituir a palavra _monge_ pela palavra _programador_ e ele nos devolve a frase:
+Esta ferramenta muito avançada também poderia atender solicitações como: "procure pra mim pelas palavras que possuem exatamente 3 letras":
+
+> Eu gostaria de `ser` monge, `mas` a profissão de monge no Brasil `não` dá dinheiro.
+
+Hora de mudar de ferramenta! Vamos imaginar uma outra ferramenta que tem o poder de fazer permuta. Do tipo que eu falo: "Por favor, poderia trocar a palavra _monge_ pela palavra _programador_?" e ela responde: "Como você pediu com educação, eu atenderei seu pedido" e devolve o resultado:
 
 > Eu gostaria de ser `programador`, mas a profissão de `programador` no Brasil não dá dinheiro.
 
-Veja que aqui também existe uma fase de busca, mas ao invés de apenas retornar o trecho encontrado, ele substitui o trecho por outra string.
+Hora de sair do mundo da imaginação e concluir o raciocínio.
 
-Pra fechar, considere o processo de validação de um texto que represente um número inteiro. O fundamental é definir quais são os **critérios** que devem ser seguidos para que o texto seja considerado válido, ou melhor, qual **padrão** o texto deve seguir. No caso dos números inteiros, eles devem ser formados apenas por dígitos numéricos, de modo que apenas o primeiro caractere da esquerda pode ser, opcionalmente, um sinal de mais ou de menos. O validador vai receber diversas strings e verificar se a string bate com o padrão definido, para então retornar se a string recebida é válida ou não.
+Olhando para as tarefas que imaginamos acima, consegue ver algum processo que seja comum à todas elas?
 
-Olhando para as tarefas que analisamos acima, consegue ver algo que todas as elas fazem em comum? É a comparação, o matching de string. Tanto a ferramenta de busca quanto o validador tentam casar um padrão ou uma simples sequência de caracteres com um trecho ou o conteúdo completo de uma string. Nos exemplos deste post, usamos o português pra descrever o padrão a ser comparado. Nós conseguimos entender a linguagem natural do ser humano, mas as ferramentas que citei e as linguagens de programação não conseguem, por isto veremos, nos próximos posts (isso mesmo, muita hora nessa calma), como descrever os mesmos padrões usando uma sintaxe formal que as ferramentas e as APIs das linguagens de programação entendem, as **expressões regulares**.
+É justamente a fase de busca propriamente dita; a comparação de partes do texto com um padrão a ser buscado; o **matching de string**.
+
+Tanto as ferramentas de busca (seja a simples ou a muito avançada) quanto a ferramenta da permuta procuram no texto (a frase do Chico) por um determinado padrão (a palavra _monge_, palavras com 3 letras, ...).
+
+As ferramentas que imaginamos aqui são realmente muito avançadas, pois elas entendem bem a linguagem natural do ser humano. Mas as ferramentas do mundo real não conseguem entender nossa linguagem natural. É por isso que veremos, ao longo dos próximos vários posts, como descrever padrões semelhantes aos que imaginamos hoje usando uma sintaxe formal que as ferramentas e as APIs do mundo real entendem, as **expressões regulares**.
+
+Valeu pessoas!
+
+Falou...
 

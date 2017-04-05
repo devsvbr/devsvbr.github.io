@@ -26,7 +26,7 @@ O resultado já é satisfatório, mas a expressão ainda pode melhorar no quesit
 
 Este cenário hipotético levanta uma questão: Será que não existe um quantificador que defina a quantidade exata de vezes que o elemento deve aparecer no matching?
 
-Não é que existe mesmo? Quem faz este serviço são as **chaves**. Com elas especificamos a quantidade usando sintaxe `c{n}`, onde **n** é o número de vezes que o caractere **c** deve se repetir.
+Não é que existe mesmo? Quem faz este serviço são as **chaves**. Com elas especificamos a quantidade usando a sintaxe `c{n}`, onde **n** é o número de vezes que o caractere **c** deve se repetir.
 
 Vejamos como fica nossa regex reescrita para usar as chaves:
 
