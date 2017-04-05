@@ -6,9 +6,9 @@ categories: regex
 ---
 E aí pessoas!
 
-No [último post]({{ site.baseurl }}{% link _posts/2017-03-30-falando-sobre-expressoes-regulares-comecando-com-caracteres-literais.md %}), criamos algumas expressões usando caracteres literais e eu havia dito que "um caractere literal dá matching apenas com um caractere igual a ele".
+No [último post]({{ site.baseurl }}{% link _posts/2017-03-30-falando-sobre-expressoes-regulares-comecando-com-caracteres-literais.md %}), criamos algumas expressões usando caracteres comuns e eu havia adiantado que mostraria o tal do **caractere especial**. Pois vamos lá.
 
-Agora, quero complementar dizendo que alguns caracteres não são interpretados como um caractere literal dentro da regex. Eles são chamados de **metacaracteres**, ou **caracteres especias**, e são os grandes responsáveis por expandir os horizontes de matching de uma regex.
+Os **caracteres especiais** são conhecidos como **metacaracteres** e são os grandes responsáveis por expandir os horizontes de matching de uma regex.
 
 Pra ver um deles em ação, considere as frases abaixo:
 
@@ -16,7 +16,7 @@ Pra ver um deles em ação, considere as frases abaixo:
 >
 > Eu não gosto de quem não usa acentos!
 
-Meu objetivo aqui, é encontrar todas as palavras "não" do texto. Até aqui, sem novidades, podemos especificar a string na regex:
+Meu objetivo aqui, é encontrar todas as palavras "não" do texto. Até aqui, sem novidades, podemos especificar na regex a string que queremos encontrar:
 
 ![imagem ilustrando matching da regex "não"]({{ "/img/posts/2017-03-31-matching-nao-1.png" | prepend: site.baseurl }})
 
@@ -30,17 +30,21 @@ Eu proponho um experimento: troque o "a" por "." (ponto) na regex e veja o que a
 
 Hmmm... Muito bom, conseguimos capturar tanto o "não" quanto o "nao". Mas vejam só, chegamos no objetivo? Acho que não. Aquele "nto" não deveria fazer parte do matching! Conseguiu ver o que o ponto está fazendo?
 
-Olhe atentamente quais foram os caracteres que deram matching com o ponto:
+Olhe atentamente quais foram os caracteres que deram match com o ponto:
 
 ![imagem ilustrando os matchings do ponto]({{ "/img/posts/2017-03-31-matching-nao-3.png" | prepend: site.baseurl }})
 
-O ponto está batendo com "a", com "ã" e com "t". E digo mais: ele bateria com qualquer outro caractere que não fosse uma quebra de linha (algumas implementações consideram a quebra de linha como matching, mas não é o caso do RegExr).
+O ponto está batendo com "a", com "ã" e com "t". E digo mais: ele bateria com qualquer outro caractere.
+
+Este é o significado especial do metacaractere `.`. Ele bate com qualquer caractere.
+
+Podemos dizer que ele tem uma função semelhante à de uma variável. Na expressão matemática `5x + 2`, `x` pode assumir qualquer valor numérico. Já na expressão regular `n.o`, `.` pode assumir a forma de qualquer caractere.
 
 Vemos que é possível escrever expressões bem mais flexíveis usando o ponto. Mas pro problema que queremos resolver, ele ainda é muito permissivo.
 
 Vamos pensar um pouco... O que é que nós precisamos pra resolver nosso problema?
 
-Eu diria que precisamos encontrar algum modo de restringir os caracteres que são considerados matching. Algo como um metacaractere que "só dê matching com `a` ou com `ã`". Concorda?
+Eu diria que precisamos encontrar algum modo de restringir os caracteres que são considerados como match. Algo como um metacaractere que "só dê match com `a` ou com `ã`". Concorda?
 
 Pois existe um conjunto de metacaracteres, os **colchetes**, também chamados de **lista**, que podem nos auxiliar nesta tarefa. Dentro dos colchetes, podemos especificar a lista de caracteres que queremos bater na regex:
 
@@ -48,19 +52,23 @@ Pois existe um conjunto de metacaracteres, os **colchetes**, também chamados de
 
 Ahá! Agora sim! A regex está batendo apenas o "nao" e o "não".
 
-Podemos usar quantas listas quisermos dentro da regex. Por exemplo, para aceitar que o "n[aã]o" inicie com "n" maiúsculo ou minúsculo, basta adicionar outra lista:
+Vale ressaltar que os colchetes são usados pra definir uma lista de caracteres que podem aparecer em **uma** determinada posição. Por exemplo, a expressão `[12345]0` define que a primeira posição pode ser qualquer um dos caracteres da lista, mas apenas um deles de cada vez, e a segunda posição deve ser obrigatoriamente "0". Ou seja, a regex `[12345]0` dá match apenas com umas das strings: "10", "20", "30", "40" ou "50".
+
+Apesar da lista valer para capturar um único caractere, podemos usar quantas listas quisermos dentro da regex. Por exemplo, para aceitar que o "n[aã]o" inicie com "N" maiúsculo ou "n" minúsculo, basta adicionar outra lista:
 
 ![imagem ilustrando matching da regex usando 2 listas]({{ "/img/posts/2017-03-31-matching-nao-5.png" | prepend: site.baseurl }})
 
 Muito Bom!
 
-Antes de seguir pro próximo assunto, eu quero mencionar algumas particularidades das listas:
+Antes de mudar de assunto, eu quero mencionar algumas particularidades das listas:
 
-- O caractere "-" (hífen) pode ser usado pra definir uma **faixa** de caracteres. Por exemplo: `[0-9]` bate com qualquer um dos dígitos numéricos da sequência de "0" a "9".
+- O "-" (hífen) pode ser usado pra definir uma **faixa** de caracteres consecutivos. Por exemplo: `[0-9]` bate com qualquer um dos dígitos numéricos da sequência de "0" a "9" ("0", "1", "2", "3", "4", "5", "6", "7", "8" ou "9").
 
   ![imagem ilustrando matching da regex usando lista com faixa]({{ "/img/posts/2017-03-31-colchetes-1.png" | prepend: site.baseurl }})
 
-- O "^" (circunflexo), aparecendo como **primeiro** caractere da lista, **nega** o matching dos itens da lista, em outras palavras, bate com qualquer caractere que **não** esteja listado. Exemplo: `[^0-9]` bate com qualquer caractere que não seja um dígito numérico entre "0" e "9".
+  P.S.: A sequência de caracteres de uma faixa são definidos de acordo com uns _"bagulho muito doido"_ com uns nomes estranhos como _"character set"_ e _"collating sequence"_ do _"locale"_. Assuntos que estão fora do escopo dos posts. Por isto, não é indicada a criação de faixas mirabolantes. Na prática, as faixas mais utilizadas são: `0-9`, `A-Z` e `a-z`.
+
+- O "^" (circunflexo), aparecendo como **primeiro** caractere da lista, **nega** o match dos itens da lista, em outras palavras, bate com qualquer caractere que **não** esteja listado. Exemplo: `[^0-9]` bate com qualquer caractere que não seja um dígito numérico entre "0" e "9".
 
   ![imagem ilustrando matching da regex usando lista negada]({{ "/img/posts/2017-03-31-colchetes-2.png" | prepend: site.baseurl }})
 
@@ -68,11 +76,11 @@ Antes de seguir pro próximo assunto, eu quero mencionar algumas particularidade
 
   ![imagem ilustrando matching da regex usando lista com hifen]({{ "/img/posts/2017-03-31-colchetes-5.png" | prepend: site.baseurl }})
 
-- O caractere "]" (fecha colchetes), aparecendo como **primeiro** caractere da lista, é tratado como um literal. Exemplo: `[]abc]` bate com "]", "a", "b" ou "c".
+- O caractere "]" (fecha colchetes), aparecendo como **primeiro** elemento da lista, é tratado como um literal. Exemplo: `[]abc]` bate com "]", "a", "b" ou "c".
 
   Aqui era o lugar onde eu postaria o print do RegExr ilustrando o exemplo acima. Mas fui trollado pela API do JavaScript. ¬¬
 
-  No fim foi até bom porque este é um exemplo ao vivo do que eu mencionei no post anterior sobre recursos que estão presentes em algumas implementações, mas não estão presentes em outras. Lembram disso? Pois é, a API usada pelo RegExr não considera o "fecha colchetes" como membro da lista. Mas o grep aceita esta sintaxe, então deixo um print com o grep mesmo:
+  No fim foi até bom porque este é um exemplo ao vivo do que eu mencionei no post anterior sobre o pão de cará... digo... sobre recursos que estão presentes em algumas implementações, mas não estão em outras. Lembram disso? Pois é, a API usada pelo RegExr não considera o "fecha colchetes" como membro da lista. Mas o grep aceita esta sintaxe, então deixo um print com o grep mesmo:
 
   ![imagem ilustrando matching da regex usando lista com fecha colchetes]({{ "/img/posts/2017-03-31-colchetes-3.png" | prepend: site.baseurl }})
 
@@ -80,7 +88,7 @@ Antes de seguir pro próximo assunto, eu quero mencionar algumas particularidade
 
   ![imagem ilustrando matching da regex usando lista com metacaractere como literal]({{ "/img/posts/2017-03-31-colchetes-4.png" | prepend: site.baseurl }})
 
-Bom pessoas, por mim eu ficaria aqui escrevendo mais e mais coisas, deixaria este post grande, enorme, um monstro. Mas não quero publicar posts muito extensos. Então vou finalizar do mesmo jeito que a maioria esmagadora de autores de textos sobre regex, com uma tabela resumindo os metacaracteres vistos até o momento.
+Bom pessoas, por mim eu ficaria aqui escrevendo mais e mais coisas, deixaria este post grande, enorme, um monstro. Mas não quero publicar posts muito extensos. Então vou finalizar com uma tabela resumindo os metacaracteres vistos até o momento.
 
 <table class="table table-bordered">
   <thead>
@@ -98,4 +106,7 @@ Bom pessoas, por mim eu ficaria aqui escrevendo mais e mais coisas, deixaria est
   </tbody>
 </table>
 
-Valeu pessoas! Até a próxima! Falou...
+Valeu pessoas! Até a próxima!
+
+Falou...
+
