@@ -26,37 +26,43 @@ A regex do passo 1 está bem definida, ela vai capturar "**http://www.devsv.com.
 
 No passo 2 também temos uma regex bem definida, que vai capturar ou "**http://www.devsv.com.br**" ou "**https://www.devsv.com.br**".
 
-Até aí tudo bem. Agora vamos analisar a regex do passo 3. Ela possui um trecho com um “ponto” seguido de um “sinal de mais”. Vamos direcionar o foco para o ponto: ele bate com qualquer coisa, e “qualquer coisa” é um conjunto muito amplo de possibilidades.
+Até aí tudo bem. Agora vamos analisar a regex do passo 3. Ela é composta por um `.+`. Este trecho bate com qualquer coisa, e “qualquer coisa” é um conjunto muito amplo de possibilidades.
 
-Por exemplo, veja o seguinte matching:
+Por estar muito flexível, ela captura muitos casos. Muitos deles nós realmente queremos capturar. Porém, ela apresenta muitos falso-positivos. Um falso-positivo é um caso que dá match, mas que não queremos que dê match. Por exemplo, veja o seguinte teste:
 
 ![imagem ilustrando matching de url apenas com pontos]({{ "/img/posts/2017-04-03-matching-url-1.png" | prepend: site.baseurl }})
 
-O ponto (literal) faz parte do conjunto "qualquer coisa", mas será que ele deveria fazer parte do matching? Receio que não. Mas veja pelo lado bom: já temos um conjunto menor que "qualquer coisa", que é "qualquer coisa exceto o ponto". Vamos trocar o ponto (metacaractere) por uma lista negando o ponto (literal):
+O ponto (literal) faz parte do conjunto "qualquer coisa", entretanto a URL cheia de pontos não deveria fazer parte do matching. Vendo pelo lado bom, já temos um conjunto menor que "qualquer coisa", que é "qualquer coisa exceto o ponto". Vamos trocar o ponto (metacaractere) por uma lista negando o ponto (literal):
 
 ![imagem ilustrando correcao do matching de url apenas com pontos]({{ "/img/posts/2017-04-03-matching-url-2.png" | prepend: site.baseurl }})
 
-Resolveu o problema do ponto, mas "qualquer coisa exceto ponto" ainda é um conjunto muito grande. Então já me adiantei e deixei mais casos que não deveriam entrar no matching. Isto quer dizer que precisamos ser mais restritos.
+Resolveu o problema do ponto, mas "qualquer coisa exceto ponto" ainda é um conjunto muito grande. Então já me adiantei e deixei mais casos que não devem dar match. Isto quer dizer que precisamos ser mais restritos.
 
-Eu quero evitar a fadiga! E esta estratégia de ir colocando caracteres na blacklist será muito cansativa. Portanto, não rola pro nosso caso.
+Ma será que esta estratégia de ir adicionando caracteres na blacklist é uma boa estratégia?
 
-Vamos pensar mais um pouco...
+Dependendo do caso, pode ser a melhor solução. Mas pro nosso caso não rola. Seria muito cansativo encontrar todos os caracteres que devem ser banidos.
 
-A solução deste problema passa pela definição de quais caracteres são permitidos na URL. Cá entre nós, eu não sei qual é a regra oficial que as URLs seguem, então vamos assumir que a URL deve ser formada apenas por letras minúsculas. Para nós, esta é a regra que tá valendo.
+A solução do nosso problema passa pela definição de quais caracteres são permitidos na URL. Cá entre nós, eu não sei qual é a regulamentação que define o padrão dos nomes de domínio. Então, vamos assumir que o domínio deve ser composto apenas de letras minúsculas. Pronto, esta é a regra que tá valendo pro nosso cenário.
 
 Agora que definimos um conjunto bem específico dos caracteres permitidos, basta transcrever a regra na sintaxe das expressões regulares. Quando eu [apresentei os colchetes]({{ site.baseurl }}{% link _posts/2017-03-31-falando-sobre-expressoes-regulares-primeiros-metacaracteres.md %}), eu havia comentado sobre a possibilidade de incluir faixas de caracteres em sequência usando o hífen. Pois é este recurso que vamos usar pra representar as letras de "a" até "z" em nossa regex:
 
 ![imagem ilustrando matching de url mais restrito]({{ "/img/posts/2017-04-03-matching-url-3.png" | prepend: site.baseurl }})
 
-Bem melhor! Temos uma regex mais restrita, e o principal: mais sólida, que reflete melhor nosso domínio!
+Bem melhor! Temos uma regex mais restrita, e o principal: mais sólida, que atende melhor os requisitos!
 
 Para concluir, eu sei que dizem que se conselho fosse bom, seria vendido e não distribuído de graça. Mas como eu não sou do tipo empresário opressor, eu gostaria de deixar alguns conselhos gratuitos.
 
-Lembrem-se: procurem restringir as opções de matching o máximo possível, claro que seguindo as regras do seu domínio. Não digo para nunca usar ponto ou listas muito grandes, mas que os utilize com consciência. Outro ponto importante é que não basta testar apenas casos que devem dar matching, teste também os casos que não devem entrar no matching, confirme que eles não são capturados de fato. Afinal, a expressão regular falha ao deixar escapar um trecho que ela deveria capturar, mas também falha ao capturar o que não deveria. Pequenas ações como estas podem evitar um problema de mau funcionamento do sistema no futuro, quando algum usuário conseguir surpreender a todos com uma entrada de dados bizarra no sistema.
+Procurem restringir as opções de matching sempre que possível, claro que seguindo os requisitos do sistema. Não quero dizer que o ponto ou as listas muito grandes nunca devam ser utilizadas, mas que sejam utilizadas com consciência.
+
+Outro ponto importante é que não basta testar apenas casos que devem dar matching, teste também os casos que não devem entrar no matching, confirme que eles não são capturados de fato. Afinal, a expressão regular falha ao deixar escapar um trecho que ela deveria capturar (falso-negativo), mas também falha ao capturar o que não deveria (falso-positivo).
+
+Pequenas ações como estas podem evitar um problema de mau funcionamento do sistema no futuro, quando algum usuário conseguir surpreender a todos com uma entrada de dados bizarra no sistema.
 
 É isso aí! Chega de filosofia computacional!
 
 Espero vê-los no próximo post, onde voltarei para os quantificadores.
 
-Valeu pessoas! Falou...
+Valeu pessoas!
+
+Falou...
 
