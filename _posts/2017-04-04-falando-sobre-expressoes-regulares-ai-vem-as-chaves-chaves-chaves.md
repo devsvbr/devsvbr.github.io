@@ -14,9 +14,7 @@ Nossa regex está aceitando qualquer domínio escrito com letras de "a" a "z", d
 
 Hora de expandir os horizontes, aceitar outros tipos de domínios como ".org.br", ".gov.br", ".net.uk", etc.
 
-Vamos pensar no domínio... Qual é a regra que temos que aplicar?
-
-Mais uma vez, eu não sei a regra exata que é usada no mundo real. Então, vamos fechar entre nós que a regra é: "3 letras seguidas de um ponto seguido de mais 2 letras". Ok?
+Temos que começar identificando a regra. Como comentei no post anterior, eu não conheço o padrão oficial pra definição do nome de domínio. Então, vamos fechar que no nosso cenário a regra é: "3 letras seguidas de um ponto seguido de mais 2 letras". Ok?
 
 Uma solução rápida é incluir diversas listas de "a" a "z" em nossa expressão. Vamos tentar?
 
@@ -34,17 +32,17 @@ Vejamos como fica nossa regex reescrita para usar as chaves:
 
 Show!
 
-Temos regras bem definidas e uma regex que nos atende muito bem. Mas o que seria de uma regra de domínio se ela não sofresse nenhuma alteração no meio do caminho?
+Temos regras bem definidas e uma regex que nos atende muito bem. Mas um requisito não é um requisito se não sofrer nenhuma alteração no meio do projeto!
 
-Precisamos mudar nossa regex para que ela capture também a URL da Universidade de Tóquio: "http://www.u-tokyo.ac.jp".
+O novo requisito diz que precisamos capturar também a URL da Universidade de Tóquio: "http://www.u-tokyo.ac.jp".
 
-Ela tem 2 características que impedem o matching, um hífen no meio do nome do domínio e o penúltimo bloco com apenas 2 caracteres.
+Ela tem 2 características que impedem o match, um hífen no meio do nome do domínio e o penúltimo bloco com apenas 2 caracteres.
 
 Pra passar a capturá-la, precisamos mudar a regra do nome principal do domínio para aceitar letras de "a" a "z" mais o hífen, além de mudar a regra do penúltimo bloco para aceitar tanto 2 quanto 3 letras.
 
 A primeira alteração consiste em colocar o hífen no início ou no fim da lista, para que ele seja interpretado como um caractere literal.
 
-Para realizar a segunda alteração, precisaremos passar 2 parâmetros para as chaves. Seguindo a sintaxe `c{n,m}`, dizemos pra regex aceitar entre **n** e **m** repetições do caractere **c**. Em nosso cenário, queremos que o bloco tenha de 2 a 3 letras, então passamos a expressão _"[a-z]{2,3}"_.
+Para realizar a segunda alteração, precisaremos passar 2 parâmetros para as chaves. Seguindo a sintaxe `c{n,m}`, dizemos pra regex aceitar entre **n** e **m** repetições do caractere **c**. Em nosso cenário, queremos que o bloco tenha de 2 a 3 letras, então passamos a expressão `[a-z]{2,3}`.
 
 Aplicando as duas alterações temos:
 
@@ -52,7 +50,7 @@ Aplicando as duas alterações temos:
 
 Show! Maneiro!
 
-Há mais uma regra que eu quero aplicar: o bloco principal do nome do domínio deve conter pelo menos 3 letras. Eu não quero mais aceitar nomes com 1 ou 2 caracteres.
+Já que é pra mudar requisito, deixe-me inventar uma regra nova: o bloco principal do nome do domínio deve conter pelo menos 3 letras. Se existir algum domínio com apenas 1 ou 2 letras, só lamento!
 
 Mais uma vez recorremos as chaves. Desta vez com a sintaxe `c{n,}`, que quer dizer que o elemento **c** deve se repetir **n** ou mais vezes. Bem parecido com o asterisco ou com o sinal de mais, com a diferença que nós definimos o limite inferior.
 
@@ -62,7 +60,7 @@ Mais uma vez recorremos as chaves. Desta vez com a sintaxe `c{n,}`, que quer diz
 
 Show! Maneiro! Maneiríssimo!
 
-O assunto dos quantificadores termina por aqui. Mas nossa regex de captura de URLs continuará fazendo parte do show no próximo post.
+O assunto dos quantificadores termina por aqui. Mas nossa regex de captura de URLs continuará fazendo parte do show por mais um post.
 
 Antes de encerrar, não custa atualizar a tabela dos metacaracteres:
 
