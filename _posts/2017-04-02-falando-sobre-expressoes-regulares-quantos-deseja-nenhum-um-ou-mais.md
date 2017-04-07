@@ -16,7 +16,9 @@ Primeiro, vamos fazer a regex capturar o protocolo http:
 
 ![imagem ilustrando matching da url do devsv com http]({{ "/img/posts/2017-04-02-matching-url-2.png" | prepend: site.baseurl }})
 
-Notem que é preciso escapar as barras após o "http:", uma vez que elas fazem parte da sintaxe do RegExr (tudo o que estiver entre as barras faz parte da expressão, portanto uma barra só é considerada literal se for escapada; esta sintaxe não é exclusividade do JavaScript, outras linguagens como Ruby e ferramentas como sed e vi também delimitam uma regex com barras).
+Notem que é preciso escapar as barras após o "http:", uma vez que elas fazem parte da sintaxe do RegExr (elas delimitam o início e o fim da expressão (análogo às aspas em volta das strings em muitas linguagens de programação), portanto uma barra só é considerada literal se for escapada; esta sintaxe não é exclusividade do JavaScript, outras linguagens como Ruby e ferramentas como sed e vi também delimitam uma regex com barras).
+
+~~P.S.: Sem querer eu fiz um _Inception_ de parênteses no parágrafo acima. Muito louco! Ahahaha!~~
 
 Próximo objetivo: aceitar o protocolo https:
 
@@ -64,11 +66,11 @@ Voltando ao nosso problema, o vulgo  _"qualquer coisa"_ pode ser escrito como `.
 
 ![imagem ilustrando matching de urls .com.br]({{ "/img/posts/2017-04-02-matching-url-5.png" | prepend: site.baseurl }})
 
-Parece bonito, mas tem um porém. O `.*` aceita **nenhuma** ocorrência de _"qualquer coisa"_, portanto a URL "http://www..com.br" é capturada no matching, veja:
+Parece bonito, mas tem um porém. O `.*` também aceita a **ausência** de _"qualquer coisa"_, portanto a URL "http://www..com.br" é capturada no matching, veja:
 
 ![imagem ilustrando matching da url www..com.br]({{ "/img/posts/2017-04-02-matching-url-6.png" | prepend: site.baseurl }})
 
-Existe um outro metacaractere, o `+` (mais), que faz com que a regex aceite **uma ou mais** repetições do elemento imediatamente anterior a ele. Muito parecido com o asterisco, a diferença é que ele **não** permite a ausência do elemento.
+Existe um outro metacaractere, o `+` (mais), que faz com que a regex aceite **uma ou mais** repetições do elemento imediatamente anterior a ele. Muito parecido com o asterisco, a diferença é que ele **não** tolera a ausência do elemento.
 
 Vejamos como ele se comporta em nossa regex:
 
@@ -122,4 +124,10 @@ Deixe-me apenas atualizar a tabela dos metacaracteres.
 Valeu pessoas! Bom café a todos!
 
 Falou...
+
+---
+
+<span>[Eu quero um Ponto Literal e ponto final! ![(anterior)]({{ "/img/icon/previous.png" | prepend: site.baseurl }})]({{ site.baseurl }}{% link _posts/2017-04-01-falando-sobre-expressoes-regulares-eu-quero-um-ponto-literal-e-ponto-final.md %})</span> <span class="pull-right">[![(próximo)]({{ "/img/icon/next.png" | prepend: site.baseurl }}) Se conselho fosse bom...]({{ site.baseurl }}{% link _posts/2017-04-03-falando-sobre-expressoes-regulares-se-conselho-fosse-bom.md %})</span>
+
+<br />
 
