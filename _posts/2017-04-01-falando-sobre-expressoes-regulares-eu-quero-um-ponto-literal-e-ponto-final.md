@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Falando sobre Expressões Regulares: Eu quero um ponto literal e ponto final!"
+title:  "Falando sobre Expressões Regulares: Eu quero um Ponto Literal e ponto final!"
 author: Eric Yuzo
 categories: regex
 ---
@@ -8,7 +8,7 @@ E aí pessoas!
 
 Estou de volta pra falar um pouco mais sobre os metacaracteres nas expressões regulares.
 
-No [último post]({{ site.baseurl }}{% link _posts/2017-03-31-falando-sobre-expressoes-regulares-primeiros-metacaracteres.md %}), eu mostrei o uso do ponto e dos colchetes. Pra hoje, a missão é fazer o matching com o domínio do blog: "www.devsv.com.br".
+A missão de hoje é criar uma regex que dê match com o domínio do blog: _"www.devsv.com.br"_.
 
 Deixem eu me adiantar e mostrar de vez uma solução:
 
@@ -68,4 +68,10 @@ No próximo post, começaremos a explorar melhor o poder das expressões regular
 Valeu pessoas! Até a próxima!
 
 Falou...
+
+---
+
+<span>[Primeiros Metacaracteres ![(anterior)]({{ "/img/icon/previous.png" | prepend: site.baseurl }})]({{ site.baseurl }}{% link _posts/2017-03-31-falando-sobre-expressoes-regulares-primeiros-metacaracteres.md %})</span> <span class="pull-right">[![(próximo)]({{ "/img/icon/next.png" | prepend: site.baseurl }}) Quantos deseja? Nenhum? Um? Ou mais?]({{ site.baseurl }}{% link _posts/2017-04-02-falando-sobre-expressoes-regulares-quantos-deseja-nenhum-um-ou-mais.md %})</span>
+
+<br />
 
