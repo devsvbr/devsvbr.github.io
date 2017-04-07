@@ -16,29 +16,29 @@ Pra ver um deles em ação, considere as frases abaixo:
 >
 > Eu não gosto de quem não usa acentos!
 
-Meu objetivo aqui, é encontrar todas as palavras "não" do texto. Até aqui, sem novidades, podemos especificar na regex a string que queremos encontrar:
+Meu objetivo aqui, é encontrar todas as palavras _"não"_ do texto. Até aqui, sem novidade, podemos especificar na regex a string que queremos encontrar:
 
 ![imagem ilustrando matching da regex "não"]({{ "/img/posts/2017-03-31-matching-nao-1.png" | prepend: site.baseurl }})
 
 O matching direto com literais funciona muito bem. Mas eu estou no Brasil, um país de todos, então não quero excluir o carinha que não curte acentos.
 
-Será que algum dos metacaracteres pode nos ajudar a capturar tanto o "não" quanto o "nao"?
+Será que algum caractere especial pode nos ajudar a capturar tanto o _"não"_ quanto o _"nao"_?
 
-Eu proponho um experimento: troque o "a" por "." (ponto) na regex e veja o que acontece:
+Eu proponho um experimento: troque o _"a"_ por _"."_ (ponto) na regex e veja o que acontece:
 
 ![imagem ilustrando matching da regex "n.o"]({{ "/img/posts/2017-03-31-matching-nao-2.png" | prepend: site.baseurl }})
 
-Hmmm... Muito bom, conseguimos capturar tanto o "não" quanto o "nao". Mas vejam só, chegamos no objetivo? Acho que não. Aquele "nto" não deveria fazer parte do matching! Conseguiu ver o que o ponto está fazendo?
+Hmmm... Muito bom, conseguimos capturar tanto o _"não"_ quanto o _"nao"_. Mas vejam só, chegamos no objetivo? Acho que não. Aquele _"nto"_ não deveria fazer parte do matching! Conseguiu ver o que o ponto está fazendo?
 
 Olhe atentamente quais foram os caracteres que deram match com o ponto:
 
 ![imagem ilustrando os matchings do ponto]({{ "/img/posts/2017-03-31-matching-nao-3.png" | prepend: site.baseurl }})
 
-O ponto está batendo com "a", com "ã" e com "t". E digo mais: ele bateria com qualquer outro caractere.
+O ponto está batendo com _"a"_, com _"ã"_ e com _"t"_. E digo mais: ele bateria com qualquer outro caractere.
 
 Este é o significado especial do metacaractere `.`. Ele bate com qualquer caractere.
 
-Podemos dizer que ele tem uma função semelhante à de uma variável. Na expressão matemática `5x + 2`, `x` pode assumir qualquer valor numérico. Já na expressão regular `n.o`, `.` pode assumir a forma de qualquer caractere.
+Podemos dizer que ele tem função semelhante à de uma variável. Na expressão matemática `5x + 2`, `x` pode assumir qualquer valor. Já na expressão regular `n.o`, `.` pode assumir a forma de qualquer caractere.
 
 Vemos que é possível escrever expressões bem mais flexíveis usando o ponto. Mas pro problema que queremos resolver, ele ainda é muito permissivo.
 
@@ -50,11 +50,11 @@ Pois existe um conjunto de metacaracteres, os **colchetes**, também chamados de
 
 ![imagem ilustrando matching da regex usando lista]({{ "/img/posts/2017-03-31-matching-nao-4.png" | prepend: site.baseurl }})
 
-Ahá! Agora sim! A regex está batendo apenas o "nao" e o "não".
+Ahá! Agora sim! A regex está batendo apenas o _"nao"_ e o _"não"_.
 
-Vale ressaltar que os colchetes são usados pra definir uma lista de caracteres que podem aparecer em **uma** determinada posição. Por exemplo, a expressão `[12345]0` define que a primeira posição pode ser qualquer um dos caracteres da lista, mas apenas um deles de cada vez, e a segunda posição deve ser obrigatoriamente "0". Ou seja, a regex `[12345]0` dá match apenas com umas das strings: "10", "20", "30", "40" ou "50".
+Vale ressaltar que os colchetes são usados pra definir uma lista de caracteres que podem aparecer em **uma** determinada posição. Por exemplo, a expressão `[12345]0` define que a primeira posição pode ser qualquer um dos caracteres da lista, mas apenas um deles de cada vez, e a segunda posição deve ser obrigatoriamente "0". Ou seja, a regex `[12345]0` dá match apenas com umas das sequências: _"10"_, _"20"_, _"30"_, _"40"_ ou _"50"_.
 
-Apesar da lista valer para capturar um único caractere, podemos usar quantas listas quisermos dentro da regex. Por exemplo, para aceitar que o "n[aã]o" inicie com "N" maiúsculo ou "n" minúsculo, basta adicionar outra lista:
+Apesar da lista valer para capturar um único caractere, podemos usar quantas listas quisermos dentro da regex. Por exemplo, para aceitar que o _"n[aã]o"_ inicie com _"N" maiúsculo_ ou _"n" minúsculo_, basta adicionar outra lista:
 
 ![imagem ilustrando matching da regex usando 2 listas]({{ "/img/posts/2017-03-31-matching-nao-5.png" | prepend: site.baseurl }})
 
@@ -88,7 +88,7 @@ Antes de mudar de assunto, eu quero mencionar algumas particularidades das lista
 
   ![imagem ilustrando matching da regex usando lista com metacaractere como literal]({{ "/img/posts/2017-03-31-colchetes-4.png" | prepend: site.baseurl }})
 
-Bom pessoas, por mim eu ficaria aqui escrevendo mais e mais coisas, deixaria este post grande, enorme, um monstro. Mas não quero publicar posts muito extensos. Então vou finalizar com uma tabela resumindo os metacaracteres vistos até o momento.
+Bom pessoas, por mim eu ficaria aqui escrevendo mais e mais coisas, deixaria este post grande, enorme, um monstro. Mas não quero publicar posts muito extensos. Então vou finalizar com uma tabela resumindo os metacaracteres que vimos hoje.
 
 <table class="table table-bordered">
   <thead>
@@ -109,4 +109,10 @@ Bom pessoas, por mim eu ficaria aqui escrevendo mais e mais coisas, deixaria est
 Valeu pessoas! Até a próxima!
 
 Falou...
+
+---
+
+<span>[Começando com Caracteres Literais ![(anterior)]({{ "/img/icon/previous.png" | prepend: site.baseurl }})]({{ site.baseurl }}{% link _posts/2017-03-30-falando-sobre-expressoes-regulares-comecando-com-caracteres-literais.md %})</span> <span class="pull-right">[![(próximo)]({{ "/img/icon/next.png" | prepend: site.baseurl }}) Eu quero um Ponto Literal e ponto final!]({{ site.baseurl }}{% link _posts/2017-04-01-falando-sobre-expressoes-regulares-eu-quero-um-ponto-literal-e-ponto-final.md %})</span>
+
+<br />
 

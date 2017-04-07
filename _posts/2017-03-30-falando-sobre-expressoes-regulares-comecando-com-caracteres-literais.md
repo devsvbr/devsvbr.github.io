@@ -12,7 +12,7 @@ A partir de agora, pra economizar teclas e aumentar a vida útil do meu teclado,
 
 Dados nomes e apelidos aos bois, é hora de conhecermos a ferramenta que fará parte das demonstrações.
 
-Eu fiquei pensando um pouco sobre qual seria a melhor ferramenta pra demonstrar na prática o funcionamento das expressões. Passou pela cabeça usar uma linguagem de programação, como _Python_, mas adicionaria um pré-requisito, que seria ter _Python_ instalado. Pensei também em mostrar os exemplos usando o _egrep_, mas quem usa _Windows_ teria que instalar algum emulador de ferramentas _Unix_. No fim, acabei encontrando uma plataforma bem interessante que me pareceu o modo mais acessível pra qualquer leitor do blog poder acompanhar os exemplos. Se trata do [RegExr](http://regexr.com/), uma plataforma para testes de regex online desenvolvida pelo [Grant Skinner](https://github.com/gskinner) (gostaria de poder fazer um comentário vibrante sobre ele agora, mas não conheço a peça, então fica pra próxima, sorry pal). Nela também é possível aprender mais sobre regex em um dos diversos guias presentes na própria plataforma.
+Eu fiquei pensando um pouco sobre qual seria a melhor ferramenta pra demonstrar na prática o funcionamento das expressões. Passou pela cabeça usar uma linguagem de programação, como _Python_, mas adicionaria um pré-requisito, que seria ter _Python_ instalado. Pensei também em mostrar os exemplos usando o _egrep_, mas quem usa _Windows_ teria que instalar algum emulador de ferramentas _Unix_. Por mais simples que seja a instalação de qualquer uma delas, eu queria uma solução ainda mais simples. No fim, acabei encontrando uma plataforma bem interessante que me pareceu o modo mais acessível pra qualquer leitor do blog poder acompanhar os exemplos. Se trata do [RegExr](http://regexr.com/), uma plataforma para testes de regex online desenvolvida pelo [Grant Skinner](https://github.com/gskinner) (gostaria de poder fazer um comentário vibrante sobre ele agora, mas não conheço a peça, então fica pra próxima, sorry pal). Nela também é possível aprender mais sobre regex em um dos diversos guias presentes na própria plataforma.
 
 Eu usarei o _RegExr_ durante as demonstrações dos conceitos. Apesar disto, nada impede que vocês usem qualquer outra ferramenta com suporte a expressões regulares.
 
@@ -22,11 +22,11 @@ Primeiro, permitam-me contar uma curiosidade sobre a minha região.
 
 Eu moro em São Vicente (SP), uma cidade da baixada santista. Aqui na baixada, nós vamos em qualquer padaria e pedimos um _pão de cará_, recebemos o produto e saímos felizes e contentes. ~~Vale ressaltar que na receita do nosso pão de cará não vai cará (isso mesmo, no pão de cará não tem cará, hahaha).~~ Legal! Se eu for pra cidade de São Paulo (lugar bacana, trabalhei por lá um tempo) e pedir um pão de cará, vão me olhar com uma cara esquisita e pensar que eu sou um retardado. Porque lá não existe esse negócio de pão de cará!
 
-Eu contei esta historinha porque no mundo das expressões regulares temos um fenômeno parecido. Eu havia mencionado que as expressões regulares estão em "tudo que é lugar", no sentido de que um grande conjunto de ferramentas e linguagens de programação fazem uso de regex. Dentro de uma regex, alguns termos tem significado especial, e existem termos especiais que estão presentes em algumas ferramentas, mas que simplesmente não existem (quero dizer, não tem nenhum significado especial) em outras ferramentas.
+Eu contei esta historinha porque no mundo das expressões regulares temos um fenômeno parecido. Eu havia mencionado que as expressões regulares estão em "tudo que é lugar", no sentido de que um grande conjunto de ferramentas e linguagens de programação suportam o uso de regex. Dentro de uma regex, alguns termos tem significado especial, e existem termos especiais que estão presentes em algumas ferramentas, mas que simplesmente não existem (quero dizer, não tem nenhum significado especial) em outras ferramentas.
 
 ![Ah, fala sério! Cada vez que eu mudar de ferramenta, vou ter que aprender uma sintaxe nova?]({{ "/img/posts/2017-03-30-fala-serio.png" | prepend: site.baseurl }})
 
-Nada de pânico! Existem sim algumas diferenças nos termos especiais, mas não é um caos generalizado. Assim como acontece em nosso idioma, há uma base central de termos fundamentais que são bem consistentes e usados da mesma maneira em todos os lugares. O importante é aprender esta base, que será suficiente pra fazer praticamente tudo. Os recursos especiais que uma ferramenta oferece costumam ser recursos adicionais que facilitam sua utilização.
+Nada de pânico! Existem sim algumas diferenças nos termos especiais, mas não é um caos generalizado. Assim como acontece em nosso idioma, há uma base central de termos fundamentais que são bem consistentes e usados da mesma maneira em todos os lugares. O importante é aprender esta base, que será suficiente pra fazer muita coisa (muita coisa mesmo). Os recursos especiais que uma ferramenta oferece costumam ser recursos adicionais que facilitam sua utilização.
 
 Sem mais delongas, hora de fazer matchings! \o/
 
@@ -59,4 +59,10 @@ Lindo, não? Pra hoje, já está de bom tamanho. No próximo post veremos alguns
 Valeu pessoas!
 
 Falou...
+
+---
+
+<span>[Introdução ![(anterior)]({{ "/img/icon/previous.png" | prepend: site.baseurl }})]({{ site.baseurl }}{% link _posts/2017-03-29-falando-sobre-expressoes-regulares-introducao.md %})</span> <span class="pull-right">[![(próximo)]({{ "/img/icon/next.png" | prepend: site.baseurl }}) Primeiros Metacaracteres]({{ site.baseurl }}{% link _posts/2017-03-31-falando-sobre-expressoes-regulares-primeiros-metacaracteres.md %})</span>
+
+<br />
 
