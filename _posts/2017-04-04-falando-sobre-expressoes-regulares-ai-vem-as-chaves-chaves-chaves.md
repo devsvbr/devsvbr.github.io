@@ -8,7 +8,7 @@ E aí pessoas!
 
 Ao longo dos últimos posts, estamos nos familiarizando com as expressões regulares enquanto criamos uma expressão que captura URLs. E a proposta pra hoje é seguir de onde paramos.
 
-Nossa regex está aceitando qualquer domínio escrito com letras de "a" a "z", desde que termine em ".com.br":
+Nossa regex está aceitando qualquer domínio escrito com letras de "a" a "z", desde que terminem em ".com.br":
 
 ![imagem ilustrando matching com urls .com.br]({{ "/img/posts/2017-04-04-matching-url-1.png" | prepend: site.baseurl }})
 
@@ -34,7 +34,7 @@ Show!
 
 Temos regras bem definidas e uma regex que nos atende muito bem. Mas um requisito não é um requisito se não sofrer nenhuma alteração no meio do projeto!
 
-O novo requisito diz que precisamos capturar também a URL da Universidade de Tóquio: "http://www.u-tokyo.ac.jp".
+O novo requisito diz que precisamos capturar também URLs no padrão da usada pela Universidade de Tóquio: "http://www.u-tokyo.ac.jp".
 
 Ela tem 2 características que impedem o match, um hífen no meio do nome do domínio e o penúltimo bloco com apenas 2 caracteres.
 
@@ -111,3 +111,10 @@ Antes de encerrar, não custa atualizar a tabela dos metacaracteres:
 Valeu pessoas!
 
 Falou...
+
+---
+
+<span>[Se conselho fosse bom... ![(anterior)]({{ "/img/icon/previous.png" | prepend: site.baseurl }})]({{ site.baseurl }}{% link _posts/2017-04-03-falando-sobre-expressoes-regulares-se-conselho-fosse-bom.md %})</span>
+
+<br />
+
