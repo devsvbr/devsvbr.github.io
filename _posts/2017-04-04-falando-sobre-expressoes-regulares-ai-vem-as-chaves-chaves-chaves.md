@@ -60,7 +60,7 @@ Mais uma vez recorremos as chaves. Desta vez com a sintaxe `c{n,}`, que quer diz
 
 Show! Maneiro! Maneiríssimo!
 
-O assunto dos quantificadores termina por aqui. Mas nossa regex de captura de URLs continuará fazendo parte do show por mais um post.
+Assim, conhecemos as três faces das chaves. No próximo post conheceremos um pouco da personalidade dos quantificadores.
 
 Antes de encerrar, não custa atualizar a tabela dos metacaracteres:
 
@@ -114,7 +114,7 @@ Falou...
 
 ---
 
-<span>[Se conselho fosse bom... ![(anterior)]({{ "/img/icon/previous.png" | prepend: site.baseurl }})]({{ site.baseurl }}{% link _posts/2017-04-03-falando-sobre-expressoes-regulares-se-conselho-fosse-bom.md %})</span>
+<span>[Se conselho fosse bom... ![(anterior)]({{ "/img/icon/previous.png" | prepend: site.baseurl }})]({{ site.baseurl }}{% link _posts/2017-04-03-falando-sobre-expressoes-regulares-se-conselho-fosse-bom.md %})</span> <span class="pull-right">[![(próximo)]({{ "/img/icon/next.png" | prepend: site.baseurl }}) Ela é gulosa... Estúpida!]({{ site.baseurl }}{% link _posts/2017-04-08-falando-sobre-expressoes-regulares-ela-e-gulosa-estupida.md %})</span>
 
 <br />
 
