@@ -6,7 +6,7 @@ menu: true
 permalink: /toc/
 ---
 
-Esta página concentra os links para os posts do blog organizados pelo conteúdo.
+Esta página contém a lista de links para os posts do blog organizados pelo conteúdo.
 
 ### Falando sobre Expressões Regulares
 
