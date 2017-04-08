@@ -18,9 +18,9 @@ Como de costume, hora de refletir...
 
 Eu já mostrei que o `?` tem a habilidade de tornar um elemento opcional. Mas não é bem isso que eu quero. Pensando bem até é, mas não com o limite de um único caractere. O que eu queria é que todo o bloco fosse opcional. Ou aparecem todos juntos, ou não aparece ninguém.
 
-Excelente... Já sabemos o que precisamos. Será que é possível fazer isso em uma regex?
+Sabemos o que queremos. É um excelente começo. A próxima questão é: será que é possível fazer isso em uma regex?
 
-Com certeza. Podemos utilizar os **parênteses** para **agrupar** elementos dentro da regex. Os grupos servem para determinar um **escopo** para outros operadores. Por exemplo, se colocarmos um quantificador após um grupo, seu efeito vale para **todo o grupo**, como se o grupo fosse um único elemento na expressão.
+Com certeza. Podemos utilizar os **parênteses** para **agrupar** elementos dentro da regex. Os grupos servem para determinar o **escopo** de alguns operadores. Por exemplo, se colocarmos um quantificador após um grupo, seu efeito vale para **todo o grupo**, como se o grupo fosse um único elemento na expressão.
 
 Já podemos atualizar nossa expressão. A ideia é agrupar o trecho final `\.[a-z]{2}` e torná-lo opcional:
 
@@ -38,7 +38,7 @@ Funciona que é uma beleza!... Mas pera um pouco! Viram aquilo?
 
 Hmmm... Um falso-positivo... Que beleza...
 
-Eu não vou alterar a regex pra parar de capturar este caso porque eu quero evitar a fadiga ~~(Os invejosos vão dizer que eu não sei resolver o problema)~~. Mas a análise da razão deste match será muito proveitosa para nós.
+Eu não vou alterar a regex pra parar de capturar este caso porque eu quero evitar a fadiga ~~(Os invejosos dirão que eu não sei resolver o problema)~~. Mas a análise da razão deste match será muito proveitosa para nós.
 
 Bora tentar entender o que aconteceu:
 
@@ -64,7 +64,7 @@ Quando digo que um quantificador é guloso, quero dizer que ele tenta capturar o
 
 Muito boa sacada!
 
-A questão é que uma expressão regular é bem-sucedida apenas se todos os seus componentes forem bem-sucedidos. Se qualquer parte integrante da expressão falhar, não haverá match nenhum.
+A questão é que uma expressão regular é bem-sucedida apenas se todos os seus componentes forem bem-sucedidos. Se qualquer parte integrante da expressão falhar em capturar o que deve, toda a expressão falha.
 
 Os quantificadores são gulosos, mas não são egoístas a ponto de sacrificar todo mundo apenas pra saciar sua gula. Se capturar o máximo possível significa condenar algum companheiro ao insucesso, o quantificador opta por capturar menos do que lhe é permitido.
 
