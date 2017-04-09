@@ -11,7 +11,7 @@
     - url: "https://github.com/silvafass"
       class: "github"
       title: "GitHub"
-  picture: "/img/members/chico.jpg"
+  picture: "/img/members/chico.jpeg"
   resume: "Sou formado como técnico em informática e estou cursando Análise e Desenvolvimento de Sistemas na FATEC. Tenho contato com a plataforma Java desde 2010, quando desenvolvi pequenos projetos, e venho atuando profissionalmente como desenvolvedor pelos últimos 5 anos. Apesar de ter mais contato com Java, tenho um crescente interesse na linguagem JavaScript, tanto no client quanto no server side com Node.js. Gosto bastante de estudar sobre arquitetura de software e tenho interesse em aprender mais sobre análise de dados."
 
 - name: Victor Santos
