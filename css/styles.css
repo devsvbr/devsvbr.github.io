@@ -31,6 +31,10 @@ a:hover, a:active {
   padding: 0px;
 }
 
+.title-logo img {
+  height: 48px;
+}
+
 li.page-menuitem > a {
   display: inline-block;
   padding: 6px 12px;
