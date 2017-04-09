@@ -151,7 +151,7 @@ Falou...
 
 ---
 
-<span>[Aí vem as Chaves... Chaves... Chaves... ![(anterior)]({{ "/img/icon/previous.png" | prepend: site.baseurl }})]({{ site.baseurl }}{% link _posts/2017-04-04-falando-sobre-expressoes-regulares-ai-vem-as-chaves-chaves-chaves.md %})</span>
+<span>[Aí vem as Chaves... Chaves... Chaves... <img class="previous-post" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({{ site.baseurl }}{% link _posts/2017-04-04-falando-sobre-expressoes-regulares-ai-vem-as-chaves-chaves-chaves.md %})</span>
 
 <br />
 
