@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Conteúdo
-icon: /img/nav/toc.png
+icon: /img/nav/toc.svg
 menu: true
 permalink: /toc/
 ---
