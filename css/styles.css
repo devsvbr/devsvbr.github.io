@@ -108,17 +108,18 @@ li.page-menuitem > a {
   height: 32px;
   text-indent: -9999px;
   outline: none;
+  background-image: url(/img/icons/social.png);
 }
 
 .rss {
-  background-image: url(/img/social/rss.png);
-}
-
-.github {
-  background-image: url(/img/social/github.png);
+  background-position: 0 0;
 }
 
 .twitter {
-  background-image: url(/img/social/twitter.png);
+  background-position: 0 -32px;
+}
+
+.github {
+  background-position: 0 -64px;
 }
 
