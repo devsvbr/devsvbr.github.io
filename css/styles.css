@@ -40,6 +40,10 @@ li.page-menuitem > a {
   padding: 6px 12px;
 }
 
+.page-menuitem img {
+  height: 36px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
