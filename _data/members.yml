@@ -3,7 +3,7 @@
     - url: "https://github.com/EricYuzo"
       class: "github"
       title: "GitHub"
-  picture: "/img/members/yuzo.jpg"
+  picture: "/img/members/yuzo.jpeg"
   resume: "Iniciei a carreira na área de instumentação e automação industrial, onde tive a oportunidade de criar meus primeiros programas no assembly do Z-80 (um processador de 8 bits da Zilog). Trabalhei um tempo em um integrador de sistemas, desenvolvendo soluções para automação industrial (CLPs, sistemas de supervisão). A partir daí comecei a me distanciar da linguagem de máquina e me aproximar da programação para PCs, foi quando comecei a estudar a linguagem Java (pauta dos meus posts na versão wordpress do blog). Atualmente tenho desenvolvido principalmente em Python, além disso tenho bash como forte aliado para auxiliar nas tarefas do dia a dia, brinco um pouco com R e tenho me aventurado na área de análise de dados com aprendizado de máquina. Por fim, como a vida não se resume só a programação, eu arrisco fazer uns desenhos, como esse da minha foto. =)"
 
 - name: Francisco Silva
