@@ -1,0 +1,4 @@
+<script>
+document.querySelector('.menu-button').onclick=function(){if(document.documentElement.classList.toggle('menu-active')){document.getElementById("main-menu").style.top=document.getElementById("nav-bar").offsetHeight+"px";}}
+document.documentElement.onclick=function(event){if(event.target===document.documentElement){document.documentElement.classList.remove('menu-active');}}
+</script>

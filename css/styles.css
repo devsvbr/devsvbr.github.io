@@ -4,8 +4,8 @@ html {
 }
 
 body {
-  padding-top: 80px;
-  padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 16px;
   background-color: #F6FAFD;
 }
 
@@ -22,10 +22,8 @@ a:hover, a:active {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 @media (min-width: 720px) {
   .container {
@@ -46,29 +44,6 @@ a:hover, a:active {
   .container {
     width: 60%;
   }
-}
-
-.navbar {
-  background-color: #030535;
-}
-
-.title-logo {
-  display: inline-block;
-  margin: 0px;
-  padding: 0px;
-}
-
-.title-logo img {
-  height: 48px;
-}
-
-li.page-menuitem > a {
-  display: inline-block;
-  padding: 6px 12px;
-}
-
-.page-menuitem img {
-  height: 36px;
 }
 
 .footer {
