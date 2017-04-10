@@ -1,0 +1,18 @@
+.previous-post {
+  display: block;
+  float:left;
+}
+.next-post {
+  display: block;
+  clear:left;
+}
+@media (min-width: 980px) {
+  .previous-post {
+    display: inline-block;
+    float:none;
+  }
+  .next-post {
+    float:right;
+    padding-bottom: 80px;
+  }
+}
