@@ -46,15 +46,15 @@ a:hover, a:active {
   }
 }
 
-.footer {
+.page-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 64px;
-  background-color: #D3EEFD;
+  background-color: #d3eefd;
 }
 
-.footer ul {
+.page-footer ul {
   margin: 16px 0;
 }
 
@@ -97,32 +97,6 @@ a:hover, a:active {
   .member-picture, .member-info {
     text-align: center;
   }
-}
-
-.social li {
-  display: inline-block;
-  margin-right: 1ch;
-}
-
-.social a {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  text-indent: -9999px;
-  outline: none;
-  background-image: url(/img/icons/social.png);
-}
-
-.rss {
-  background-position: 0 0;
-}
-
-.twitter {
-  background-position: 0 -32px;
-}
-
-.github {
-  background-position: 0 -64px;
 }
 
 .previous-post {
