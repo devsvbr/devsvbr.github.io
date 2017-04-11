@@ -3,9 +3,7 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
+// Variables
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -44,6 +42,7 @@ $member-img-size:  160px;
 $image-social:     url(/img/icons/social.png);
 
 
+// Mixins
 
 // Using media queries with like this:
 // @include media-query($palm) {
@@ -65,12 +64,12 @@ $image-social:     url(/img/icons/social.png);
 }
 
 
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
+        "header",
+        "footer",
         "layout",
-        "navbar",
         "syntax-highlighting",
         "social",
         "about"

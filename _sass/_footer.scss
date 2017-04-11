@@ -1,0 +1,13 @@
+/**
+ * Site footer
+ */
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-size;
+  background-color: $footer-color;
+}
+.page-footer ul {
+  margin: $base-font-size 0;
+}
