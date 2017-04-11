@@ -1,10 +1,6 @@
 /**
  * Links to Social Networks
  */
-.social li {
-  display: inline-block;
-  margin-right: 1ch;
-}
 .social a {
   display: inline-block;
   width: 32px;
@@ -12,10 +8,6 @@
   text-indent: -9999px;
   outline: none;
   background-image: $image-social;
-}
-
-.page-footer .social {
-  float: right;
 }
 
 /**

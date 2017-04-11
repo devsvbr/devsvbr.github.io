@@ -1,0 +1,45 @@
+/**
+ * Content Menu
+ */
+.page-menuitem:hover {
+  background-color: lighten($navbar-color, 10%);
+}
+.page-menuitem img {
+  height: $menuitem-size;
+  padding: (($logo-size - $menuitem-size) / 2) 0;
+}
+
+/**
+ * Post Navigation Button
+ */
+.previous-post {
+    display: block;
+    float:left;
+}
+.next-post {
+    display: block;
+    clear:left;
+}
+@include media-query-min($medium-scr) {
+    .previous-post {
+        display: inline-block;
+        float:none;
+    }
+    .next-post {
+        float:right;
+        padding-bottom: $footer-size + $base-font-size;
+    }
+}
+
+.icon32 {
+  width: 32px;
+  height: 32px;
+}
+.flipped {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
