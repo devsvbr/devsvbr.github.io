@@ -197,7 +197,7 @@
     margin-bottom: $spacing-unit;
 }
 
-.post-title {
+.title, .post-title, .page-title {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
@@ -207,7 +207,7 @@
     }
 }
 
-.post-content {
+.post-content, .page-content {
     margin-bottom: $spacing-unit;
 
     h2 {
