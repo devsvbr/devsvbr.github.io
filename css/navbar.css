@@ -36,6 +36,10 @@
   display: inline-block;
 }
 
+.page-menuitem:hover {
+  background-color: #363868;
+}
+
 .page-menuitem img {
   height: 36px;
   padding: 6px 0;
