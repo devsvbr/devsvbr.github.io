@@ -165,11 +165,13 @@ pre {
   display: inline-block;
   margin: 0;
   padding: 0;
+  height: $navbar-size;
 }
 .logo img {
   height: $logo-size;
 }
 .logo a {
+  display:inline-block;
   color: $footer-color;
 }
 
