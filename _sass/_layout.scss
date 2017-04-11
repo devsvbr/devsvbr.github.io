@@ -188,6 +188,31 @@
     font-size: 24px;
 }
 
+.container {
+  padding: 0 ($spacing-unit / 2);
+  margin: 0 auto;
+}
+@include media-query-min($small-scr) {
+  .container {
+    width: 90%;
+  }
+}
+@include media-query-min($medium-scr) {
+  .container {
+    width: 80%;
+  }
+}
+@include media-query-min($large-scr) {
+  .container {
+    width: 70%;
+  }
+}
+@include media-query-min($verylarge-scr) {
+  .container {
+    width: 60%;
+  }
+}
+
 
 
 /**
