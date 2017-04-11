@@ -25,6 +25,14 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
+$small-scr:        720px;
+$medium-scr:       980px;
+$large-scr:        1280px;
+$verylarge:        1440px;
+
+$navbar-size:      50px;
+$footer-size:      64px;
+
 
 
 // Using media queries with like this:
@@ -36,6 +44,19 @@ $on-laptop:        800px;
 // }
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+// Using media queries with like this:
+// @include media-query-min($palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query-min($device) {
+    @media (min-width: $device) {
         @content;
     }
 }
