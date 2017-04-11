@@ -66,6 +66,9 @@
   box-sizing: border-box;
   box-shadow: inset 0 0 0.4em $footer-color;
 }
+.menu-button:hover {
+  cursor: pointer;
+}
 
 .button-icon {
   display: block;
