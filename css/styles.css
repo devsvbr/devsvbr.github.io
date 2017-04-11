@@ -1,26 +1,3 @@
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  padding-top: 50px;
-  padding-bottom: 16px;
-  background-color: #f6fafd;
-}
-
-p {
-  text-align: justify;
-}
-
-a:link, a:visited {
-  color: #2a7ae2;
-}
-
-a:hover, a:active {
-  color: red;
-}
-
 .container {
   padding: 0 15px;
   margin: 0 auto;

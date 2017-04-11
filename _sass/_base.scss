@@ -13,6 +13,11 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -21,6 +26,8 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    padding-top: 50px;
+    padding-bottom: 16px;
 }
 
 
@@ -33,6 +40,15 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Set paragraph alignment
+ */
+p {
+    text-align: justify;
 }
 
 
@@ -92,12 +108,12 @@ a {
     color: $brand-color;
     text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
+    &:link, &:visited {
+        color: $brand-color;
     }
 
-    &:hover {
-        color: $text-color;
+    &:hover, &:active {
+        color: $ahover-color;
         text-decoration: underline;
     }
 }
