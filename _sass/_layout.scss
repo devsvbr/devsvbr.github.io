@@ -225,3 +225,17 @@
         padding-bottom: $footer-size + $base-font-size;
     }
 }
+
+.icon32 {
+  width: 32px;
+  height: 32px;
+}
+
+.flipped {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
