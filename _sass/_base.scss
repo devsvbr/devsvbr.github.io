@@ -26,8 +26,8 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
-    padding-top: 50px;
-    padding-bottom: 16px;
+    padding-top: $navbar-size;
+    padding-bottom: $base-font-size;
 }
 
 
