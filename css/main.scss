@@ -35,6 +35,8 @@ $verylarge-scr:    1440px;
 $navbar-size:      50px;
 $footer-size:      64px;
 
+$image-social:     url(/img/icons/social.png);
+
 
 
 // Using media queries with like this:
@@ -69,5 +71,6 @@ $footer-size:      64px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "social"
 ;

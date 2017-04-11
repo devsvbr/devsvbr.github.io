@@ -1,3 +1,6 @@
+/**
+ * Links to Social Networks
+ */
 .social li {
   display: inline-block;
   margin-right: 1ch;
@@ -9,13 +12,18 @@
   height: 32px;
   text-indent: -9999px;
   outline: none;
-  background-image: url(/img/icons/social.png);
+  background-image: $image-social;
 }
 
 .page-footer .social {
   float: right;
 }
 
+
+
+/**
+ * Icon Image
+ */
 .rss {
   background-position: 0 0;
 }
