@@ -17,6 +17,7 @@ $text-color:       #111;
 $background-color: #f6fafd;
 $brand-color:      #2a7ae2;
 $ahover-color:     red;
+$navbar-color:     #030535;
 $footer-color:     #d3eefd;
 $th-color:         #e2f4fe;
 
@@ -34,6 +35,10 @@ $verylarge-scr:    1440px;
 
 $navbar-size:      50px;
 $footer-size:      64px;
+$logo-size:        48px;
+$menuitem-size:    36px;
+$menubutton-size:  40px;
+$menu-max-size:    320px;
 $member-img-size:  160px;
 
 $image-social:     url(/img/icons/social.png);
@@ -65,6 +70,7 @@ $image-social:     url(/img/icons/social.png);
 @import
         "base",
         "layout",
+        "navbar",
         "syntax-highlighting",
         "social",
         "about"
