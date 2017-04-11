@@ -1,2 +1,4 @@
-<script src="/js/vendor/jquery-1.12.0.min.js"></script>
-<script src="/js/vendor/bootstrap-3.3.6.min.js"></script>
+<script>
+document.querySelector('.menu-button').onclick=function(){if(document.documentElement.classList.toggle('menu-active')){document.getElementById("nav-menu").style.top=document.getElementById("navbar").offsetHeight+"px";}}
+document.documentElement.onclick=function(event){if(event.target===document.documentElement){document.documentElement.classList.remove('menu-active');}}
+</script>

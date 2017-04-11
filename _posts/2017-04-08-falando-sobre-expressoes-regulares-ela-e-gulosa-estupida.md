@@ -88,7 +88,7 @@ Pois é, hora de desapegar. No próximo post, escreveremos novas expressões e c
 
 Mas não posso fechar o post antes de atualizar da tabela de operadores:
 
-<table class="table table-bordered">
+<table class="table">
   <thead>
     <tr>
       <th colspan="3">Itens que batem com um caractere</th>
@@ -151,7 +151,4 @@ Falou...
 
 ---
 
-<span>[Aí vem as Chaves... Chaves... Chaves... <img class="previous-post" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({{ site.baseurl }}{% link _posts/2017-04-04-falando-sobre-expressoes-regulares-ai-vem-as-chaves-chaves-chaves.md %})</span>
-
-<br />
-
+<span class="previous-post">[Aí vem as Chaves... Chaves... Chaves... <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({{ site.baseurl }}{% link _posts/2017-04-04-falando-sobre-expressoes-regulares-ai-vem-as-chaves-chaves-chaves.md %})</span>

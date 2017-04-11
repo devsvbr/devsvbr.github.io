@@ -68,7 +68,4 @@ Falou...
 
 ---
 
-<span>[Quantos deseja? Nenhum? Um? Ou mais? <img class="previous-post" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({{ site.baseurl }}{% link _posts/2017-04-02-falando-sobre-expressoes-regulares-quantos-deseja-nenhum-um-ou-mais.md %})</span> <span class="pull-right">[<img class="next-post" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Aí vem as Chaves... Chaves... Chaves...]({{ site.baseurl }}{% link _posts/2017-04-04-falando-sobre-expressoes-regulares-ai-vem-as-chaves-chaves-chaves.md %})</span>
-
-<br />
-
+<span class="previous-post">[Quantos deseja? Nenhum? Um? Ou mais? <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({{ site.baseurl }}{% link _posts/2017-04-02-falando-sobre-expressoes-regulares-quantos-deseja-nenhum-um-ou-mais.md %})</span> <span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Aí vem as Chaves... Chaves... Chaves...]({{ site.baseurl }}{% link _posts/2017-04-04-falando-sobre-expressoes-regulares-ai-vem-as-chaves-chaves-chaves.md %})</span>

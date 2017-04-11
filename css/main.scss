@@ -3,9 +3,7 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
+// Variables
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -14,8 +12,12 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
+$background-color: #f6fafd;
 $brand-color:      #2a7ae2;
+$ahover-color:     red;
+$navbar-color:     #030535;
+$footer-color:     #d3eefd;
+$th-color:         #e2f4fe;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -24,7 +26,23 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
+$small-scr:        720px;
+$medium-scr:       980px;
+$large-scr:        1280px;
+$verylarge-scr:    1440px;
 
+$navbar-size:      50px;
+$footer-size:      64px;
+$logo-size:        48px;
+$menuitem-size:    36px;
+$menubutton-size:  40px;
+$menu-max-size:    320px;
+$member-img-size:  160px;
+
+$image-social:     url(/img/icons/social.png);
+
+
+// Mixins
 
 // Using media queries with like this:
 // @include media-query($palm) {
@@ -39,11 +57,20 @@ $on-laptop:        800px;
     }
 }
 
+@mixin media-query-min($device) {
+    @media (min-width: $device) {
+        @content;
+    }
+}
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
-        "layout",
+        "header",
+        "footer",
+        "social",
+        "page",
+        "about",
         "syntax-highlighting"
 ;

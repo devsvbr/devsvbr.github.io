@@ -1,0 +1,32 @@
+/**
+ * Links to Social Networks
+ */
+.social li {
+  display: inline-block;
+  margin-right: 1ch;
+}
+.social a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  outline: none;
+  background-image: $image-social;
+}
+
+.page-footer .social {
+  float: right;
+}
+
+/**
+ * Icon Image
+ */
+.rss {
+  background-position: 0 0;
+}
+.twitter {
+  background-position: 0 -32px;
+}
+.github {
+  background-position: 0 -64px;
+}

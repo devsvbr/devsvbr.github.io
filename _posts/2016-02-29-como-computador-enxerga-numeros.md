@@ -18,7 +18,7 @@ E responda duas perguntas:
 
 Você não deve ter tido dificuldade para responder que são 6 moedas e que seu valor somado é de 110 centavos (ou R$ 1,10).
 
-Mostrei essa mesma foto e fiz as mesmas perguntas pra alguns amigos e a resposta foi a mesma. Todos acertaram e acharam extremamente fácil, assim como eu esperava. <del>O mais surpreendente foi que todos pensaram que eu estava tentando sacaneá-los com algum tipo de pegadinha. Não entendi por que pensaram isso, mas também não vem ao caso, vamos esquecer este detalhe...</del>
+Mostrei essa mesma foto e fiz as mesmas perguntas pra alguns amigos e a resposta foi a mesma. Todos acertaram e acharam extremamente fácil, assim como eu esperava. ~~O mais surpreendente foi que todos pensaram que eu estava tentando sacaneá-los com algum tipo de pegadinha. Não entendi por que pensaram isso, mas também não vem ao caso, vamos esquecer este detalhe...~~
 
 O fato é que nos acostumamos a contar e somar números desde pequenos. Por isso, executamos essas tarefas no modo automático e, muitas vezes, nem sabemos explicar como fazemos. É algo que simplesmente fazemos.
 
@@ -27,7 +27,7 @@ O fato é que nos acostumamos a contar e somar números desde pequenos. Por isso
 
 Pensando de forma mais técnica, podemos dizer que representamos números no sistema de numeração decimal. Ele recebe este nome por utilizar dez algarismos (0, 1, 2, 3, 4, 5, 6, 7, 8 e 9) para codificar os números. Por possuir 10 algarismos, podemos dizer também, que sua base é 10. Deste modo, para representar números maiores que 9, combinamos algarismos que podem valer mais ou valer menos de acordo com sua posição. O valor de posição é definido pelas potências de base 10:
 
-<table class="table table-bordered text-center">
+<table class="table text-center">
   <tbody>
     <tr>
       <td>10<sup>3</sup></td><td>10<sup>2</sup></td><td>10<sup>1</sup></td><td>10<sup>0</sup></td><td>10<sup>-1</sup></td><td>10<sup>-2</sup></td><td>10<sup>-3</sup></td>
@@ -55,7 +55,7 @@ O sistema de numeração que utiliza apenas dois dígitos (0 e 1) para codificar
 
 O sistema binário segue a mesma lógica do sistema decimal. Porém, os números são formados pela combinação dos dígitos 0 e/ou 1 e os valores de posição são definidos por potências de base 2:
 
-<table class="table table-bordered text-center">
+<table class="table text-center">
   <tbody>
     <tr>
       <td>2<sup>6</sup></td><td>2<sup>5</sup></td><td>2<sup>4</sup></td><td>2<sup>3</sup></td><td>2<sup>2</sup></td><td>2<sup>1</sup></td><td>2<sup>0</sup></td>

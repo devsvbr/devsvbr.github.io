@@ -8,11 +8,13 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -21,9 +23,9 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    padding-top: $navbar-size;
+    padding-bottom: $base-font-size;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -35,7 +37,12 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
+/**
+ * Set paragraph alignment
+ */
+p {
+    text-align: justify;
+}
 
 /**
  * Images
@@ -44,8 +51,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -57,8 +62,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
@@ -74,16 +77,12 @@ li {
     }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
-
-
 
 /**
  * Links
@@ -92,17 +91,15 @@ a {
     color: $brand-color;
     text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
+    &:link, &:visited {
+        color: $brand-color;
     }
 
-    &:hover {
-        color: $text-color;
+    &:hover, &:active {
+        color: $ahover-color;
         text-decoration: underline;
     }
 }
-
-
 
 /**
  * Blockquotes
@@ -119,8 +116,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
-
 
 /**
  * Code formatting
@@ -148,8 +143,6 @@ pre {
     }
 }
 
-
-
 /**
  * Wrapper
  */
@@ -170,8 +163,6 @@ pre {
     }
 }
 
-
-
 /**
  * Clearfix
  */
@@ -183,8 +174,6 @@ pre {
         clear: both;
     }
 }
-
-
 
 /**
  * Icons

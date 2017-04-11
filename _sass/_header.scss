@@ -1,0 +1,118 @@
+/**
+ * Site header
+ */
+.site-header {
+  background-color: $navbar-color;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: $navbar-size;
+  z-index: 8000;
+}
+
+/**
+ * DevSV Logo
+ */
+.logo {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.logo img {
+  height: $logo-size;
+}
+
+/**
+ * Content Menu
+ */
+.menu {
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+.menu > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-menuitem {
+  display: inline-block;
+}
+.page-menuitem:hover {
+  background-color: lighten($navbar-color, 10%);
+}
+.page-menuitem img {
+  height: $menuitem-size;
+  padding: (($logo-size - $menuitem-size) / 2) 0;
+}
+
+/**
+ * Mobile Content Menu
+ */
+.menu-button {
+  display: block;
+  float: left;
+  background-color: $navbar-color;
+  border: solid 1px $footer-color;
+  border-radius: 15%;
+  padding: 0;
+  margin: ($logo-size - $menubutton-size) / 2;
+  width: $menubutton-size;
+  height: $menubutton-size;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0.4em $footer-color;
+}
+.menu-button:hover {
+  cursor: pointer;
+}
+.button-icon {
+  display: block;
+  border-top: 12px double $footer-color;
+  border-bottom: 4px solid $footer-color;
+  width: 24px;
+  height: 20px;
+  margin: 9px 7px;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: $on-palm) {
+  .menu {
+    background-color: $navbar-color;
+    height: 100%;
+    width: 80%;
+    max-width: $menu-max-size;
+    position: fixed;
+    z-index: 1;
+    top: $navbar-size;
+    left: -100%;
+    transition: left 0.3s ease-out;
+  }
+  .menu-active .menu {
+    left: 0;
+  }
+  .menu-active:after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: $navbar-size;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.4);
+  }
+  .page-menuitem {
+      display: block;
+  }
+}
+@media not all and (max-width: $on-palm) {
+  .menu-button {
+    display: none;
+  }
+}
