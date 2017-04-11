@@ -94,6 +94,9 @@
     left: -100%;
     transition: left 0.3s ease-out;
   }
+  .menu-active .menu-button {
+    background-color: lighten($navbar-color, 20%);
+  }
   .menu-active .menu {
     left: 0;
   }
