@@ -239,3 +239,18 @@
   filter: FlipH;
   -ms-filter: "FlipH";
 }
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.table th, .table td {
+  border: 1px solid $grey-color-light;
+  padding: 0.5em;
+  text-align: left;
+}
+.table > thead > tr > th,
+.table > thead > tr > td {
+  background-color: $th-color;
+}
