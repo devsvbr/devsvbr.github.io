@@ -6,7 +6,7 @@ html {
 body {
   padding-top: 50px;
   padding-bottom: 16px;
-  background-color: #F6FAFD;
+  background-color: #f6fafd;
 }
 
 p {
@@ -14,7 +14,7 @@ p {
 }
 
 a:link, a:visited {
-  color: #2A7AE2;
+  color: #2a7ae2;
 }
 
 a:hover, a:active {
@@ -70,4 +70,21 @@ a:hover, a:active {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.table th, .table td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  text-align: left;
+}
+
+.table > thead > tr > th,
+.table > thead > tr > td {
+  background-color: #e2f4fe;
 }

@@ -64,7 +64,7 @@ Assim, conhecemos as três faces das chaves. No próximo post conheceremos um po
 
 Antes de encerrar, não custa atualizar a tabela dos metacaracteres:
 
-<table class="table table-bordered">
+<table class="table">
   <thead>
     <tr>
       <th colspan="3">Itens que batem com um caractere</th>

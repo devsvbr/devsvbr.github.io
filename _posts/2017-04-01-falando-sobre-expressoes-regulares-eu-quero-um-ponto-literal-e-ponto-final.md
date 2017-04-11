@@ -44,7 +44,7 @@ Como viram, com a barra invertida na frente, o ponto bateu apenas com ponto. O m
 
 Pra fechar, deixo a versão atualizada da tabela com os metacaracteres que vimos até agora:
 
-<table class="table table-bordered">
+<table class="table">
   <thead>
     <tr>
       <th>Metacaractere</th><th>Nome</th><th>Função</th>

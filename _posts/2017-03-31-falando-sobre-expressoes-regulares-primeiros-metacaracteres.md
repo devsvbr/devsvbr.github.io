@@ -90,7 +90,7 @@ Antes de mudar de assunto, eu quero mencionar algumas particularidades das lista
 
 Bom pessoas, por mim eu ficaria aqui escrevendo mais e mais coisas, deixaria este post grande, enorme, um monstro. Mas não quero publicar posts muito extensos. Então vou finalizar com uma tabela resumindo os metacaracteres que vimos hoje.
 
-<table class="table table-bordered">
+<table class="table">
   <thead>
     <tr>
       <th>Metacaractere</th><th>Nome</th><th>Função</th>

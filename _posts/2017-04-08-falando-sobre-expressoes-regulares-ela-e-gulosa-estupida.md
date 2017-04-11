@@ -88,7 +88,7 @@ Pois é, hora de desapegar. No próximo post, escreveremos novas expressões e c
 
 Mas não posso fechar o post antes de atualizar da tabela de operadores:
 
-<table class="table table-bordered">
+<table class="table">
   <thead>
     <tr>
       <th colspan="3">Itens que batem com um caractere</th>

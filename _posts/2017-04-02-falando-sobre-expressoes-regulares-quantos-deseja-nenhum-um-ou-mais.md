@@ -80,7 +80,7 @@ Legal! Estamos conseguindo deixar nossa regex cada vez mais genérica. E vamos m
 
 Deixe-me apenas atualizar a tabela dos metacaracteres.
 
-<table class="table table-bordered">
+<table class="table">
   <thead>
     <tr>
       <th colspan="3">Itens que batem com um caractere</th>
