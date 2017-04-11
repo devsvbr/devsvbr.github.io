@@ -8,7 +8,6 @@
   margin-right: auto;
   overflow: hidden;
 }
-
 @include media-query-min($medium-scr) {
   .members {
     width: 90%;
@@ -24,7 +23,6 @@
   list-style: none;
   overflow: hidden;
 }
-
 .member:nth-last-child(n+2) {
   background-image: linear-gradient(to right, transparent, $footer-color, transparent);
   background-size: 100% 2px;
@@ -46,7 +44,6 @@
     clear: left;
   }
 }
-
 .member-picture > img {
   max-width: $member-img-size;
   width: 100%;
@@ -70,19 +67,16 @@
     clear: right;
   }
 }
-
 .member-info > h3 {
   font-size: 1.2em;
   font-weight: bold;
   margin: 0;
   padding: 0;
 }
-
 .member-info > ul {
   margin: 0;
   padding: 0;
 }
-
 .member-info > p {
   margin: 1em 0 0 0;
 }

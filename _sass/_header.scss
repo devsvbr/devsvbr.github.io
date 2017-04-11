@@ -69,7 +69,6 @@
 .menu-button:hover {
   cursor: pointer;
 }
-
 .button-icon {
   display: block;
   border-top: 12px double $footer-color;
@@ -112,7 +111,6 @@
       display: block;
   }
 }
-
 @media not all and (max-width: $on-palm) {
   .menu-button {
     display: none;

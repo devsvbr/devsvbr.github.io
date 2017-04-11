@@ -1,33 +1,6 @@
 /**
- * Page content
+ * Container boundaries
  */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
-    font-size: 20px;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
-    display: block;
-    font-size: 24px;
-}
-
 .container {
   padding: 0 ($spacing-unit / 2);
   margin: 0 auto;
@@ -53,7 +26,32 @@
   }
 }
 
+/**
+ * Page content
+ */
+.page-content {
+    padding: $spacing-unit 0;
+}
+.page-heading {
+    font-size: 20px;
+}
 
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+.post-link {
+    display: block;
+    font-size: 24px;
+}
 
 /**
  * Posts
@@ -100,6 +98,31 @@
     }
 }
 
+/**
+ * Table
+ */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.table th, .table td {
+  border: 1px solid $grey-color-light;
+  padding: 0.5em;
+  text-align: left;
+}
+.table > thead > tr > th,
+.table > thead > tr > td {
+  background-color: $th-color;
+}
+.table.text-center th,
+.table.text-center td {
+  text-align: center;
+}
+
+/**
+ * Post Navigation Button
+ */
 .previous-post {
     display: block;
     float:left;
@@ -130,23 +153,4 @@
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
-}
-
-.table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 1em;
-}
-.table th, .table td {
-  border: 1px solid $grey-color-light;
-  padding: 0.5em;
-  text-align: left;
-}
-.table > thead > tr > th,
-.table > thead > tr > td {
-  background-color: $th-color;
-}
-.table.text-center th,
-.table.text-center td {
-  text-align: center;
 }
