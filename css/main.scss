@@ -66,11 +66,8 @@ $image-social:     url(/img/icons/social.png);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "header",
-        "footer",
+        "layout",
         "social",
-        "page",
-        "about",
-        "syntax-highlighting"
+        "about"
+//        "syntax-highlighting"
 ;
