@@ -4,27 +4,27 @@
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /**
  * Basic styling
  */
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-    padding-top: $navbar-size;
-    padding-bottom: $base-font-size;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  padding-top: $navbar-size;
+  padding-bottom: $base-font-size;
 }
 
 /**
@@ -33,113 +33,112 @@ body {
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
-    margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
 }
 
 /**
  * Set paragraph alignment
  */
 p {
-    text-align: justify;
+  text-align: justify;
 }
 
 /**
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 /**
  * Figures
  */
 figure > img {
-    display: block;
+  display: block;
 }
 
 figcaption {
-    font-size: $small-font-size;
+  font-size: $small-font-size;
 }
 
 /**
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+  margin-left: $spacing-unit;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }
 
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 /**
  * Links
  */
 a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:link, &:visited {
     color: $brand-color;
-    text-decoration: none;
+  }
 
-    &:link, &:visited {
-        color: $brand-color;
-    }
-
-    &:hover, &:active {
-        color: $ahover-color;
-        text-decoration: underline;
-    }
+  &:hover, &:active {
+    color: $ahover-color;
+    text-decoration: underline;
+  }
 }
 
 /**
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 /**
  * Code formatting
  */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+pre, code {
+  font-size: 15px;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eef;
 }
 
 code {
-    padding: 1px 5px;
+  padding: 1px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
+  padding: 8px 12px;
+  overflow-x: scroll;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 /**
@@ -165,13 +164,11 @@ pre {
   margin: 0;
   padding: 0;
   height: $navbar-size;
-}
-.logo img {
-  height: $logo-size;
-}
-.logo a {
-  display:inline-block;
-  color: $footer-color;
+
+  a {
+    display:inline-block;
+    color: $footer-color;
+  }
 }
 
 /**
@@ -181,15 +178,18 @@ pre {
   float: right;
   padding: 0;
   margin: 0;
+
+  > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    color: $footer-color;
+  }
 }
-.menu > ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.menu a {
-  color: $footer-color;
-}
+
 .page-menuitem {
   display: inline-block;
 }
@@ -209,9 +209,10 @@ pre {
   height: $menubutton-size;
   box-sizing: border-box;
   box-shadow: inset 0 0 0.4em $footer-color;
-}
-.menu-button:hover {
-  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 .button-icon {
   display: block;
@@ -238,21 +239,23 @@ pre {
     left: -100%;
     transition: left 0.3s ease-out;
   }
-  .menu-active .menu-button {
-    background-color: lighten($navbar-color, 20%);
-  }
-  .menu-active .menu {
-    left: 0;
-  }
-  .menu-active:after {
-    content: "";
-    display: block;
-    position: fixed;
-    top: $navbar-size;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0,0,0,0.4);
+  .menu-active {
+    .menu-button {
+      background-color: lighten($navbar-color, 20%);
+    }
+    .menu {
+      left: 0;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: fixed;
+      top: $navbar-size;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0,0,0,0.4);
+    }
   }
   .page-menuitem {
       display: block;
@@ -273,9 +276,10 @@ pre {
   width: 100%;
   height: $footer-size;
   background-color: $footer-color;
-}
-.page-footer ul {
-  margin: $base-font-size 0;
+
+  ul {
+    margin: $base-font-size 0;
+  }
 }
 
 /**
@@ -295,24 +299,17 @@ pre {
 .container {
   padding: 0 ($spacing-unit / 2);
   margin: 0 auto;
-}
-@include media-query-min($small-scr) {
-  .container {
+
+  @include media-query-min($small-scr) {
     width: 90%;
   }
-}
-@include media-query-min($medium-scr) {
-  .container {
+  @include media-query-min($medium-scr) {
     width: 80%;
   }
-}
-@include media-query-min($large-scr) {
-  .container {
+  @include media-query-min($large-scr) {
     width: 70%;
   }
-}
-@include media-query-min($verylarge-scr) {
-  .container {
+  @include media-query-min($verylarge-scr) {
     width: 60%;
   }
 }
@@ -321,72 +318,72 @@ pre {
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+  padding: $spacing-unit 0;
 }
 .page-heading {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .post-list {
-    margin-left: 0;
-    list-style: none;
+  margin-left: 0;
+  list-style: none;
 
-    > li {
-        margin-bottom: $spacing-unit;
-    }
+  > li {
+    margin-bottom: $spacing-unit;
+  }
 }
 .post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
+  font-size: $small-font-size;
+  color: $grey-color;
 }
 .post-link {
-    display: block;
-    font-size: 24px;
+  display: block;
+  font-size: 24px;
 }
 
 /**
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit;
 }
 
 .title, .post-title, .page-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
+  font-size: 42px;
+  letter-spacing: -1px;
+  line-height: 1;
 
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
+  @include media-query($on-laptop) {
+    font-size: 36px;
+  }
 }
 
 .post-content, .page-content {
-    margin-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit;
 
-    h2 {
-        font-size: 32px;
+  h2 {
+    font-size: 32px;
 
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
+    @include media-query($on-laptop) {
+      font-size: 28px;
     }
+  }
 
-    h3 {
-        font-size: 26px;
+  h3 {
+    font-size: 26px;
 
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
+    @include media-query($on-laptop) {
+      font-size: 22px;
     }
+  }
 
-    h4 {
-        font-size: 20px;
+  h4 {
+    font-size: 20px;
 
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
+    @include media-query($on-laptop) {
+      font-size: 18px;
     }
+  }
 }
 
 /**
@@ -396,17 +393,20 @@ pre {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1em;
-}
-.table th, .table td {
-  border: 1px solid $grey-color-light;
-  padding: 0.5em;
-  text-align: left;
-}
-.table > thead > tr > th,
-.table > thead > tr > td {
-  background-color: $th-color;
-}
-.table.text-center th,
-.table.text-center td {
-  text-align: center;
+
+  th, td {
+    border: 1px solid $grey-color-light;
+    padding: 0.5em;
+    text-align: left;
+  }
+
+  > thead > tr > th,
+  > thead > tr > td {
+    background-color: $th-color;
+  }
+
+  &.text-center th,
+  &.text-center td {
+    text-align: center;
+  }
 }
