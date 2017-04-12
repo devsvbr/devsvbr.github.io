@@ -3,8 +3,8 @@
  */
 .social a {
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: $social-icon-size;
+  height: $social-icon-size;
   text-indent: -9999px;
   outline: none;
   background-image: $image-social;
@@ -17,8 +17,8 @@
   background-position: 0 0;
 }
 .twitter {
-  background-position: 0 -32px;
+  background-position: 0 (-$social-icon-size);
 }
 .github {
-  background-position: 0 -64px;
+  background-position: 0 (-$social-icon-size * 2);
 }
