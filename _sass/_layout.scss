@@ -1,9 +1,6 @@
 /**
  * Content Menu
  */
-.page-menuitem:hover {
-  background-color: lighten($navbar-color, 10%);
-}
 .page-menuitem img {
   height: $menuitem-size;
   padding: (($logo-size - $menuitem-size) / 2) 0;
