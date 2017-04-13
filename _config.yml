@@ -9,3 +9,9 @@ twitter_username: devsvbr
 include: ['_pages']
 kramdown:
   input: GFM
+
+exclude:
+  - .git
+  - .gitignore
+  - node_modules
+  - package.json
