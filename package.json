@@ -1,0 +1,10 @@
+{
+  "name": "devsvbr.github.io",
+  "version": "1.0.0",
+  "description": "DevSV website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DevSV",
+  "license": "GPL-3.0+"
+}
