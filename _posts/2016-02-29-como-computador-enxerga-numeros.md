@@ -82,7 +82,7 @@ A leitura dos números binários é feita sem associações. Basta seguir a sequ
 
 Existem alguns termos relacionados aos números binários que são bem comuns na área de computação. A seguir temos três deles:
 
-`bit`: é o nome dado a cada dígito do número binário. Ele vem da expressão em inglês "<b>bi</b>nary digi<b>t</b>".
+`bit`: é o nome dado a cada dígito do número binário. Ele vem da expressão em inglês "**bi**nary digi**t**".
 
 `LSB (Least Significant Bit)`: representa o bit menos significativo, que é o bit que representa uma unidade;
 
