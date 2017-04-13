@@ -6,8 +6,6 @@ url: "http://www.devsv.com.br"
 twitter_username: devsvbr
 
 # Build settings
-source: _source
-
 include: ['_pages']
 kramdown:
   input: GFM
