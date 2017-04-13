@@ -18,4 +18,4 @@ Esta página contém a lista de links para os posts do blog organizados pelo con
 6. [Se conselho fosse bom...]({{ site.baseurl }}{% link _posts/2017-04-03-falando-sobre-expressoes-regulares-se-conselho-fosse-bom.md %})
 7. [Aí vem as Chaves... Chaves... Chaves...]({{ site.baseurl }}{% link _posts/2017-04-04-falando-sobre-expressoes-regulares-ai-vem-as-chaves-chaves-chaves.md %})
 8. [Ela é gulosa... Estúpida!]({{ site.baseurl }}{% link _posts/2017-04-08-falando-sobre-expressoes-regulares-ela-e-gulosa-estupida.md %})
-
+9. [O que foi que ele disse?]({{ site.baseurl }}{% link _posts/2017-04-13-falando-sobre-expressoes-regulares-o-que-foi-que-ele-disse.md %})
