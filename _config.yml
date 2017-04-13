@@ -13,5 +13,6 @@ kramdown:
 exclude:
   - .git
   - .gitignore
+  - gulpfile.js
   - node_modules
   - package.json
