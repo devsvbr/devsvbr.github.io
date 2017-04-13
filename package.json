@@ -1,0 +1,13 @@
+{
+  "name": "devsvbr.github.io",
+  "version": "1.0.0",
+  "description": "DevSV website",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "author": "DevSV",
+  "license": "GPL-3.0+",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
