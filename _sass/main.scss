@@ -1,9 +1,10 @@
 @charset "utf-8";
 
 @import
-        "resources",
-        "layout",
-        "social",
-        "about",
-        "syntax-highlighting"
+        "resources/variables",
+        "resources/mixins",
+        "main/layout",
+        "main/social",
+        "main/about",
+        "main/syntax-highlighting"
 ;
