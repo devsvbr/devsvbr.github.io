@@ -5,13 +5,18 @@ var gulp = require('gulp'),
     jpegRecompress = require('imagemin-jpeg-recompress');
 
 
+gulp.task('copy', function() {
+    return gulp.src('_img/**/*')
+        .pipe(gulp.dest('img'));
+});
+
 gulp.task('clean', function() {
   return gulp.src('img', {read: false})
       .pipe(clean());
 });
 
 gulp.task('optimize-img', function() {
-  return gulp.src('_img/**/*')
+  return gulp.src('img/**/*')
       .pipe(imagemin([
           imagemin.svgo({
             plugins: [{removeViewBox: false}]
