@@ -98,7 +98,7 @@ a {
   }
 
   &:hover, &:active {
-    color: $ahover-color;
+    color: $linkhover-color;
     text-decoration: underline;
   }
 }
@@ -230,7 +230,7 @@ pre {
   left: 0;
 }
 
-@media (max-width: $on-palm) {
+@media (max-width: $verysmall-scr) {
   .menu {
     background-color: $navbar-color;
     height: 100%;
@@ -264,7 +264,7 @@ pre {
       display: block;
   }
 }
-@media not all and (max-width: $on-palm) {
+@media not all and (max-width: $verysmall-scr) {
   .menu-button {
     display: none;
   }
@@ -303,16 +303,16 @@ pre {
   padding: 0 ($spacing-unit / 2);
   margin: 0 auto;
 
-  @include media-query-min($small-scr) {
+  @include media-query($small-scr) {
     width: 90%;
   }
-  @include media-query-min($medium-scr) {
+  @include media-query($medium-scr) {
     width: 80%;
   }
-  @include media-query-min($large-scr) {
+  @include media-query($large-scr) {
     width: 70%;
   }
-  @include media-query-min($verylarge-scr) {
+  @include media-query($verylarge-scr) {
     width: 60%;
   }
 }
@@ -352,12 +352,12 @@ pre {
 }
 
 .title, .post-title, .page-title {
-  font-size: 42px;
+  font-size: 36px;
   letter-spacing: -1px;
   line-height: 1;
 
-  @include media-query($on-laptop) {
-    font-size: 36px;
+  @include media-query($medium-scr) {
+    font-size: 42px;
   }
 }
 
@@ -365,26 +365,26 @@ pre {
   margin-bottom: $spacing-unit;
 
   h2 {
-    font-size: 32px;
+    font-size: 28px;
 
-    @include media-query($on-laptop) {
-      font-size: 28px;
+    @include media-query($medium-scr) {
+      font-size: 32px;
     }
   }
 
   h3 {
-    font-size: 26px;
+    font-size: 22px;
 
-    @include media-query($on-laptop) {
-      font-size: 22px;
+    @include media-query($medium-scr) {
+      font-size: 26px;
     }
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 18px;
 
-    @include media-query($on-laptop) {
-      font-size: 18px;
+    @include media-query($medium-scr) {
+      font-size: 20px;
     }
   }
 }
