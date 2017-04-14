@@ -52,7 +52,7 @@ A imagem acima destaca os trechos da regex que deram match com os trechos da URL
 4. `[a-z]{2,3}` captura o trecho **"ab"**;
 5. `(\.[a-z]{2})?` captura o trecho **".co"**. Por ser o fim da regex, o match é bem-sucedido.
 
-![Por que o "(www\.)?" não capturou o "www."?]({{ "/img/posts/2017-04-08-pq-nao-capturou-www-1.png" | prepend: site.baseurl }})
+![Por que o "(www\.)?" não capturou o "www."?]({{ "/img/posts/2017-04-08-pq-nao-capturou-www-1.jpeg" | prepend: site.baseurl }})
 
 Boa pergunta!
 
@@ -60,7 +60,7 @@ Para entender o que está acontecendo de fato, precisamos conhecer uma caracter�
 
 Quando digo que um quantificador é guloso, quero dizer que ele tenta capturar o **maior trecho** que ele conseguir, dentro dos limites permitidos. A regra se aplica a todos os quantificadores que vimos nos posts anteriores: `?`, `+`, `*` e `{n,m}`.
 
-![Agora que eu não entendi nada! Se o '?' é guloso, por que ele abriu mão do "www."?]({{ "/img/posts/2017-04-08-pq-nao-capturou-www-2.png" | prepend: site.baseurl }})
+![Agora que eu não entendi nada! Se o '?' é guloso, por que ele abriu mão do "www."?]({{ "/img/posts/2017-04-08-pq-nao-capturou-www-2.jpeg" | prepend: site.baseurl }})
 
 Muito boa sacada!
 

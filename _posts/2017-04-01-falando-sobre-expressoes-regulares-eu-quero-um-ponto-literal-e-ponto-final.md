@@ -16,7 +16,7 @@ Deixem eu me adiantar e mostrar de vez uma solução:
 
 Viram? Simples demais!
 
-![Sou zica memo molecão!! Resolvi saporra rapidão!!]({{ "/img/posts/2017-04-01-sou-zica.png" | prepend: site.baseurl }})
+![Sou zica memo molecão!! Resolvi saporra rapidão!!]({{ "/img/posts/2017-04-01-sou-zica.jpeg" | prepend: site.baseurl }})
 
 Tá bom... Tá bom... Até imagino o que estão pensando. E têm razão, o ponto é um _curinga_, portanto, essa regex bate com strings do tipo:
 
@@ -24,7 +24,7 @@ Tá bom... Tá bom... Até imagino o que estão pensando. E têm razão, o ponto
 
 Muito bom! Estão espertos! Parabéns!
 
-![Sabem como é, né? Eu só estava testando se estavam atentos!]({{ "/img/posts/2017-04-01-1-2-3-testando.png" | prepend: site.baseurl }})
+![Sabem como é, né? Eu só estava testando se estavam atentos!]({{ "/img/posts/2017-04-01-1-2-3-testando.jpeg" | prepend: site.baseurl }})
 
 Agora temos um problema pra resolver. O ponto deve ser literalmente um ponto e não qualquer coisa.
 

@@ -8,7 +8,7 @@ Antes de falar dos computadores, vamos pensar um pouco sobre como nós mesmos ve
 
 Olhe para a figura abaixo:
 
-![Era pra aparecer uma foto aqui. =(]({{ "/img/posts/2016-02-29-moedas.png" | prepend: site.baseurl }})
+![Era pra aparecer uma foto aqui. =(]({{ "/img/posts/2016-02-29-moedas.jpeg" | prepend: site.baseurl }})
 
 E responda duas perguntas:
 

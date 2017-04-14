@@ -12,7 +12,7 @@ Diferente dos últimos posts, minha proposta pra hoje não é apresentar nenhum 
 
 Para isto, vamos começar refletindo!
 
-![imagem refletindo]({{ "/img/posts/2017-04-03-refletindo.png" | prepend: site.baseurl }})
+![imagem refletindo]({{ "/img/posts/2017-04-03-refletindo.jpeg" | prepend: site.baseurl }})
 
 Primeiro, vamos pensar sobre o que fizemos até agora, durante a criação da regex pra capturar URLs.
 
