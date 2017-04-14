@@ -47,4 +47,4 @@ gulp.task('optimize-img', function() {
 
 
 /* Aliases */
-gulp.task('default', $.sequence('clean', 'copy', 'optimize-img'));
+gulp.task('default', $.sequence('clean', 'copy', ['optimize-img', 'sass']));
