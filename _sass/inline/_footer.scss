@@ -1,0 +1,25 @@
+/**
+ * Site footer
+ */
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-size;
+  background-color: $footer-color;
+
+  ul {
+    margin: $base-font-size 0;
+  }
+}
+
+/**
+ * Links to Social Networks
+ */
+.social li {
+  display: inline-block;
+  margin-right: 1ch;
+}
+.page-footer .social {
+  float: right;
+}
