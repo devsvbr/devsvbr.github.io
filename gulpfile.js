@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    sequence = require('gulp-sequence'),
     clean = require('gulp-clean'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
@@ -33,3 +34,5 @@ gulp.task('optimize-img', function() {
       ]))
       .pipe(gulp.dest('img'));
 });
+
+gulp.task('default', sequence('clean', 'copy', 'optimize-img'));
