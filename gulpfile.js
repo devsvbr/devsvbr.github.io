@@ -1,25 +1,27 @@
 var gulp = require('gulp'),
-    sequence = require('gulp-sequence'),
-    clean = require('gulp-clean'),
-    imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     jpegRecompress = require('imagemin-jpeg-recompress');
 
+var $ = require('gulp-load-plugins')();
 
+
+/* Base tasks */
 gulp.task('copy', function() {
-    return gulp.src('_img/**/*')
-        .pipe(gulp.dest('img'));
+  return gulp.src('_img/**/*')
+      .pipe(gulp.dest('img'));
 });
 
 gulp.task('clean', function() {
   return gulp.src('img', {read: false})
-      .pipe(clean());
+      .pipe($.clean());
 });
 
+
+/* Optimizations for images */
 gulp.task('optimize-img', function() {
   return gulp.src('img/**/*')
-      .pipe(imagemin([
-          imagemin.svgo({
+      .pipe($.imagemin([
+          $.imagemin.svgo({
             plugins: [{removeViewBox: false}]
           }),
           pngquant({
@@ -35,4 +37,6 @@ gulp.task('optimize-img', function() {
       .pipe(gulp.dest('img'));
 });
 
-gulp.task('default', sequence('clean', 'copy', 'optimize-img'));
+
+/* Aliases */
+gulp.task('default', $.sequence('clean', 'copy', 'optimize-img'));
