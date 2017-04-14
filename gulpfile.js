@@ -12,7 +12,7 @@ gulp.task('copy', function() {
 });
 
 gulp.task('clean', function() {
-  return gulp.src('img', {read: false})
+  return gulp.src(['css', 'img'], {read: false})
       .pipe($.clean());
 });
 
@@ -27,7 +27,7 @@ gulp.task('sass', function() {
 
 /* Optimizations for images */
 gulp.task('optimize-img', function() {
-  return gulp.src('img/**/*')
+  return gulp.src('img/**/*.{svg,png,jpeg}')
       .pipe($.imagemin([
           $.imagemin.svgo({
             plugins: [{removeViewBox: false}]
