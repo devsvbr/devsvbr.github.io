@@ -17,6 +17,14 @@ gulp.task('clean', function() {
 });
 
 
+/* Sass compilation */
+gulp.task('sass', function() {
+  return gulp.src('_sass/main.scss')
+      .pipe($.sass().on('error', $.sass.logError))
+      .pipe(gulp.dest('css'));
+});
+
+
 /* Optimizations for images */
 gulp.task('optimize-img', function() {
   return gulp.src('img/**/*')
