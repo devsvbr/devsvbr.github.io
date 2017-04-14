@@ -7,7 +7,7 @@ var $ = require('gulp-load-plugins')();
 
 /* Base tasks */
 gulp.task('copy', function() {
-  return gulp.src('_img/**/*')
+  return gulp.src('_src/img/**/*')
       .pipe(gulp.dest('img'));
 });
 
@@ -19,7 +19,7 @@ gulp.task('clean', function() {
 
 /* Sass compilation */
 gulp.task('sass', function() {
-  return gulp.src('_sass/*.scss')
+  return gulp.src('_src/sass/*.scss')
       .pipe($.sass().on('error', $.sass.logError))
       .pipe(gulp.dest('css'));
 });
