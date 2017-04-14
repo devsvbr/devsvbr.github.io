@@ -1,7 +1,14 @@
 var gulp = require('gulp'),
+    clean = require('gulp-clean'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     jpegRecompress = require('imagemin-jpeg-recompress');
+
+
+gulp.task('clean', function() {
+  return gulp.src('img', {read: false})
+      .pipe(clean());
+});
 
 gulp.task('optimize-img', function() {
   return gulp.src('_img/**/*')
