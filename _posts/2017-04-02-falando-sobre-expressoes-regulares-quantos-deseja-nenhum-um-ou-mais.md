@@ -44,7 +44,7 @@ Vish! E agora?
 
 Mais um momento de reflexão...
 
-![imagem pensando...]({{ "/img/posts/2017-04-02-pensando.png" | prepend: site.baseurl }})
+![imagem pensando...]({{ "/img/posts/2017-04-02-pensando.jpeg" | prepend: site.baseurl }})
 
 O raciocínio é o seguinte, eu preciso capturar URLs seguindo algumas regras:
 

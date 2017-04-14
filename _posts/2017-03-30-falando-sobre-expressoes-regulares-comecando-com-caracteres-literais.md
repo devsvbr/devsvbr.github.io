@@ -24,7 +24,7 @@ Eu moro em São Vicente (SP), uma cidade da baixada santista. Aqui na baixada, n
 
 Eu contei esta historinha porque no mundo das expressões regulares temos um fenômeno parecido. Eu havia mencionado que as expressões regulares estão em "tudo que é lugar", no sentido de que um grande conjunto de ferramentas e linguagens de programação suportam o uso de regex. Dentro de uma regex, alguns termos tem significado especial, e existem termos especiais que estão presentes em algumas ferramentas, mas que simplesmente não existem (quero dizer, não tem nenhum significado especial) em outras ferramentas.
 
-![Ah, fala sério! Cada vez que eu mudar de ferramenta, vou ter que aprender uma sintaxe nova?]({{ "/img/posts/2017-03-30-fala-serio.png" | prepend: site.baseurl }})
+![Ah, fala sério! Cada vez que eu mudar de ferramenta, vou ter que aprender uma sintaxe nova?]({{ "/img/posts/2017-03-30-fala-serio.jpeg" | prepend: site.baseurl }})
 
 Nada de pânico! Existem sim algumas diferenças nos termos especiais, mas não é um caos generalizado. Assim como acontece em nosso idioma, há uma base central de termos fundamentais que são bem consistentes e usados da mesma maneira em todos os lugares. O importante é aprender esta base, que será suficiente pra fazer muita coisa (muita coisa mesmo). Os recursos especiais que uma ferramenta oferece costumam ser recursos adicionais que facilitam sua utilização.
 

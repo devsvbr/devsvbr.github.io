@@ -12,7 +12,7 @@ Agora, deixe-me contar a história:
 
 > Estávamos no ônibus eu e o Chico...
 
-![imagem do Professor Girafales dizendo que o burro vai na frente!]({{ "/img/posts/2017-04-13-o-burro-vai-na-frente.png" | prepend: site.baseurl }})
+![imagem do Professor Girafales dizendo que o burro vai na frente!]({{ "/img/posts/2017-04-13-o-burro-vai-na-frente.jpeg" | prepend: site.baseurl }})
 
 P.S.: Se não entendeu a imagem, procure no YouTube por "Eu e Quico, Quico e eu".
 

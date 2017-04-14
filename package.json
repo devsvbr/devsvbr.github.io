@@ -8,6 +8,9 @@
   "author": "DevSV",
   "license": "GPL-3.0+",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.2.0",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-pngquant": "^5.0.0"
   }
 }
