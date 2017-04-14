@@ -4,7 +4,7 @@ var pngquant = require('imagemin-pngquant');
 var jpegRecompress = require('imagemin-jpeg-recompress');
 
 gulp.task('optimize-img', function() {
-  return gulp.src('_gulp/img/**/*')
+  return gulp.src('_img/**/*')
     .pipe(imagemin([
         imagemin.svgo({
             plugins: [{removeViewBox: false}]
