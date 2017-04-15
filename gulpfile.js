@@ -21,6 +21,7 @@ gulp.task('clean', function() {
 gulp.task('sass', function() {
   return gulp.src('_src/sass/*.scss')
       .pipe($.sass().on('error', $.sass.logError))
+      .pipe($.cssnano({safe: true}))
       .pipe(gulp.dest('css'));
 });
 
