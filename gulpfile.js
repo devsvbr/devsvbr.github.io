@@ -12,7 +12,7 @@ gulp.task('copy', function() {
 });
 
 gulp.task('clean', function() {
-  return gulp.src(['css', 'img'], {read: false})
+  return gulp.src(['css', 'img', '_includes/*.{css,js,svg}'], {read: false})
       .pipe($.clean());
 });
 
