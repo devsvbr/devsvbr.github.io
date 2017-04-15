@@ -36,13 +36,14 @@ gulp.task('inline-css', function() {
 /* JavaScript */
 gulp.task('minify-js', function() {
   return gulp.src( '_src/js/{analytics,menu}.js')
-      // minify code will be here soon
+      .pipe($.uglify())
       .pipe(gulp.dest('_includes'));
 });
 
 gulp.task('loadcss-js', function() {
   return gulp.src([ '_src/js/loadCSS.js', '_src/js/cssrelpreload.js' ])
       .pipe($.concat('loadcss.js'))
+      .pipe($.uglify())
       .pipe(gulp.dest('_includes'));
 });
 
