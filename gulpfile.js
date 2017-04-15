@@ -33,7 +33,7 @@ gulp.task('inline-css', function() {
 });
 
 
-/* Optimizations for images */
+/* Images */
 gulp.task('optimize-img', function() {
   return gulp.src('img/**/*.{svg,png,jpeg}')
       .pipe($.imagemin([
@@ -54,6 +54,16 @@ gulp.task('optimize-img', function() {
 });
 
 
+gulp.task('optimize-logo', function() {
+  return gulp.src('_src/logo/logo.svg')
+      .pipe($.imagemin({
+          svgoPlugins: [{removeViewBox: false}]
+      }))
+      .pipe(gulp.dest('_includes'));
+});
+
+
 /* Aliases */
 gulp.task('build-css', ['main-css', 'inline-css']);
-gulp.task('default', $.sequence('clean', 'copy', ['optimize-img', 'build-css']));
+gulp.task('build-img', ['optimize-logo', 'optimize-img']);
+gulp.task('default', $.sequence('clean', 'copy', ['build-img', 'build-css']));
