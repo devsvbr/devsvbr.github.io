@@ -17,7 +17,7 @@
     display: block;
     clear:left;
 }
-@include media-query-min($medium-scr) {
+@include media-query($medium-scr) {
     .previous-post {
         display: inline-block;
         float:none;

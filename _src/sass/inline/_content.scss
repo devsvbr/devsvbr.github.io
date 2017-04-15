@@ -1,0 +1,117 @@
+/**
+ * Container boundaries
+ */
+.container {
+  padding: 0 ($spacing-unit / 2);
+  margin: 0 auto;
+
+  @include media-query($small-scr) {
+    width: 90%;
+  }
+  @include media-query($medium-scr) {
+    width: 80%;
+  }
+  @include media-query($large-scr) {
+    width: 70%;
+  }
+  @include media-query($verylarge-scr) {
+    width: 60%;
+  }
+}
+
+/**
+ * Page content
+ */
+.page-content {
+  padding: $spacing-unit 0;
+}
+.page-heading {
+  font-size: 20px;
+}
+
+.post-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+.post-link {
+  display: block;
+  font-size: 24px;
+}
+
+/**
+ * Posts
+ */
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.title, .post-title, .page-title {
+  font-size: 36px;
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($small-scr) {
+    font-size: 42px;
+  }
+}
+
+.post-content, .page-content {
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    font-size: 28px;
+
+    @include media-query($small-scr) {
+      font-size: 32px;
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+
+    @include media-query($small-scr) {
+      font-size: 26px;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+
+    @include media-query($small-scr) {
+      font-size: 20px;
+    }
+  }
+}
+
+/**
+ * Table
+ */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+
+  th, td {
+    border: 1px solid $grey-color-light;
+    padding: 0.5em;
+    text-align: left;
+  }
+
+  > thead > tr > th,
+  > thead > tr > td {
+    background-color: $th-color;
+  }
+
+  &.text-center th,
+  &.text-center td {
+    text-align: center;
+  }
+}

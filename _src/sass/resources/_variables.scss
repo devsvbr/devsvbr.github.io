@@ -1,9 +1,4 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
-
-// Variables
+// Base
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -11,26 +6,26 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
+// Colors
 $text-color:       #111;
 $background-color: #f6fafd;
 $brand-color:      #2a7ae2;
-$ahover-color:     red;
+$linkhover-color:  red;
 $navbar-color:     #030535;
 $footer-color:     #d3eefd;
 $th-color:         #e2f4fe;
-
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-$on-palm:          600px;
-$on-laptop:        800px;
-
+// Screen width
+$verysmall-scr:    600px;
 $small-scr:        720px;
 $medium-scr:       980px;
 $large-scr:        1280px;
 $verylarge-scr:    1440px;
 
+// Size values
 $navbar-size:      48px;
 $footer-size:      64px;
 $logo-size:        48px;
@@ -40,35 +35,5 @@ $menu-max-size:    320px;
 $member-img-size:  160px;
 $social-icon-size: 32px;
 
+// Social icon
 $image-social:     url(/img/icons/social.png);
-
-
-// Mixins
-
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-@mixin media-query-min($device) {
-    @media (min-width: $device) {
-        @content;
-    }
-}
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "layout",
-        "social",
-        "about",
-        "syntax-highlighting"
-;
