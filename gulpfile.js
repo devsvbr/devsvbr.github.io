@@ -33,6 +33,20 @@ gulp.task('inline-css', function() {
 });
 
 
+/* JavaScript */
+gulp.task('minify-js', function() {
+  return gulp.src( '_src/js/{analytics,menu}.js')
+      // minify code will be here soon
+      .pipe(gulp.dest('_includes'));
+});
+
+gulp.task('loadcss-js', function() {
+  return gulp.src([ '_src/js/loadCSS.js', '_src/js/cssrelpreload.js' ])
+      .pipe($.concat('loadcss.js'))
+      .pipe(gulp.dest('_includes'));
+});
+
+
 /* Images */
 gulp.task('optimize-img', function() {
   return gulp.src('img/**/*.{svg,png,jpeg}')
@@ -65,5 +79,6 @@ gulp.task('optimize-logo', function() {
 
 /* Aliases */
 gulp.task('build-css', ['main-css', 'inline-css']);
+gulp.task('build-js', ['loadcss-js', 'minify-js']);
 gulp.task('build-img', ['optimize-logo', 'optimize-img']);
-gulp.task('default', $.sequence('clean', 'copy', ['build-img', 'build-css']));
+gulp.task('default', $.sequence('clean', 'copy', ['build-css', 'build-js', 'build-img']));
