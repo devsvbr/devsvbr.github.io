@@ -68,7 +68,6 @@ gulp.task('optimize-img', function() {
       .pipe(gulp.dest('img'));
 });
 
-
 gulp.task('optimize-logo', function() {
   return gulp.src('_src/logo/logo.svg')
       .pipe($.imagemin({
@@ -82,4 +81,5 @@ gulp.task('optimize-logo', function() {
 gulp.task('build-css', ['main-css', 'inline-css']);
 gulp.task('build-js', ['loadcss-js', 'minify-js']);
 gulp.task('build-img', ['optimize-logo', 'optimize-img']);
-gulp.task('default', $.sequence('clean', 'copy', ['build-css', 'build-js', 'build-img']));
+gulp.task('build', ['build-css', 'build-js', 'build-img']);
+gulp.task('default', $.sequence('clean', 'copy', 'build'));
