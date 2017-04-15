@@ -9,5 +9,5 @@
   <link rel="preload" as="style" href="{{ "/css/main.css" | prepend: site.baseurl }}" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}"></noscript>
   <script>{% include loadcss.js %}</script>
-  <script>{% include analytics.js %}</script>
+  {% if jekyll.environment == "production" %}<script>{% include analytics.js %}</script>{% endif %}
 </head>

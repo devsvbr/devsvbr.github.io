@@ -1,18 +1,14 @@
-# Site settings
+# Site Settings
 title: DevSV
 description: Blog de nerd
 baseurl: ""
 url: "http://www.devsv.com.br"
 twitter_username: devsvbr
 
-# Build settings
+# Handling Reading
 include: ['_pages']
+exclude: ['gulpfile.js','node_modules','package.json']
+
+# Markdown Processor
 kramdown:
   input: GFM
-
-exclude:
-  - .git
-  - .gitignore
-  - gulpfile.js
-  - node_modules
-  - package.json
