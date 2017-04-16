@@ -78,7 +78,7 @@ Os retrovisores são aquelas sequências com barra invertida e um número: `\1` 
 
 Na prática, se o primeiro grupo capturar o texto "Natal", `\1` só dará match com "Natal"; se o match do primeiro grupo for "Páscoa", `\1` só dará match com "Páscoa". A mesma lógica se aplica ao segundo grupo e o retrovisor `\2`.
 
-É importante saber que os retrovisores clássicos tem o limite de fazer referência à **no máximo 9 grupos**.
+É importante saber que os retrovisores clássicos podem fazer referência à **no máximo 9 grupos**.
 
 Mas por que 9 grupos?
 
@@ -86,7 +86,7 @@ Porque a sintaxe é barra invertida mais um único dígito, o que nos limita aos
 
 A título de curiosidade, posso dizer que existem alguns modos de acessar mais de 9 retrovisores em algumas ferramentas e APIs. Mas estes recursos específicos não estão no escopo deste post.
 
-E isso aí pessoas! Este post encerra a série "Falando sobre Expressões Regulares", mas não encerra o assunto. Nos próximos posts, mostrarei algumas aplicações práticas das expressões regulares em cenários reais.
+É isso aí pessoas! Este post encerra a série "Falando sobre Expressões Regulares", mas não encerra o assunto. Nos próximos posts, mostrarei algumas aplicações práticas das expressões regulares em cenários reais.
 
 Pra finalizar, segue a atualização da tabelinha clássica:
 
