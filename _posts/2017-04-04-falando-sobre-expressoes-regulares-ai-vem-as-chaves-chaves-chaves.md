@@ -34,7 +34,7 @@ Show!
 
 Temos regras bem definidas e uma regex que nos atende muito bem. Mas um requisito não é um requisito se não sofrer nenhuma alteração no meio do projeto!
 
-O novo requisito diz que precisamos capturar também URLs no padrão da usada pela Universidade de Tóquio: "http://www.u-tokyo.ac.jp".
+O novo requisito diz que precisamos capturar também URLs que seguem o mesmo padrão da Universidade de Tóquio: "http://www.u-tokyo.ac.jp".
 
 Ela tem 2 características que impedem o match, um hífen no meio do nome do domínio e o penúltimo bloco com apenas 2 caracteres.
 
