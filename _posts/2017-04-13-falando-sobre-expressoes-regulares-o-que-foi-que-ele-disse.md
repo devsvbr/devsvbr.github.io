@@ -173,4 +173,4 @@ Valeu e Falou...
 
 ---
 
-<span class="previous-post">[Ela é gulosa... Estúpida! <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({{ site.baseurl }}{% link _posts/2017-04-08-falando-sobre-expressoes-regulares-ela-e-gulosa-estupida.md %})</span>
+<span class="previous-post">[Ela é gulosa... Estúpida! <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({{ site.baseurl }}{% link _posts/2017-04-08-falando-sobre-expressoes-regulares-ela-e-gulosa-estupida.md %})</span> <span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Feliz Natal... digo... Feliz Páscoa!]({{ site.baseurl }}{% link _posts/2017-04-16-falando-sobre-expressoes-regulares-feliz-natal-digo-feliz-pascoa.md %})</span>
