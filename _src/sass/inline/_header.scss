@@ -116,6 +116,11 @@
   }
   .page-menuitem {
       display: block;
+
+      a {
+        display: block;
+        width: 100%;
+      }
   }
 }
 @media not all and (max-width: $verysmall-scr) {
