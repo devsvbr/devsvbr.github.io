@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Falando sobre Expressões Regulares: Se conselho fosse bom..."
 author: Eric Yuzo
 categories: regex

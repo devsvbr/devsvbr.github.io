@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Falando sobre Expressões Regulares: Começando com Caracteres Literais"
 author: Eric Yuzo
 categories: regex

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Falando sobre Expressões Regulares: Feliz Natal... digo... Feliz Páscoa!"
 author: Eric Yuzo
 categories: regex

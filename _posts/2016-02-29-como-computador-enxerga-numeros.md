@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Como o computador enxerga os números?"
 author: Eric Yuzo
 categories: binario conceito

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Falando sobre Expressões Regulares: Eu quero um Ponto Literal e ponto final!"
 author: Eric Yuzo
 categories: regex

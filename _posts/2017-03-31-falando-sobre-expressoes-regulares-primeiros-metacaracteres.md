@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Falando sobre Expressões Regulares: Primeiros Metacaracteres"
 author: Eric Yuzo
 categories: regex

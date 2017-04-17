@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Falando sobre Expressões Regulares: O que foi que ele disse?"
 author: Eric Yuzo
 categories: regex
