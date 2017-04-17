@@ -6,9 +6,11 @@
     <main class="container">
       <div class="page-content">
         {{ content }}
+        {% if page.comments %}<div id="disqus_thread"></div>{% endif %}
       </div>
     </main>
     {% include footer.html %}
     <script>{% include menu.js %}</script>
+    {% include disqus.html %}
   </body>
 </html>
