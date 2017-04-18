@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Falando sobre Expressões Regulares: Ela é gulosa... Estúpida!"
 author: Eric Yuzo
 categories: regex

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Falando sobre Expressões Regulares: Quantos deseja? Nenhum? Um? Ou mais?"
 author: Eric Yuzo
 categories: regex

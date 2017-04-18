@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Falando sobre Expressões Regulares: Aí vem as Chaves... Chaves... Chaves..."
 author: Eric Yuzo
 categories: regex
