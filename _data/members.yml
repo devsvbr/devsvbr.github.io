@@ -4,7 +4,7 @@
       class: "github"
       title: "GitHub"
   picture: "/img/members/yuzo.jpeg"
-  resume: "Iniciei a carreira na área de instumentação e automação industrial, onde tive a oportunidade de criar meus primeiros programas no assembly do Z-80 (um processador de 8 bits da Zilog). Trabalhei um tempo em um integrador de sistemas, desenvolvendo soluções para automação industrial (CLPs, sistemas de supervisão). A partir daí comecei a me distanciar da linguagem de máquina e me aproximar da programação para PCs, foi quando comecei a estudar a linguagem Java (pauta dos meus posts na versão wordpress do blog). Atualmente tenho desenvolvido principalmente em Python, além disso tenho bash como forte aliado para auxiliar nas tarefas do dia a dia, brinco um pouco com R e tenho me aventurado na área de análise de dados com aprendizado de máquina. Por fim, como a vida não se resume só a programação, eu arrisco fazer uns desenhos, como esse da minha foto. =)"
+  resume: "O Eric é nosso blogueiro zica memo, o grande responsável pelo sucesso do DevSV até hoje! O cara já trabalhou com programação baixo nível, depois se aventurou com Java e foi Javeiro por bastante tempo, e mais recentemente está trabalhando com Python, R e data science... Como era de se esperar, só as tecnologias zica memo! Além disso tudo, ainda tem energia pra manter o nosso blog cheio de vida. =)"
 
 - name: Francisco Silva
   links:
@@ -14,7 +14,7 @@
   picture: "/img/members/chico.jpeg"
   resume: "O Chico é o grande filósofo da equipe! O cara que sabe sobre a real origem da água! Na parte técnica, ele ama JavaScript de paixão e desenrola muito bem em Linux. Ele já fez umas façanhas do tipo migrar do Windows pra Linux sem ter internet em casa; basicamente baixando os pacotes via APT pra um pendrive no laboratório pra instalar depois no PC dele. Mas a principal característica do Chico é que ele é um cara engraçadão; qualquer tempinho que você tira pra conversar com ele sempre rende muitas risadas!"
 
-- name: Victor Santos
+- name: Victor David Santos
   links:
     - url: "https://github.com/victords"
       class: "github"
