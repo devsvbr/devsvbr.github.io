@@ -57,7 +57,7 @@ Estamos quase lá! Conseguimos match nas duas linhas que começam com "Chico:". 
 
 O que está faltando, é um meio de informar pra regex que ela deve dar match na string "Chico:" somente no **ínicio** da linha.
 
-Para passar esta informação pra expressão, usamos o metacaractere `^` (circunflexo). Se colocarmos o circunflexo no início da expressão, ele se torna um metacaractere que bate com a **posição inicial** da linha.
+Para passar esta informação pra expressão, nós utilizamos o metacaractere `^` (circunflexo), cuja função é bater com a **posição inicial** da linha.
 
 Isto mesmo, o circunflexo é do tipo que bate com uma determinada **posição**, por isto, é classificado como um operador **posicional**. Diversas fontes usam o termo **âncora** para se referir a este tipo de operador. Ambos são válidos, fique a vontade pra chamá-lo com o nome que achar melhor.
 
@@ -79,7 +79,7 @@ Com o multiline ativo, temos o match conforme esperado:
 
 A missão de hoje não foi comprida e já está cumprida.
 
-Mas não quero encerrar sem mostrar o oposto do circunflexo, que é o `$` (cifrão). Se o circunflexo no início da regex bate com o início da linha, o cifrão no fim da expressão bate com o **fim** da linha.
+Mas não quero encerrar sem mostrar o oposto do circunflexo, que é o `$` (cifrão). Se o circunflexo bate com o início da linha, o cifrão bate com o **fim** da linha.
 
 Pra ver como age o cifrão, vamos aplicar a regex `[A-Za-z]+\.` pra capturar as palavras que antecedem um ponto qualquer:
 
