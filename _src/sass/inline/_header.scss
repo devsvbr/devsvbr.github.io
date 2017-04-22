@@ -53,7 +53,12 @@
 
   a {
     color: $footer-color;
+    text-decoration: none;
     padding: 0.5em;
+
+    &:hover {
+      color: darken($footer-color, 30%);
+    }
   }
 }
 
