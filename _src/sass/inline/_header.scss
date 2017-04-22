@@ -20,10 +20,16 @@
   display: inline-block;
   margin: 0;
   padding: 0;
-  height: $navbar-size;
+  height: 100%;
 
   a {
-    display:inline-block;
+    display: inline-block;
+  }
+
+  svg {
+    vertical-align: middle;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
   }
 }
 
