@@ -24,7 +24,6 @@
 
   a {
     display:inline-block;
-    color: $footer-color;
   }
 }
 
@@ -41,14 +40,15 @@
     padding: 0;
     margin: 0;
   }
-
-  a {
-    color: $footer-color;
-  }
 }
 
 .page-menuitem {
   display: inline-block;
+
+  a {
+    color: $footer-color;
+    padding: 0.5em;
+  }
 }
 
 /**
