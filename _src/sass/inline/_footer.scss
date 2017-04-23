@@ -9,11 +9,9 @@
   background-color: $footer-color;
 
   ul {
+    list-style: none;
     margin: $base-font-size 0;
-  }
-
-  .social {
-    float: right;
+    text-align: center;
   }
 }
 
