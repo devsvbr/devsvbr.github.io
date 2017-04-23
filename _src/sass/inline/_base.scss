@@ -143,3 +143,15 @@ pre {
     padding-left: 0;
   }
 }
+
+/**
+ *  Horizontal lines
+ */
+hr {
+  background-image: linear-gradient(to right, transparent, darken($background-color, 50%), transparent);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  border: none;
+  height: 2px;
+}

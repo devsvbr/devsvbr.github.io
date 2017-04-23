@@ -9,17 +9,37 @@
   background-color: $footer-color;
 
   ul {
-    margin: $base-font-size 0;
+    list-style: none;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
   }
 }
 
-/**
- * Links to Social Networks
- */
-.social li {
-  display: inline-block;
-  margin-right: 1ch;
-}
-.page-footer .social {
-  float: right;
+.social {
+  li {
+    display: inline-block;
+    margin-right: 1ch;
+  }
+  
+  a {
+    display: inline-block;
+    width: $social-icon-size;
+    height: $social-icon-size;
+    box-sizing: border-box;
+    outline: none;
+
+    svg {
+      width: $social-icon-size;
+      height: $social-icon-size;
+      box-sizing: border-box;
+    }
+
+    .link-text {
+      display: none;
+    }
+  }
 }

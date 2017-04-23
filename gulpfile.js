@@ -55,7 +55,10 @@ gulp.task('optimize-img', function() {
   return gulp.src('img/**/*.{svg,png,jpeg}')
       .pipe($.imagemin([
           $.imagemin.svgo({
-            plugins: [{removeViewBox: false}]
+            plugins: [
+                {removeViewBox: false},
+                {cleanupIDs: false}
+            ]
           }),
           pngquant({
             quality: '65-80',
