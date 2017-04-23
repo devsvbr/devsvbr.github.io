@@ -7,7 +7,7 @@ twitter_username: devsvbr
 
 # Handling Reading
 include: ['_pages']
-exclude: ['gulpfile.js','node_modules','package.json','_src']
+exclude: ['browserslist','gulpfile.js','node_modules','package.json','_src']
 
 # Markdown Processor
 kramdown:
