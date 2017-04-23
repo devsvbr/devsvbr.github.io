@@ -56,13 +56,13 @@
   vertical-align: middle;
 
   a {
-    color: $footer-color;
+    color: $background-color;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0.5em 1em;
 
     &:hover {
-      color: darken($footer-color, 30%);
+      color: darken($background-color, 20%);
     }
   }
 }
@@ -74,14 +74,14 @@
   display: block;
   float: left;
   background-color: $navbar-color;
-  border: solid 1px $footer-color;
+  border: solid 1px $background-color;
   border-radius: 15%;
   padding: 0;
   margin: ($logo-size - $menubutton-size) / 2;
   width: $menubutton-size;
   height: $menubutton-size;
   box-sizing: border-box;
-  box-shadow: inset 0 0 0.4em $footer-color;
+  box-shadow: inset 0 0 0.4em $background-color;
 
   &:hover {
     cursor: pointer;
@@ -89,8 +89,8 @@
 }
 .button-icon {
   display: block;
-  border-top: 12px double $footer-color;
-  border-bottom: 4px solid $footer-color;
+  border-top: 12px double $background-color;
+  border-bottom: 4px solid $background-color;
   width: 24px;
   height: 20px;
   margin: 9px 7px;
@@ -132,7 +132,7 @@
   }
   .page-menuitem {
       display: block;
-      border-bottom: 1px solid darken($footer-color, 75%);
+      border-bottom: 1px solid darken($background-color, 80%);
 
       a {
         display: block;
