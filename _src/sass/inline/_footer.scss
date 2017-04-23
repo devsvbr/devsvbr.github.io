@@ -11,15 +11,31 @@
   ul {
     margin: $base-font-size 0;
   }
+
+  .social {
+    float: right;
+  }
 }
 
-/**
- * Links to Social Networks
- */
-.social li {
-  display: inline-block;
-  margin-right: 1ch;
-}
-.page-footer .social {
-  float: right;
+.social {
+  li {
+    display: inline-block;
+    margin-right: 1ch;
+  }
+  
+  a {
+    display: inline-block;
+    width: $social-icon-size;
+    height: $social-icon-size;
+    outline: none;
+
+    svg {
+      width: $social-icon-size;
+      height: $social-icon-size;
+    }
+
+    .link-text {
+      display: none;
+    }
+  }
 }
