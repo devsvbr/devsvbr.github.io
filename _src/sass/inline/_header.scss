@@ -74,14 +74,10 @@
   display: block;
   float: left;
   background-color: $navbar-color;
-  border: solid 1px $background-color;
-  border-radius: 15%;
-  padding: 0;
-  margin: ($logo-size - $menubutton-size) / 2;
+  padding: (($navbar-size + 2*$logo-padding) - $menubutton-size) / 2;
+  margin: 0;
   width: $menubutton-size;
   height: $menubutton-size;
-  box-sizing: border-box;
-  box-shadow: inset 0 0 0.4em $background-color;
 
   &:hover {
     cursor: pointer;
@@ -89,11 +85,14 @@
 }
 .button-icon {
   display: block;
-  border-top: 12px double $background-color;
-  border-bottom: 4px solid $background-color;
-  width: 24px;
-  height: 20px;
-  margin: 9px 7px;
+  box-shadow: 0px -2px 0px 0px $background-color,
+              0px -8px 0px 0px $navbar-color,
+              0px -10px 0px 0px $background-color,
+              0px -16px 0px 0px $navbar-color,
+              0px -18px 0px 0px $background-color;
+  width: $menubutton-size;
+  height: $menubutton-size;
+  margin-top: 21px;
   box-sizing: border-box;
   position: relative;
   top: 0;
@@ -105,7 +104,6 @@
     background-color: $navbar-color;
     height: 100%;
     width: 80%;
-    max-width: $menu-max-size;
     position: fixed;
     z-index: 1;
     top: $navbar-size;
@@ -113,9 +111,6 @@
     transition: left 0.3s ease-out;
   }
   .menu-active {
-    .menu-button {
-      background-color: lighten($navbar-color, 20%);
-    }
     .menu {
       left: 0;
     }
