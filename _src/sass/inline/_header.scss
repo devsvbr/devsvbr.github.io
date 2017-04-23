@@ -132,6 +132,7 @@
   }
   .page-menuitem {
       display: block;
+      border-bottom: 1px solid darken($footer-color, 75%);
 
       a {
         display: block;
