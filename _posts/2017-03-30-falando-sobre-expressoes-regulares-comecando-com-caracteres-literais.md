@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Falando sobre Expressões Regulares: Começando com Caracteres Literais"
+title: "Falando sobre Expressões Regulares: Começando com Caracteres Literais"
+description: "Primeiros exemplos do uso de expressões regulares."
 author: Eric Yuzo
 categories: regex
 ---

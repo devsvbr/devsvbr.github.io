@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Falando sobre Expressões Regulares: O que foi que ele disse?"
+title: "Falando sobre Expressões Regulares: O que foi que ele disse?"
+description: "Conhecendo metacaracteres âncoras."
 author: Eric Yuzo
 categories: regex
 ---

@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Falando sobre Expressões Regulares: Introdução"
+title: "Falando sobre Expressões Regulares: Introdução"
+description: "Pequena analogia que mostra uma motivação para o uso de expressões regulares."
 author: Eric Yuzo
 categories: regex
 ---
