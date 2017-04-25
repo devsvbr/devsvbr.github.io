@@ -2,7 +2,7 @@
  * Content wrapper
  */
 .wrapper {
-  padding: 0 ($spacing-unit / 2);
+  padding: 0;
   margin: 0 auto;
 
   @include media-query($small-scr) {
@@ -23,7 +23,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit ($spacing-unit / 2);
 }
 .page-heading {
   font-size: 20px;
