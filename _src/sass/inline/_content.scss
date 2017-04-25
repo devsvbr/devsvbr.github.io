@@ -6,16 +6,16 @@
   margin: 0 auto;
 
   @include media-query($small-scr) {
-    width: 90%;
-  }
-  @include media-query($medium-scr) {
     width: 80%;
   }
-  @include media-query($large-scr) {
+  @include media-query($medium-scr) {
     width: 70%;
   }
-  @include media-query($verylarge-scr) {
+  @include media-query($large-scr) {
     width: 60%;
+  }
+  @include media-query($verylarge-scr) {
+    width: 50%;
   }
 }
 
