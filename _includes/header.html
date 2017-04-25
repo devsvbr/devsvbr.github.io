@@ -1,17 +1,15 @@
-<header>
-  <nav id="navbar" class="site-header">
-    <div class="wrapper">
-      <div class="menu-button"><span class="button-icon"></span></div>
-      <h1 class="logo"><a class="" href="{{ site.baseurl }}/">{% include logo.svg %}</a></h1>
-      <div id="nav-menu" class="menu">
-        <ul>
-          {% for page in site.pages %}
-            {% if page.menu %}
-              <li class="page-menuitem"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </nav>
+<header id="navbar" class="site-header">
+  <div class="wrapper">
+    <div class="menu-button"><span class="button-icon"></span></div>
+    <h1 class="logo"><a class="" href="{{ site.baseurl }}/">{% include logo.svg %}</a></h1>
+    <nav id="nav-menu" class="menu">
+      <ul>
+        {% for page in site.pages %}
+          {% if page.menu %}
+            <li class="page-menuitem"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
 </header>
