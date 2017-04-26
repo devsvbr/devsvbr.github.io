@@ -29,12 +29,25 @@
   font-size: 20px;
 }
 
+
+/**
+ * Posts
+ */
 .post-list {
   margin-left: 0;
   list-style: none;
 
   > li {
     margin-bottom: $spacing-unit;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    .post-link {
+      display: block;
+      font-size: .75em;
+    }
   }
 }
 .post-meta {
@@ -42,13 +55,8 @@
   color: $grey-color;
 }
 .post-link {
-  display: block;
-  font-size: 24px;
+  font-size: 1.5em;
 }
-
-/**
- * Posts
- */
 .post-header {
   margin-bottom: $spacing-unit;
 }
