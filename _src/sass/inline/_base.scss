@@ -23,7 +23,7 @@ body {
   color: $text-color;
   background-color: $background-color;
   text-size-adjust: 100%;
-  padding-top: $navbar-size;
+  padding-top: ($navbar-size + 2*$logo-padding);
   padding-bottom: $base-font-size;
 }
 strong {

@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Falando sobre Expressões Regulares: Se conselho fosse bom..."
+title: "Falando sobre Expressões Regulares: Se conselho fosse bom..."
+description: "Algumas dicas pra aplicar no processo de escrita de expressões regulares."
 author: Eric Yuzo
 categories: regex
 ---

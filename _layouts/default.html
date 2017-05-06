@@ -3,8 +3,8 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main class="container">
-      <div class="page-content">
+    <main>
+      <div class="page-content wrapper">
         {{ content }}
         {% if jekyll.environment == "production" %}{% include disqus-div.html %}{% endif %}
       </div>

@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Falando sobre Expressões Regulares: Primeiros Metacaracteres"
+title: "Falando sobre Expressões Regulares: Primeiros Metacaracteres"
+description: "Hora de fazer mais que um simples matching direto."
 author: Eric Yuzo
 categories: regex
 ---

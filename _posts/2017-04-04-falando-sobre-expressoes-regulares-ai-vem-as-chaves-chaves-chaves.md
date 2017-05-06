@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Falando sobre Expressões Regulares: Aí vem as Chaves... Chaves... Chaves..."
+title: "Falando sobre Expressões Regulares: Aí vem as Chaves... Chaves... Chaves..."
+description: "Aí vem as Chaves... Chaves... Chaves... Todos atentos olhando pro DevSV!"
 author: Eric Yuzo
 categories: regex
 ---

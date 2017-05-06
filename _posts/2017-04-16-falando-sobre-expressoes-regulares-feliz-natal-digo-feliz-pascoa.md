@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Falando sobre Expressões Regulares: Feliz Natal... digo... Feliz Páscoa!"
+title: "Falando sobre Expressões Regulares: Feliz Natal... digo... Feliz Páscoa!"
+description: "Aproveitando o clima de Páscoa para apresentar novos metacaracteres."
 author: Eric Yuzo
 categories: regex
 ---
