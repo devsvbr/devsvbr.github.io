@@ -56,21 +56,21 @@ A imagem acima destaca os trechos da regex que deram match com os trechos da URL
 
 ![Por que o "(www\.)?" não capturou o "www."?]({{ "/img/posts/2017-04-08-pq-nao-capturou-www-1.jpeg" | prepend: site.baseurl }})
 
-Boa pergunta!
+Excelente pergunta!
 
 Para entender o que está acontecendo de fato, precisamos conhecer uma característica dos operadores quantificadores: eles são **gulosos** por natureza.
 
-Quando digo que um quantificador é guloso, quero dizer que ele tenta capturar o **maior trecho** que ele conseguir, dentro dos limites permitidos. A regra se aplica a todos os quantificadores que vimos nos posts anteriores: `?`, `+`, `*` e `{n,m}`.
+Quando digo que os quantificadores são gulosos, quero dizer que eles tentam capturar o **maior trecho** que conseguirem, dentro dos limites permitidos. A regra se aplica a todos os quantificadores que vimos nos posts anteriores: `?`, `+`, `*` e `{n,m}`.
 
 ![Agora que eu não entendi nada! Se o '?' é guloso, por que ele abriu mão do "www."?]({{ "/img/posts/2017-04-08-pq-nao-capturou-www-2.jpeg" | prepend: site.baseurl }})
 
-Muito boa sacada!
+Muito boa sacada! Mas muita hora nessa calma, eu já estava chegando lá.
 
 A questão é que uma expressão regular é bem-sucedida apenas se todos os seus componentes forem bem-sucedidos. Se qualquer parte integrante da expressão falhar em capturar o que deve, toda a expressão falha.
 
 Os quantificadores são gulosos, mas não são egoístas a ponto de sacrificar todo mundo apenas pra saciar sua gula. Se capturar o máximo possível significa condenar algum companheiro ao insucesso, o quantificador opta por capturar menos do que lhe é permitido.
 
-Pra clarear as ideias, eu preparei uma imagem que retrata como seria o mundo se os quantificadores fossem egoístas e se colocassem acima do sucesso da missão:
+Pra clarear as ideias, eu usei toda a minha habilidade artística pra preparar, no Paint, uma imagem que retrata como seria o mundo se os quantificadores fossem egoístas e se colocassem acima do sucesso da missão:
 
 ![imagem ilustrando o mundo com quantificadores egoístas]({{ "/img/posts/2017-04-08-fluxo-quantificador-guloso-1.png" | prepend: site.baseurl }})
 
@@ -88,7 +88,7 @@ Assim, eu encerro o assunto dos quantificadores e me despeço da nossa querida r
 
 Pois é, hora de desapegar. No próximo post, escreveremos novas expressões e conheceremos uma nova categoria de operadores.
 
-Mas não posso fechar o post antes de atualizar da tabela de operadores:
+Mas não posso fechar o post antes de atualizar a tabela de operadores:
 
 <table class="table">
   <thead>
