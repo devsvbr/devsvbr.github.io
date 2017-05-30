@@ -15,16 +15,36 @@ permalink: /toc/
 
 <p>Posts da série:</p>
 
-<ol>
-  <li class="post-link"><a href="{{ site.baseurl }}{% link _posts/2017-03-29-falando-sobre-expressoes-regulares-introducao.md %}">Introdução</a></li>
-  <li class="post-link"><a href="{{ site.baseurl }}{% link _posts/2017-03-30-falando-sobre-expressoes-regulares-comecando-com-caracteres-literais.md %}">Começando com Caracteres Literais</a></li>
-  <li class="post-link"><a href="{{ site.baseurl }}{% link _posts/2017-03-31-falando-sobre-expressoes-regulares-primeiros-metacaracteres.md %}">Primeiros Metacaracteres</a></li>
-  <li class="post-link"><a href="{{ site.baseurl }}{% link _posts/2017-04-01-falando-sobre-expressoes-regulares-eu-quero-um-ponto-literal-e-ponto-final.md %}">Eu quero um Ponto Literal e ponto final!</a></li>
-  <li class="post-link"><a href="{{ site.baseurl }}{% link _posts/2017-04-02-falando-sobre-expressoes-regulares-quantos-deseja-nenhum-um-ou-mais.md %}">Quantos deseja? Nenhum? Um? Ou mais?</a></li>
-  <li class="post-link"><a href="{{ site.baseurl }}{% link _posts/2017-04-03-falando-sobre-expressoes-regulares-se-conselho-fosse-bom.md %}">Se conselho fosse bom...</a></li>
-  <li class="post-link"><a href="{{ site.baseurl }}{% link _posts/2017-04-04-falando-sobre-expressoes-regulares-ai-vem-as-chaves-chaves-chaves.md %}">Aí vem as Chaves... Chaves... Chaves...</a></li>
-  <li class="post-link"><a href="{{ site.baseurl }}{% link _posts/2017-04-08-falando-sobre-expressoes-regulares-ela-e-gulosa-estupida.md %}">Ela é gulosa... Estúpida!</a></li>
-  <li class="post-link"><a href="{{ site.baseurl }}{% link _posts/2017-04-13-falando-sobre-expressoes-regulares-o-que-foi-que-ele-disse.md %}">O que foi que ele disse?</a></li>
-  <li class="post-link"><a href="{{ site.baseurl }}{% link _posts/2017-04-16-falando-sobre-expressoes-regulares-feliz-natal-digo-feliz-pascoa.md %}">Feliz Natal... digo... Feliz Páscoa!</a></li>
-</ol>
+<ul>
+{% for post in site.categories.regex reversed %}
+  {% assign tokens = post.title | split:':' %}
+  {% if tokens[0] == 'Falando sobre Expressões Regulares' %}
+    <li>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | remove_first:'Falando sobre Expressões Regulares:' }}</a>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
 
+<hr />
+
+<h3>Expressões Regulares na Prática</h3>
+
+<p>Pequena série onde compartilho alguns problemas que podem ser resolvidos com auxílio de ferramentas com suporte às expressões regulares.</p>
+
+<p>Esta é uma série complementar à série "Falando sobre Expressões Regulares". A ideia aqui é apenas mostrar exemplos de uso das expressões na prática, sem entrar nos fundamentos teóricos sobre regex.</p>
+
+<p>Posts da série:</p>
+
+<ul>
+{% for post in site.categories.regex reversed %}
+  {% assign tokens = post.title | split:':' %}
+  {% if tokens[0] == 'Expressões Regulares na Prática' %}
+    <li>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | remove_first:'Expressões Regulares na Prática:' }}</a>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
