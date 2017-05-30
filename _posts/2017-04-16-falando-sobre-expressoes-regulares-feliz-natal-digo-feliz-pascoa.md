@@ -88,7 +88,7 @@ Porque a sintaxe é barra invertida mais um único dígito, o que nos limita aos
 
 A título de curiosidade, posso dizer que existem alguns modos de acessar mais de 9 retrovisores em algumas ferramentas e APIs. Mas estes recursos específicos não estão no escopo deste post.
 
-É isso aí pessoas! Nos próximos posts, mostrarei algumas aplicações práticas das expressões regulares em cenários reais.
+É isso aí pessoas! Este post encerra a série “Falando sobre Expressões Regulares”, mas não encerra o assunto. Nos próximos posts, mostrarei algumas aplicações práticas das expressões regulares em cenários reais.
 
 Pra finalizar, segue a atualização da tabelinha clássica:
 
