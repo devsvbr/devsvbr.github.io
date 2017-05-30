@@ -26,3 +26,25 @@ permalink: /toc/
   {% endif %}
 {% endfor %}
 </ul>
+
+<hr />
+
+<h3>Expressões Regulares na Prática</h3>
+
+<p>Pequena série onde compartilho alguns problemas que podem ser resolvidos com auxílio de ferramentas com suporte às expressões regulares.</p>
+
+<p>Esta é uma série complementar à série "Falando sobre Expressões Regulares". A ideia aqui é apenas mostrar exemplos de uso das expressões na prática, sem entrar nos fundamentos teóricos sobre regex.</p>
+
+<p>Posts da série:</p>
+
+<ul>
+{% for post in site.categories.regex reversed %}
+  {% assign tokens = post.title | split:':' %}
+  {% if tokens[0] == 'Expressões Regulares na Prática' %}
+    <li>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | remove_first:'Expressões Regulares na Prática:' }}</a>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
