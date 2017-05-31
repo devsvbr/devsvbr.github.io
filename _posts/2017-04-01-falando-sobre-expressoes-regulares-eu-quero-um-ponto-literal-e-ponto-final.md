@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title: "Falando sobre Expressões Regulares: Eu quero um Ponto Literal e ponto final!"
+series: "Falando sobre Expressões Regulares"
+title: "Eu quero um Ponto Literal e ponto final!"
 description: "Entendendo como podemos anular as habilidades especiais dos metacaracteres."
 author: Eric Yuzo
 categories: regex
