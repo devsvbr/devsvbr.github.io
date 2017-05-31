@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title: "Expressões Regulares na Prática: Filtragem de dados"
+series: "Expressões Regulares na Prática"
+title: "Filtragem de dados"
 description: "Caso prático do uso de expressões regulares para filtrar dados."
 author: Eric Yuzo
 categories: regex

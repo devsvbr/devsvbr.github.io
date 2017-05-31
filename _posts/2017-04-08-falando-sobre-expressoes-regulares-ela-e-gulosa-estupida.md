@@ -1,7 +1,8 @@
 ---
 layout: post
 comments: true
-title: "Falando sobre Expressões Regulares: Ela é gulosa... Estúpida!"
+series: "Falando sobre Expressões Regulares"
+title: "Ela é gulosa... Estúpida!"
 description: "Hora de descobrir que os quantificadores clássicos são gulosos."
 author: Eric Yuzo
 categories: regex
