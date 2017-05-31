@@ -8,7 +8,7 @@ categories: regex
 ---
 Fala aí pessoas!
 
-Estou de volta pra complementar minhas postagens sobre expressões regulares. Mas desta vez, o foco não está na parte teórica. Minha ideia é compartilhar com vocês alguns problemas, onde para cada um deles, apresentarei uma sugestão de solução fazendo uso de regex. O objetivo é mostrar na prática, situações onde as expressões regulares podem ser empregadas.
+Estou de volta pra complementar minhas postagens sobre expressões regulares. Mas desta vez, o foco não está na parte teórica. Minha ideia é compartilhar com vocês alguns problemas, de modo que para cada um deles, apresentarei uma sugestão de solução fazendo uso de regex. O objetivo é mostrar na prática, situações onde as expressões regulares podem ser empregadas.
 
 Bora nessa?
 
@@ -24,15 +24,17 @@ Antes de começar, eu preciso dizer que acho muito chato manipular diretamente a
 
 Eu vou seguir utilizando ferramentas de linha de comando Linux. Pra começar, farei uma exploração rápida usando o comando `head`:
 
-![imagem mostrando o comando head no arquivo]({{ "/img/posts/2017-05-30-explorando-arquivo-head.png" | prepend: site.baseurl }})
+![imagem mostrando o arquivo lido pelo head]({{ "/img/posts/2017-05-30-explorando-arquivo-head.png" | prepend: site.baseurl }})
 
 O `head` retorna as 10 primeiras linhas do arquivo. Com uma olhada rápida, podemos perceber que a primeira contém um cabeçalho e as linhas seguintes possuem os dados propriamente ditos.
 
-_P.S.:_ O arquivo está formatado em um esquema tabular, seguindo o padrão CSV, onde os valores das colunas estão separados por vírgula. Caso não conheça este formato, veja como fica a formatação do mesmo arquivo quando aberto em um editor de planilhas, como o Calc:
+O arquivo está formatado em um esquema tabular, seguindo o padrão CSV, onde os valores das colunas estão separados por vírgula. Olhando para o conteúdo bruto, não parece muito com uma tabela, mas veja como fica a visualização do mesmo arquivo quando formatado adequadamente:
 
-![imagem mostrando o arquivo aberto no LibreOffice Calc]({{ "/img/posts/2017-05-30-explorando-arquivo-calc.png" | prepend: site.baseurl }})
+![imagem mostrando o arquivo lido pelo column]({{ "/img/posts/2017-05-30-explorando-arquivo-column.png" | prepend: site.baseurl }})
 
-Um ponto bacana, é que a primeira coluna representa a sigla da UF de cada município da listagem. Assim, se eu filtrar as linhas que começam com "SP,", eu terei em mãos os dados das cidades paulistas.
+Pra quem tem interesse em entender o que foi feito: o comando `column` é usado para formatar a entrada em colunas, afim de deixar a visualização mais agradável para os olhos. O parâmetro `-s` define o separador, que é a vírgula para o nosso caso, e o parâmetro `-t` diz que a saída deve ser apresentada em forma de tabela. Deste modo, ele quebra as colunas automaticamente quando encontrar uma vírgula e preenche os espaços em branco pra deixar a saída formatada como se fosse uma tabela. Por fim, temos um `|` que direciona a saída do `column` para o `head`, que exibe apenas as 10 primeiras linhas.
+
+Voltando para a exploração do arquivo, um ponto bacana, é que a primeira coluna representa a sigla da UF de cada município da listagem. Assim, se eu filtrar as linhas que começam com "SP,", eu terei em mãos os dados das cidades paulistas.
 
 Legal! Este será um bom aquecimento. Para fazer a filtragem, usarei o programa `egrep`:
 
@@ -75,7 +77,7 @@ egrep '^SP,([0-9]+,){2}(Santa|Santo|São) ' populacao-ibge.csv >> populacao-sp-s
 
 O comando `head -1` retorna apenas a primeira linha do arquivo `populacao-ibge.csv` (que é o cabeçalho) e o `>` direciona o retorno do `head` para um novo arquivo chamado `populacao-sp-santo.csv`. Na linha seguinte, temos o `egrep` que filtra os dados desejados, enquanto o `>>` adiciona o retorno no final do arquivo `populacao-sp-santo.csv`. Deste modo, o arquivo `populacao-sp-santo.csv` contém o cabeçalho seguido das 55 linhas filtradas pelo egrep, que é o resultado de mais um trabalho bem feito. =D
 
-Muito bom pessoas! Este foi um exemplo de problema que pode ser resolvido com uso de regex. Esta não é a única maneira, eu poderia ler o arquivo e processá-lo com alguma linguagem de programação ou até mesmo em um editor de planilhas. Mas na minha opinião, fazer em 1 ou 2 linhas de shell parece a solução mais simples. E você, gosta de alguma solução diferente da minha? Percebeu algum problema no método descrito? Deixe sua opinião nos comentários.
+Muito bom pessoas! Este foi um exemplo de problema que pode ser resolvido com uso de regex. Esta não é a única maneira, eu poderia ler o arquivo e processá-lo com alguma linguagem de programação ou até mesmo em um editor de planilhas. Mas na minha opinião, fazer em 1 ou 2 linhas de shell parece a solução mais simples, e o principal, mais divertida. E você, gosta de alguma solução diferente da minha? Percebeu algum problema no método descrito? Deixe sua opinião nos comentários.
 
 Até a próxima!
 
