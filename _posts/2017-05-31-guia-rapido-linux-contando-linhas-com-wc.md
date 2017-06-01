@@ -4,6 +4,7 @@ comments: true
 series: "Guia Rápido Linux"
 title: "Contando linhas com wc"
 description: "Guia rápido para contar linhas usando o programa wc."
+date: 2017-05-31 14:44:00 -0300
 author: Eric Yuzo
 categories: [linux, shell]
 ---
