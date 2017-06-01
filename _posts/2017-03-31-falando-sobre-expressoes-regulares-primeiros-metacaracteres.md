@@ -4,6 +4,7 @@ comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Primeiros Metacaracteres"
 description: "Hora de fazer mais que um simples matching direto."
+date: 2017-03-31 11:52:00 -0300
 author: Eric Yuzo
 categories: regex
 ---

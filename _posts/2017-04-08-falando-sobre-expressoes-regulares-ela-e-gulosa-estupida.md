@@ -4,6 +4,7 @@ comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Ela é gulosa... Estúpida!"
 description: "Hora de descobrir que os quantificadores clássicos são gulosos."
+date: 2017-04-08 18:45:00 -0300
 author: Eric Yuzo
 categories: regex
 ---

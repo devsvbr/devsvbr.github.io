@@ -4,6 +4,7 @@ comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Aí vem as Chaves... Chaves... Chaves..."
 description: "Aí vem as Chaves... Chaves... Chaves... Todos atentos olhando pro DevSV!"
+date: 2017-04-04 10:10:00 -0300
 author: Eric Yuzo
 categories: regex
 ---

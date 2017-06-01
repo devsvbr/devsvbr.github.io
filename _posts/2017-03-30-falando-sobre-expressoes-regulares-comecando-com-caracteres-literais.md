@@ -4,6 +4,7 @@ comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Começando com Caracteres Literais"
 description: "Primeiro contato com expressões regulares."
+date: 2017-03-30 00:09:00 -0300
 author: Eric Yuzo
 categories: regex
 ---
