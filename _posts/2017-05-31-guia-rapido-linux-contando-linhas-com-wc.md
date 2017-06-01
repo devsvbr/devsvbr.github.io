@@ -10,7 +10,7 @@ categories: [linux, shell]
 Quando precisamos saber o número de linhas de um arquivo qualquer, recorremos ao programa `wc`, usando a seguinte sintaxe:
 
 ```bash
-wc -l [ARQUIVO...]
+wc -l [ARQUIVO]
 ```
 
 Exemplo:
