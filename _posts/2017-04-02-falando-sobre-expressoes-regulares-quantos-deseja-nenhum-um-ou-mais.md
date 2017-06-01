@@ -4,6 +4,7 @@ comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Quantos deseja? Nenhum? Um? Ou mais?"
 description: "Entendendo como as expressões regulares podem nos ajudar a encontrar textos de diferentes tamanhos."
+date: 2017-04-02 10:55:00 -0300
 author: Eric Yuzo
 categories: regex
 ---

@@ -4,6 +4,7 @@ comments: true
 series: "Expressões Regulares na Prática"
 title: "Filtragem de dados"
 description: "Caso prático do uso de expressões regulares para filtrar dados."
+date: 2017-05-30 17:35:00 -0300
 author: Eric Yuzo
 categories: regex
 ---

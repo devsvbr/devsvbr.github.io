@@ -4,6 +4,7 @@ comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Feliz Natal... digo... Feliz Páscoa!"
 description: "Aproveitando o clima de Páscoa para apresentar novos metacaracteres."
+date: 2017-04-16 19:28:00 -0300
 author: Eric Yuzo
 categories: regex
 ---
