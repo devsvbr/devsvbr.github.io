@@ -5,6 +5,12 @@ baseurl: ""
 url: "http://www.devsv.com.br"
 twitter_username: devsvbr
 
+# Collections
+collections:
+  toc:
+    output: true
+    permalink: /:collection/:path
+
 # Handling Reading
 include: ['_pages']
 exclude: ['browserslist','gulpfile.js','node_modules','package.json','_src']
