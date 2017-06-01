@@ -1,0 +1,45 @@
+---
+layout: page
+title: Conteúdo sobre Expressões Regulares
+description: Confira a lista com todo o conteúdo sobre expressões regulares.
+---
+
+<h3>Falando sobre Expressões Regulares</h3>
+
+<p>Esta é uma série introdutória, onde tento instigar a reflexão sobre o uso dos principais recursos oferecidos pelas expressões regulares.</p>
+
+<p><strong>Aviso Importante:</strong> Os posts foram escritos para serem lidos na sequência. Deste modo, alguns deles continuam uma ideia iniciada nos posts anteriores. Se o seu interesse é uma referência rápida sobre o funcionamento de um metacaractere específico, este não é o local mais indicado.</p>
+
+<p>Posts da série:</p>
+
+<ul>
+{% for post in site.categories.regex reversed %}
+  {% if post.series == 'Falando sobre Expressões Regulares' %}
+    <li>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr />
+
+<h3>Expressões Regulares na Prática</h3>
+
+<p>Pequena série onde compartilho alguns problemas que podem ser resolvidos com auxílio de ferramentas com suporte às expressões regulares.</p>
+
+<p>Esta é uma série complementar à série "Falando sobre Expressões Regulares". A ideia aqui é apenas mostrar exemplos de uso das expressões na prática, sem entrar nos fundamentos teóricos sobre regex.</p>
+
+<p>Posts da série:</p>
+
+<ul>
+{% for post in site.categories.regex reversed %}
+  {% if post.series == 'Expressões Regulares na Prática' %}
+    <li>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
