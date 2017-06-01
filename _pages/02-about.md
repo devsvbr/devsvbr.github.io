@@ -2,7 +2,6 @@
 layout: page
 title: Quem Somos?
 description: Saiba mais sobre o DevSV e as pessoas que fazem as coisas acontecerem.
-icon: /img/nav/about.svg
 menu: true
 permalink: /about/
 ---

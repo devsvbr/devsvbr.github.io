@@ -4,13 +4,14 @@ comments: true
 series: "Guia Rápido Linux"
 title: "Contando linhas com wc"
 description: "Guia rápido para contar linhas usando o programa wc."
+date: 2017-05-31 14:44:00 -0300
 author: Eric Yuzo
 categories: [linux, shell]
 ---
 Quando precisamos saber o número de linhas de um arquivo qualquer, recorremos ao programa `wc`, usando a seguinte sintaxe:
 
 ```bash
-wc -l [ARQUIVO...]
+wc -l [ARQUIVO]
 ```
 
 Exemplo:
@@ -38,3 +39,5 @@ Exemplo:
 Para contar linhas, usamos o parâmetro `-l` (line); para contar palavras, usamos o parâmetro `-w` (word); já para contar os bytes usamos o parâmetro `-c`. Por que será?
 
 O parâmetro se chama `-c` porque, originalmente, ele fazia referência à contagem de caracteres. Como os encodings da época usavam 8 bits pra representar cada caractere, contar os bytes era o mesmo que contar caracteres. Porém, com os encodings mais modernos essa lógica não se aplica, uma vez que alguns caracteres são codificados com mais de 1 byte. Por isso, não dizemos mais que o `-c` serve pra contar caracteres; agora dizemos que ele serve para contar bytes.
+
+Assim como os encodings de caracteres evoluíram, o `wc` também evoluiu. Hoje ele aceita o parâmetro `-m` para definir a contagem dos caracteres, mesmo que eles sejam multibytes.
