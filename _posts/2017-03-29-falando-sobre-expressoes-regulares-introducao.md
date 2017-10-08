@@ -4,6 +4,7 @@ comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Introdução"
 description: "Pequena analogia que mostra uma motivação para o uso de expressões regulares."
+date: 2017-03-29 23:17:00 -0300
 author: Eric Yuzo
 categories: regex
 ---

@@ -4,6 +4,7 @@ comments: true
 series: "Falando sobre Expressões Regulares"
 title: "O que foi que ele disse?"
 description: "Conhecendo metacaracteres âncoras."
+date: 2017-04-13 14:01:00 -0300
 author: Eric Yuzo
 categories: regex
 ---

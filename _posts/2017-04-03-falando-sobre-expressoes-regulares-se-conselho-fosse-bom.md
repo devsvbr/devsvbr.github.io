@@ -4,6 +4,7 @@ comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Se conselho fosse bom..."
 description: "Algumas dicas pra aplicar no processo de escrita de expressões regulares."
+date: 2017-04-03 00:00:00 -0300
 author: Eric Yuzo
 categories: regex
 ---
