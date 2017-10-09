@@ -40,19 +40,19 @@ su -
 2- Já como `root`, atualizar a lista de pacotes apt:
 
 ```bash
-apt update
+apt-get update
 ```
 
 3- Atualizar os pacotes do sistema (importante principalmente para atualização dos pacotes de segurança):
 
 ```bash
-apt upgrade
+apt-get upgrade
 ```
 
 4- Em seguida, instalar pacotes úteis para a construção dos módulos de kernel do VirtualBox:
 
 ```bash
-apt install build-essential module-assistant
+apt-get install build-essential module-assistant
 ```
 
 * O pacote `build-essential` traz, em sua lista de dependências, pacotes essenciais para a construção de softwares, como o `gcc`, `make`, além de diversas bibliotecas e headers.
@@ -75,7 +75,7 @@ O primeiro passo é inserir a ISO (Imagem de disco) do Guest Additions na máqui
 
 *P.S.*: na versão em português, o caminho é: `Dispositivos` > `Inserir imagem de CD dos Adicionais para Convidado...`.
 
-Neste passo, caso a imagem de disco não esteja presente no seu sistema, o VirtualBox pergutará se deseja fazer o download da imagem. Basta confirmar, que o download é feito automaticamente.
+Neste passo, caso a imagem de disco não esteja presente no seu sistema, o VirtualBox pergutará se deve fazer o download da imagem. Basta confirmar, que o download será feito automaticamente.
 
 Com a imagem devidamente inserida no drive virtual, o Debian reconhecerá a mídia e perguntará o que deve ser feito. Como executaremos o instalador manualmente via terminal, podemos pedir para que não faça nada.
 
