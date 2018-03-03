@@ -64,7 +64,7 @@ Para passar esta informação pra expressão, nós utilizamos o metacaractere `^
 
 Isto mesmo, o circunflexo é do tipo que bate com uma determinada **posição**, por isto, é classificado como um operador **posicional**. Diversas fontes usam o termo **âncora** para se referir a este tipo de operador. Ambos são válidos, fique a vontade pra chamá-lo com o nome que achar melhor.
 
-Sabendo que o circunflexo bate com o início da linha, vamos colocá-lo na expressão:
+Sabendo que o circunflexo bate com o início da linha, vamos adicioná-lo à expressão:
 
 ![imagem ilustrando matching fail com "^Chico:"]({{ "/img/posts/2017-04-13-matching-chico-fail.png" | prepend: site.baseurl }})
 

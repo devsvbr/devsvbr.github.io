@@ -12,10 +12,9 @@ E aí pessoas!
 
 Depois de um longo tempo de hibernação, estou de volta com uma série de posts onde vou falar um pouco sobre as expressões regulares (ER) e seu uso em algumas ferramentas.
 
-Eu uso muito as expressões regulares em atividades de rotina, principalmente no editor de texto e também  para buscar arquivos baseado no conteúdo. Eu também trabalhei um bom tempo com processamento de texto, parsing e matching de strings, que foi onde realmente pude entender melhor o que é possível fazer com expressões regulares. Mas não se enganem pelas minhas palavras, apesar de eu ter um pouco de experiência, eu estou bem... bem longe de poder dizer que sou um especialista em ER. Mas é um recurso que eu gosto bastante e está presente em tudo que é lugar, desde ferramentas pra edição de texto (como vi, Sublime Text, ...), ferramentas de processamento de texto (como grep, sed, awk, ...), até nas APIs das principais linguagens de programação do mercado. Será bem prazeroso falar sobre o assunto e espero aprender bastante escrevendo, assim como espero que seja proveitoso pra vocês que dispensam um tempo pra ler meus posts.
+Eu costumo utilizar ERs em atividades de rotina, principalmente no editor de texto e nas buscas em geral. Além disso, trabalhei um bom tempo com processamento de texto, parsing e matching de strings, atividade pela qual tive a oportunidade de conhecer um pouco mais que o básico sobre as expressões regulares. Como é um recurso que eu gosto bastante e está presente em tudo que é lugar (editores de texto; ferramentas que de alguma forma oferecem recursos de busca/substituição de texto; nas APIs das principais linguagens de programação do mercado; etc...), espero poder passar o mínimo dessa experiência para quem quer começar a fuçar sobre o assunto.
 
-
-Então, vamos lá. Antes de começar a falar especificamente das expressões regulares, quero parar um pouco pra pensar em algumas atividades de processamento de texto.
+Então, bora. Antes de começar a falar especificamente das expressões regulares, quero parar um pouco pra pensar em algumas atividades de processamento de texto.
 
 Considere uma ferramenta de busca simples, daquelas que eu digo o que quero e ela destaca os resultados encontrados.
 
@@ -29,11 +28,11 @@ Imagine que eu peça pra ferramenta buscar a palavra _monge_, certo? Ela me devo
 
 > Eu gostaria de ser `monge`, mas a profissão de `monge` no Brasil não dá dinheiro.
 
-A ferramenta poderia ser do tipo muito avançada e permitir buscas mais flexíveis, como "me retorne todas as palavras que começam com a letra D". Neste caso o retorno seria:
+A ferramenta poderia ser do tipo muito avançada e permitir buscas mais flexíveis, como "retorne-me todas as palavras que começam com a letra D". Neste caso o retorno seria:
 
 > Eu gostaria `de` ser monge, mas a profissão `de` monge no Brasil não `dá` `dinheiro`.
 
-Esta ferramenta muito avançada também poderia atender solicitações como: "procure pra mim pelas palavras que possuem exatamente 3 letras":
+Esta ferramenta muito avançada também poderia atender solicitações como: "procure por palavras que possuam exatamente 3 letras":
 
 > Eu gostaria de `ser` monge, `mas` a profissão de monge no Brasil `não` dá dinheiro.
 

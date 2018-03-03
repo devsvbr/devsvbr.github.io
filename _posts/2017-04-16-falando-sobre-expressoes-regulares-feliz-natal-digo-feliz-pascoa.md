@@ -62,7 +62,7 @@ Então, o que temos que fazer pra resolver nosso problema é: agrupar as palavra
 
 Agora sim! Com o escopo bem definido, o pipe fez o **OU** nos trechos esperados.
 
-Mas ainda tem um probleminha aí. Deixe-me adicionar alguns casos pra teste:
+Mas ainda tem um probleminha aí. Deixe-me adicionar alguns casos para teste:
 
 ![imagem ilustrando matching com mensagem inconsistente de natal e pascoa]({{ "/img/posts/2017-04-16-matching-natal-pascoa-4.png" | prepend: site.baseurl }})
 

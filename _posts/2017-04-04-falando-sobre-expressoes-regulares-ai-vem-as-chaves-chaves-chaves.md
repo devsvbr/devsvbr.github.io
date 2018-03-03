@@ -28,7 +28,7 @@ O resultado já é satisfatório, mas a expressão ainda pode melhorar no quesit
 
 Este cenário hipotético levanta uma questão: Será que não existe um quantificador que defina a quantidade exata de vezes que o elemento deve aparecer no matching?
 
-Não é que existe mesmo? Quem faz este serviço são as **chaves**. Com elas especificamos a quantidade usando a sintaxe `c{n}`, onde **n** é o número de vezes que o caractere **c** deve se repetir.
+Não é que existe mesmo? Quem faz este serviço são as **chaves**. Com elas especificamos a quantidade usando a sintaxe `c{n}`, onde **n** é o número de vezes que o elemento **c** deve se repetir.
 
 Vejamos como fica nossa regex reescrita para usar as chaves:
 
@@ -36,7 +36,7 @@ Vejamos como fica nossa regex reescrita para usar as chaves:
 
 Show!
 
-Temos regras bem definidas e uma regex que nos atende muito bem. Mas um requisito não é um requisito se não sofrer nenhuma alteração no meio do projeto!
+Temos regras bem definidas e uma regex que nos atende muito bem. Mas um requisito não é um requisito se não sofrer nenhuma alteração durante o desenrolar do projeto!
 
 O novo requisito diz que precisamos capturar também URLs que seguem o mesmo padrão da Universidade de Tóquio: "http://www.u-tokyo.ac.jp".
 
@@ -46,7 +46,7 @@ Pra passar a capturá-la, precisamos mudar a regra do nome principal do domínio
 
 A primeira alteração consiste em colocar o hífen no início ou no fim da lista, para que ele seja interpretado como um caractere literal.
 
-Para realizar a segunda alteração, precisaremos passar 2 parâmetros para as chaves. Seguindo a sintaxe `c{n,m}`, dizemos pra regex aceitar entre **n** e **m** repetições do caractere **c**. Em nosso cenário, queremos que o bloco tenha de 2 a 3 letras, então passamos a expressão `[a-z]{2,3}`.
+Para realizar a segunda alteração, devemos passar 2 parâmetros para as chaves. Seguindo a sintaxe `c{n,m}`, dizemos pra regex aceitar entre **n** e **m** repetições do elemento **c**. Em nosso cenário, queremos que o bloco tenha de 2 a 3 letras, então passamos a expressão `[a-z]{2,3}`.
 
 Aplicando as duas alterações temos:
 

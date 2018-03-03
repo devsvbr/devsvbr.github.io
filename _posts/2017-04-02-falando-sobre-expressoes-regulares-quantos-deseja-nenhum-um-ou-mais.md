@@ -10,7 +10,7 @@ categories: regex
 ---
 E aí pessoas!
 
-No [último post]({{ site.baseurl }}{% link _posts/2017-04-01-falando-sobre-expressoes-regulares-eu-quero-um-ponto-literal-e-ponto-final.md %}) criamos uma regex pra bater com o domínio do blog. Eu gostei tanto do exemplo que resolvi continuar com ele. A ideia agora é deixar a regex mais genérica, capturando diversas URLs.
+No [último post]({{ site.baseurl }}{% link _posts/2017-04-01-falando-sobre-expressoes-regulares-eu-quero-um-ponto-literal-e-ponto-final.md %}) criamos uma regex pra bater com o domínio do blog. Eu gostei tanto do exemplo que resolvi continuar com ele. A ideia agora é expandir a regex para que passe a capturar diversas URLs.
 
 Nosso ponto de partida é a regex que bate apenas com o domínio "www.devsv.com.br":
 
@@ -34,7 +34,7 @@ Vamos pensar um pouco... O que precisamos fazer pra bater as duas URLs?
 
 Hmmm... O "http" está sempre lá... já o "s" pode estar presente ou não, tanto faz... o restante da regex está ok...
 
-Bingo! Este é o ponto, tanto faz se o "s" aparece ou não aparece na URL, a regex deve capturar os 2 casos. Resumindo, o "s" é um elemento **opcional** na URL.
+Bingo! Este é o ponto, tanto faz se o "s" aparece ou não na URL, a regex deve capturar os 2 casos. Resumindo, o "s" é um elemento **opcional**.
 
 O metacaractere que vai nos ajudar nesta tarefa é o `?` (interrogação). Sua função é fazer com que o caractere à sua esquerda se torne **opcional**. Se o objetivo é ter um "s" opcional, usamos a regex `s?`:
 
@@ -60,9 +60,9 @@ O raciocínio é o seguinte, eu preciso capturar URLs seguindo algumas regras:
 
 As regras 1, 2, 3 e 5 já são satisfeitas na nossa regex. A pendência que temos pra resolver, é a regra 4: aceitar qualquer coisa.
 
-Já conhecemos o ponto, que vai bater com qualquer caractere único. Mas o que precisamos é que qualquer caractere possa aparecer várias vezes. E várias vezes deve ser uma quantidade variável. Afinal, existem URLs com 3 letras, 5 letras, 8 letras, etc.
+Já conhecemos o ponto, que bate com qualquer caractere único. Mas o que precisamos é que qualquer caractere possa aparecer várias vezes. E várias vezes deve ser uma quantidade variável. Afinal, existem URLs com 3 letras, 5 letras, 8 letras, etc.
 
-Bingo de novo! Essa é a ideia! Como já é previsível, essa é a hora que eu mostro mais um metacaractere. Então que seja bem vindo o `*` (asterisco).
+Bingo de novo! Essa é a ideia! Como já é previsível, é agora que eu mostro mais um metacaractere. Então que seja bem vindo o `*` (asterisco).
 
 O asterisco (assim como o ponto de interrogação) é um metacaractere chamado de **quantificador**, pois ele não define **o que** a regex deve bater, mas define a **quantidade de vezes** que um elemento pode aparecer no matching. Falando especificamente do asterisco, seu papel na regex é permitir que o caractere imediatamente à sua esquerda apareça **nenhuma, uma ou mais vezes** no matching.
 

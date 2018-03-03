@@ -12,7 +12,7 @@ E aí pessoas!
 
 Estou de volta pra continuar melhorando a regex que criamos [neste post]({{ site.baseurl }}{% link _posts/2017-04-02-falando-sobre-expressoes-regulares-quantos-deseja-nenhum-um-ou-mais.md %}) para capturar URLs.
 
-Diferente dos últimos posts, minha proposta pra hoje não é apresentar nenhum metacaractere novo. A proposta pra hoje é corrigir algumas falhas que ainda não vieram à tona.
+Diferente dos últimos posts, minha proposta pra hoje não é apresentar nenhum metacaractere novo. A ideia é corrigir algumas falhas que ainda não vieram à tona.
 
 Para isto, vamos começar refletindo!
 
@@ -40,9 +40,9 @@ O ponto (literal) faz parte do conjunto "qualquer coisa", entretanto a URL cheia
 
 ![imagem ilustrando correcao do matching de url apenas com pontos]({{ "/img/posts/2017-04-03-matching-url-2.png" | prepend: site.baseurl }})
 
-Resolveu o problema do ponto, mas "qualquer coisa exceto ponto" ainda é um conjunto muito grande. Então já me adiantei e deixei mais casos que não devem dar match. Isto quer dizer que precisamos ser mais restritos.
+Resolveu o problema do ponto, mas "qualquer coisa exceto ponto" ainda é um conjunto que excede as expectativas. Então já me adiantei e deixei mais casos que não devem dar match. Isto quer dizer que precisamos ser mais restritos.
 
-Mas será que esta estratégia de ir adicionando caracteres na blacklist é uma boa estratégia?
+Mas será que esta estratégia de ir adicionando caracteres na _"blacklist"_ é uma boa estratégia?
 
 Dependendo do caso, pode ser a solução mais viável. Mas pro nosso caso não rola. Seria muito cansativo encontrar todos os caracteres que devem ser banidos.
 
@@ -56,9 +56,9 @@ Bem melhor! Temos uma regex mais restrita, e o principal: mais sólida, que aten
 
 Para concluir, eu sei que dizem que se conselho fosse bom, seria vendido e não distribuído de graça. Mas como eu não sou do tipo empresário opressor, eu gostaria de deixar alguns conselhos gratuitos.
 
-Procurem restringir as opções de matching sempre que possível, claro que seguindo os requisitos do sistema. Não quero dizer que o ponto ou as listas muito grandes nunca devam ser utilizadas, mas que sejam utilizadas com consciência.
+Procurem restringir as opções de matching sempre que possível, claro que seguindo os requisitos do sistema. Não quero dizer que o ponto ou listas muito abrangentes nunca devam ser utilizadas, mas que sejam utilizadas com consciência.
 
-Outro ponto importante é que não basta testar apenas casos que devem dar matching, teste também os casos que não devem entrar no matching, confirme que eles não são capturados de fato. Afinal, a expressão regular falha ao deixar escapar um trecho que ela deveria capturar (falso-negativo), mas também falha ao capturar o que não deveria (falso-positivo).
+Outro ponto importante é que não basta testar apenas casos que devem dar matching, teste também os casos que não devem entrar no matching, confirme que eles não são capturados de fato. Afinal, a expressão regular falha ao deixar escapar um trecho que ela deveria capturar (falso-negativo), mas também falha ao capturar algo que não deveria (falso-positivo).
 
 Pequenas ações como estas podem evitar um problema de mau funcionamento de um sistema que usa regex, quando algum usuário conseguir surpreender a todos com uma entrada de dados bizarra no sistema.
 
