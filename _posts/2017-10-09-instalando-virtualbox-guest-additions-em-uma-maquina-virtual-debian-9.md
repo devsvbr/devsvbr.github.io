@@ -19,7 +19,7 @@ Os pacotes do Guest Additions são instalados no sistema operacional convidado (
 
 * acesso à pastas compartilhadas no *host*;
 
-* área de transferência (*clipboard*) compartilhado.
+* área de transferência (*clipboard*) compartilhada.
 
 Além de outros recursos. Para saber mais, confira o [manual](https://www.virtualbox.org/manual/ch04.html) do VirtualBox.
 
