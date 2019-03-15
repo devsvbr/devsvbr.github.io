@@ -1,9 +1,11 @@
 ---
 layout: post
 comments: true
+postid: "guia-linux-tail"
 series: "Guia Rápido Linux"
 title: "Extraindo as últimas linhas com tail"
 description: "Guia rápido para extrair as linhas finais de um arquivo usando o tail."
+language: pt
 date: 2017-06-01 18:15:00 -0300
 author: Eric Yuzo
 categories: [linux, shell]
