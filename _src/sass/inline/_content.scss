@@ -64,7 +64,7 @@
   font-size: 1.2em;
 }
 
-.title, .post-title, .page-title {
+.title, .post-title, .page-title, .error404-title {
   font-size: 36px;
   letter-spacing: -1px;
   line-height: 1;
@@ -72,6 +72,11 @@
   @include media-query($small-scr) {
     font-size: 42px;
   }
+}
+
+.error404-title {
+  font-size: 72px;
+  color: lightgray;
 }
 
 .post-content, .page-content {
