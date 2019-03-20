@@ -24,7 +24,11 @@ body {
   background-color: $background-color;
   text-size-adjust: 100%;
   padding-top: ($navbar-size + 2*$logo-padding);
-  padding-bottom: $base-font-size;
+  padding-bottom: 0;
+
+  @include media-query($verysmall-scr) {
+    padding-bottom: $base-font-size;
+  }
 }
 strong {
   font-weight: bold;

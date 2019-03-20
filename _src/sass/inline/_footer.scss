@@ -2,29 +2,66 @@
  * Site footer
  */
 .page-footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: $footer-size;
+  margin: 0;
+  padding: 0;
   background-color: $footer-color;
 
-  ul {
-    list-style: none;
+  .language-selector, .social {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .language-selector {
+    padding: 1ch;
+  }
+
+  @include media-query($verysmall-scr) {
     position: absolute;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    height: $footer-size;
+
+    > .wrapper {
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    .language-selector, .social {
+      width: auto;
+      height: 100%;
+      padding: 0;
+    }
+
+    .language-selector {
+      display: table;
+      float: left;
+
+      > div {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+    .social {
+      display: table;
+      float: right;
+
+      > ul {
+        display: table-cell;
+        vertical-align: middle;
+        list-style: none;
+      }
+    }
   }
 }
 
-.social {
+.social-link {
   li {
     display: inline-block;
     margin-right: 1ch;
   }
-  
+
   a {
     display: inline-block;
     width: $social-icon-size;
