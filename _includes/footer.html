@@ -1,9 +1,19 @@
 <footer class="page-footer">
   <div class="wrapper">
-    <ul class="social">
-      <!-- email --><li><a href="mailto:contato@devsv.com.br"><span class="link-text">Contato</span><svg><use xlink:href="{{ "/img/icons/footer.svg#email" | prepend: site.baseurl }}" /></svg></a></li>
-      <!-- Twitter --><li><a href="https://twitter.com/{{ site.twitter_username }}"><span class="link-text">@{{ site.twitter_username }}</span><svg><use xlink:href="{{ "/img/icons/footer.svg#twitter" | prepend: site.baseurl }}" /></svg></a></li>
-      <!-- RSS --><li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="link-text">RSS</span><svg><use xlink:href="{{ "/img/icons/footer.svg#rss" | prepend: site.baseurl }}" /></svg></a></li>
-    </ul>
+    <div class="language-selector">
+      <div>
+        <select id="footer-language-select" name="language">
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+    </div>
+    <div class="social">
+      <ul class="social-link">
+        <!-- email --><li><a href="mailto:contato@devsv.com.br"><span class="link-text">Contato</span><svg><use xlink:href="{{ "/img/icons/footer.svg#email" | prepend: site.baseurl }}" /></svg></a></li>
+        <!-- Twitter --><li><a href="https://twitter.com/{{ site.twitter_username }}"><span class="link-text">@{{ site.twitter_username }}</span><svg><use xlink:href="{{ "/img/icons/footer.svg#twitter" | prepend: site.baseurl }}" /></svg></a></li>
+        <!-- RSS --><li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="link-text">RSS</span><svg><use xlink:href="{{ "/img/icons/footer.svg#rss" | prepend: site.baseurl }}" /></svg></a></li>
+      </ul>
+    </div>
   </div>
 </footer>
