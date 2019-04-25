@@ -1,13 +1,23 @@
 <footer class="page-footer">
   <div class="wrapper">
-    <div class="language-selector">
-      <div>
-        <select id="footer-language-select" name="language">
-          <option value="en">English</option>
-          <option value="pt">Português</option>
-        </select>
+    {% if page.language %}
+      <div class="language-selector">
+        <div>
+          <select id="footer-language-select" name="language">
+            {% if page.language == "en" %}
+              <option value="en" selected="selected">English</option>
+            {% else %}
+              <option value="en">English</option>
+            {% endif %}
+            {% if page.language == "pt" %}
+              <option value="pt" selected="selected">Português</option>
+            {% else %}
+              <option value="pt">Português</option>
+            {% endif %}
+          </select>
+        </div>
       </div>
-    </div>
+    {% endif %}
     <div class="social">
       <ul class="social-link">
         <!-- email --><li><a href="mailto:contato@devsv.com.br"><span class="link-text">Contato</span><svg><use xlink:href="{{ "/img/icons/footer.svg#email" | prepend: site.baseurl }}" /></svg></a></li>
