@@ -1,0 +1,1 @@
+var host="devsv.com.br";0<=window.location.host.indexOf(host)&&"https:"!=window.location.protocol&&(window.location.protocol="https");
