@@ -37,7 +37,7 @@ gulp.task('inline-css', function() {
 
 /* JavaScript */
 gulp.task('minify-js', function() {
-  return gulp.src( '_src/js/{analytics,menu}.js')
+  return gulp.src( '_src/js/{analytics,menu,sslredirect}.js')
       .pipe($.uglify())
       .pipe(gulp.dest('_includes'));
 });
