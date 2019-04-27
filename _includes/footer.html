@@ -5,7 +5,7 @@
         <div>
           <select id="footer-language-select" name="language">
             {% for lang in site.data.languages %}
-              <option value="{{ lang.id }}" {% if page.language == lang.id %} selected="selected" {% endif %}>{{ lang.label }}</option>
+              <option value="{{ lang.id }}" {% if page.lang == lang.id %} selected="selected" {% endif %}>{{ lang.label }}</option>
             {% endfor %}
           </select>
         </div>
