@@ -2,6 +2,7 @@
 layout: post
 pageid: "post-regex-9"
 lang: pt
+langvisible: false
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "O que foi que ele disse?"

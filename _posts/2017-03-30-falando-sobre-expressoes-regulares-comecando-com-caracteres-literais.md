@@ -2,6 +2,7 @@
 layout: post
 pageid: "post-regex-2"
 lang: pt
+langvisible: false
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Começando com Caracteres Literais"

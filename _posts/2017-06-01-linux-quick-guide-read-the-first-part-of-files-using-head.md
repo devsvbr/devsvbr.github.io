@@ -2,6 +2,7 @@
 layout: post
 pageid: "post-guia-linux-head"
 lang: en
+langvisible: true
 comments: true
 series: "Linux Quick Guide"
 title: "Read the first part of files using head"

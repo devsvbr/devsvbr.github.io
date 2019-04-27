@@ -2,6 +2,7 @@
 layout: post
 pageid: "post-guia-linux-tail"
 lang: pt
+langvisible: true
 comments: true
 series: "Guia Rápido Linux"
 title: "Extraindo as últimas linhas com tail"

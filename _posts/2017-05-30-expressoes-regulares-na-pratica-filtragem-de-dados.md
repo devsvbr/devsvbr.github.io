@@ -2,6 +2,7 @@
 layout: post
 pageid: "post-regex-pratica-1"
 lang: pt
+langvisible: false
 comments: true
 series: "Expressões Regulares na Prática"
 title: "Filtragem de dados"

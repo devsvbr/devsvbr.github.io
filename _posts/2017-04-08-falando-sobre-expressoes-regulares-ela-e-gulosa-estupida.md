@@ -2,6 +2,7 @@
 layout: post
 pageid: "post-regex-8"
 lang: pt
+langvisible: false
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Ela é gulosa... Estúpida!"

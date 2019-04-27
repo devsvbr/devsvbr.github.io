@@ -2,6 +2,7 @@
 layout: post
 pageid: "post-guia-linux-tail"
 lang: en
+langvisible: true
 comments: true
 series: "Linux Quick Guide"
 title: "Read the last part of files using tail"

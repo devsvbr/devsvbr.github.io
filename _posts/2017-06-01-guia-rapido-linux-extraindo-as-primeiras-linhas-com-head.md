@@ -2,6 +2,7 @@
 layout: post
 pageid: "post-guia-linux-head"
 lang: pt
+langvisible: true
 comments: true
 series: "Guia Rápido Linux"
 title: "Extraindo as primeiras linhas com head"

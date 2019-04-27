@@ -2,6 +2,7 @@
 layout: post
 pageid: "post-regex-7"
 lang: pt
+langvisible: false
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Aí vem as Chaves... Chaves... Chaves..."
