@@ -1,19 +1,5 @@
 ---
-layout: default
-language: pt
+layout: home
+lang: pt
 permalink: /pt/
 ---
-<div class="home">
-  <h1 class="title">Posts</h1>
-  <ul class="post-list">
-  {% for post in site.posts %}
-  {% if post.language == null or post.language == "pt" %}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
-      <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{% if post.series %}{{ post.series }}: {% endif %}{{ post.title }}</a></h2>
-      {% if post.description %}<p class="post-description">{{ post.description }}</p>{% endif %}
-    </li>
-  {% endif %}
-  {% endfor %}
-  </ul>
-</div>
