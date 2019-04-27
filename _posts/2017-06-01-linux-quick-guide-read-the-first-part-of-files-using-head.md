@@ -1,11 +1,11 @@
 ---
 layout: post
+pageid: "post-guia-linux-head"
+lang: en
 comments: true
-postid: "guia-linux-head"
 series: "Linux Quick Guide"
 title: "Read the first part of files using head"
 description: "Quick guide on using head to read the first few lines of files."
-language: en
 date: 2017-06-01 12:38:00 -0300
 author: Eric Yuzo
 categories: [linux, shell]

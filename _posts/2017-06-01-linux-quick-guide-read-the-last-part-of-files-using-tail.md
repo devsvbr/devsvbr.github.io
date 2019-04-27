@@ -1,11 +1,11 @@
 ---
 layout: post
+pageid: "post-guia-linux-tail"
+lang: en
 comments: true
-postid: "guia-linux-tail"
 series: "Linux Quick Guide"
 title: "Read the last part of files using tail"
 description: "Quick guide on using tail to read the last few lines of files."
-language: en
 date: 2017-06-01 18:15:00 -0300
 author: Eric Yuzo
 categories: [linux, shell]

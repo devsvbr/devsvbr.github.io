@@ -1,5 +1,7 @@
 ---
 layout: post
+pageid: "post-regex-9"
+lang: pt
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "O que foi que ele disse?"

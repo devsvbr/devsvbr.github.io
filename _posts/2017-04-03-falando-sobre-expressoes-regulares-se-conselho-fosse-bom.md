@@ -1,5 +1,7 @@
 ---
 layout: post
+pageid: "post-regex-6"
+lang: pt
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Se conselho fosse bom..."

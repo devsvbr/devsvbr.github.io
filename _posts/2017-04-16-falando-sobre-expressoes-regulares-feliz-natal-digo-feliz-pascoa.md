@@ -1,5 +1,7 @@
 ---
 layout: post
+pageid: "post-regex-10"
+lang: pt
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Feliz Natal... digo... Feliz Páscoa!"

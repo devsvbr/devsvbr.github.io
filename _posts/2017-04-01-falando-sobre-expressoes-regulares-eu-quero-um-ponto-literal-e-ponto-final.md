@@ -1,5 +1,7 @@
 ---
 layout: post
+pageid: "post-regex-4"
+lang: pt
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Eu quero um Ponto Literal e ponto final!"

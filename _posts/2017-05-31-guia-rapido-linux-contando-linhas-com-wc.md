@@ -1,5 +1,7 @@
 ---
 layout: post
+pageid: "post-guia-linux-wc"
+lang: pt
 comments: true
 series: "Guia Rápido Linux"
 title: "Contando linhas com wc"

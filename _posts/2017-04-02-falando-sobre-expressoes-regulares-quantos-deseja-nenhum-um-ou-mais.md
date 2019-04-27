@@ -1,5 +1,7 @@
 ---
 layout: post
+pageid: "post-regex-5"
+lang: pt
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Quantos deseja? Nenhum? Um? Ou mais?"

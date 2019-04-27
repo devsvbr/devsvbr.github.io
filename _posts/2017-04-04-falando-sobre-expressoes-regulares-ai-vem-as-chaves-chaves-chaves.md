@@ -1,5 +1,7 @@
 ---
 layout: post
+pageid: "post-regex-7"
+lang: pt
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Aí vem as Chaves... Chaves... Chaves..."

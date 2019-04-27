@@ -1,11 +1,11 @@
 ---
 layout: post
+pageid: "post-guia-linux-head"
+lang: pt
 comments: true
-postid: "guia-linux-head"
 series: "Guia Rápido Linux"
 title: "Extraindo as primeiras linhas com head"
 description: "Guia rápido para extrair as linhas iniciais de um arquivo usando o head."
-language: pt
 date: 2017-06-01 12:38:00 -0300
 author: Eric Yuzo
 categories: [linux, shell]

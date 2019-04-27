@@ -1,5 +1,7 @@
 ---
 layout: post
+pageid: "post-regex-1"
+lang: pt
 comments: true
 series: "Falando sobre Expressões Regulares"
 title: "Introdução"
