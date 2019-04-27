@@ -1,9 +1,10 @@
 ---
 layout: page
+lang: pt
 title: Quem Somos?
 description: Saiba mais sobre o DevSV e as pessoas que fazem as coisas acontecerem.
 menu: true
-permalink: /about/
+permalink: /pt/about/
 ---
 
 O DevSV nasceu no fim de 2010, a partir da iniciativa de alguns nerds recém formados no curso técnico em informática na [ETEC](http://etecdrc.com.br/) de São Vicente.
