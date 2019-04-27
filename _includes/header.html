@@ -4,9 +4,9 @@
     <h1 class="logo"><a class="" href="{{ site.baseurl }}/{% if page.lang %}{{ page.lang }}{% else %}pt{% endif %}/">{% include logo.svg %}</a></h1>
     <nav id="nav-menu" class="menu">
       <ul>
-        {% for page in site.pages %}
-          {% if page.menu %}
-            <li class="page-menuitem"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% for pg in site.pages %}
+          {% if pg.menu and pg.lang == page.lang %}
+            <li class="page-menuitem"><a href="{{ pg.url | prepend: site.baseurl }}">{{ pg.title }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
