@@ -1,6 +1,6 @@
 ---
 layout: post
-pageid: "post-guia-linux-head"
+pubid: "post-guia-linux-head"
 lang: en
 langvisible: true
 comments: true

@@ -1,7 +1,6 @@
 ---
 layout: post
-pageid: "post-regex-pratica-1"
-lang: pt
+pubid: "post-regex-pratica-1"
 langvisible: false
 comments: true
 series: "Expressões Regulares na Prática"

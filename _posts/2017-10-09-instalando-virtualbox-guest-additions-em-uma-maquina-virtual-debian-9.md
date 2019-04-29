@@ -1,7 +1,6 @@
 ---
 layout: post
-pageid: "post-vbox-guest-debian9"
-lang: pt
+pubid: "post-vbox-guest-debian9"
 langvisible: false
 comments: true
 title: "Instalando VirtualBox Guest Additions em uma máquina virtual Debian 9"

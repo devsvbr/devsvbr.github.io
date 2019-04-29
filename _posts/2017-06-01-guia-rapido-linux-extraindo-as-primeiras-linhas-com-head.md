@@ -1,7 +1,6 @@
 ---
 layout: post
-pageid: "post-guia-linux-head"
-lang: pt
+pubid: "post-guia-linux-head"
 langvisible: true
 comments: true
 series: "Guia Rápido Linux"

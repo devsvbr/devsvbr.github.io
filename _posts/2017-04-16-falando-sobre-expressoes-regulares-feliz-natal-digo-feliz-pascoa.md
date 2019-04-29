@@ -1,7 +1,6 @@
 ---
 layout: post
-pageid: "post-regex-10"
-lang: pt
+pubid: "post-regex-10"
 langvisible: false
 comments: true
 series: "Falando sobre Expressões Regulares"
