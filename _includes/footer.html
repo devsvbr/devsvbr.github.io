@@ -5,7 +5,23 @@
         <div>
           <select id="footer-language-select" name="language">
             {% for lang in site.data.languages %}
-              <option value="{{ lang.id }}" {% if page.lang == lang.id %} selected="selected" {% endif %}>{{ lang.label }}</option>
+              {% if page.lang == lang.id %}
+                <option value="{{ page.url }}" selected="selected">{{ lang.label }}</option>
+              {% elsif page.type == "post" %}
+                {% for p in site.posts %}
+                  {% if p.pubid == page.pubid and p.lang == lang.id %}
+                    <option value="{{ p.url | prepend: site.baseurl }}">{{ lang.label }}</option>
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% else %}
+                {% for p in site.pages %}
+                  {% if p.pubid == page.pubid and p.lang == lang.id %}
+                    <option value="{{ p.url | prepend: site.baseurl }}">{{ lang.label }}</option>
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
             {% endfor %}
           </select>
         </div>
