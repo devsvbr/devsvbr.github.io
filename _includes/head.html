@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="icon" href="{{ "/img/favicon.ico" | prepend: site.baseurl }}">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description[page.lang] }}{% endif %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <style>{% include inline.css %}</style>
   <link rel="preload" as="style" href="{{ "/css/main.css" | prepend: site.baseurl }}" onload="this.rel='stylesheet'">
