@@ -1,6 +1,8 @@
 # Site Settings
 title: DevSV
-description: Blog de nerd
+description:
+  pt: Programação descontraída no estilo caiçara
+  en: Caiçara-like playful programming
 baseurl: ""
 url: "http://www.devsv.com.br"
 twitter_username: devsvbr
