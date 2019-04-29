@@ -1,7 +1,7 @@
 <header id="navbar" class="site-header">
   <div class="wrapper">
     <div class="menu-button"><span class="button-icon"></span></div>
-    <h1 class="logo"><a class="" href="{{ site.baseurl }}/{% if page.lang %}{{ page.lang }}{% else %}pt{% endif %}/">{% include logo.svg %}</a></h1>
+    <h1 class="logo"><a class="" href="{{ site.baseurl }}/{{ page.lang }}/">{% include logo.svg %}</a></h1>
     <nav id="nav-menu" class="menu">
       <ul>
         {% for pg in site.pages %}
