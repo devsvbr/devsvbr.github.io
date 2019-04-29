@@ -13,7 +13,7 @@
     {% endif %}
     <div class="social">
       <ul class="social-link">
-        <!-- email --><li><a href="mailto:contato@devsv.com.br"><span class="link-text">Contato</span><svg><use xlink:href="{{ "/img/icons/footer.svg#email" | prepend: site.baseurl }}" /></svg></a></li>
+        <!-- email --><li><a href="mailto:contato@devsv.com.br"><span class="link-text">{{ site.data[page.lang].text.contact }}</span><svg><use xlink:href="{{ "/img/icons/footer.svg#email" | prepend: site.baseurl }}" /></svg></a></li>
         <!-- Twitter --><li><a href="https://twitter.com/{{ site.twitter_username }}"><span class="link-text">@{{ site.twitter_username }}</span><svg><use xlink:href="{{ "/img/icons/footer.svg#twitter" | prepend: site.baseurl }}" /></svg></a></li>
         <!-- RSS --><li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="link-text">RSS</span><svg><use xlink:href="{{ "/img/icons/footer.svg#rss" | prepend: site.baseurl }}" /></svg></a></li>
       </ul>
