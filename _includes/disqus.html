@@ -11,5 +11,9 @@ s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
-<noscript>Para visualizar os <a href="https://disqus.com/?ref_noscript">comentários via Disqus</a> é preciso que o JavScript esteja habilitado.</noscript>
+{% if page.lang == "pt" %}
+<noscript>Para visualizar os <a href="https://disqus.com/?ref_noscript">comentários via Disqus</a> é preciso que o JavaScript esteja habilitado.</noscript>
+{% else %}
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+{% endif %}
 {% endif %}
