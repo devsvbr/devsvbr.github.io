@@ -17,6 +17,26 @@ collections:
 include: ['_pages']
 exclude: ['browserslist','gulpfile.js','node_modules','package.json','_src']
 
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      lang: "pt"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      type: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      type: "post"
+
 # Markdown Processor
 kramdown:
   input: GFM
