@@ -11,6 +11,7 @@
     </main>
     {% include footer.html %}
     <script>{% include menu.js %}</script>
+    {% if page.langvisible %}<script>{% include languageselect.js %}</script>{% endif %}
     {% if jekyll.environment == "production" %}{% include disqus.html %}{% endif %}
   </body>
 </html>
