@@ -1,0 +1,27 @@
+---
+layout: page
+pubid: "toc-main"
+lang: en
+langvisible: true
+title: Contents
+description: List of DevSV blog contents.
+menu: true
+permalink: /en/toc/
+---
+
+<h3>Linux Quick Guide</h3>
+
+<p>A collection of short posts showing how to use some of most useful Linux Shell tools.</p>
+
+<p>Posts:</p>
+
+<ul>
+{% for post in site.categories.shell reversed %}
+  {% if post.series == "Linux Quick Guide" and post.lang == page.lang %}
+    <li>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
