@@ -31,7 +31,7 @@
       <ul class="social-link">
         <!-- email -->
         <li>
-          <a href="mailto:contato@devsv.com.br">
+          <a href="mailto:contato@devsv.com.br" title="link {{ site.data[page.lang].text.contact }}">
             <span class="link-text">{{ site.data[page.lang].text.contact }}</span>
             <svg aria-hidden="true">
               <title>{{ site.data[page.lang].text.contact }}</title>
@@ -41,7 +41,7 @@
         </li>
         <!-- Twitter -->
         <li>
-          <a href="https://twitter.com/{{ site.twitter_username }}">
+          <a href="https://twitter.com/{{ site.twitter_username }}" title="link twitter @{{ site.twitter_username }}">
             <span class="link-text">@{{ site.twitter_username }}</span>
             <svg aria-hidden="true">
               <title>@{{ site.twitter_username }}</title>
@@ -51,7 +51,7 @@
         </li>
         <!-- RSS -->
         <li>
-          <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+          <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="link RSS">
             <span class="link-text">RSS</span>
             <svg aria-hidden="true">
               <title>RSS</title>
