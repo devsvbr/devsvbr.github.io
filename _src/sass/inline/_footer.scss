@@ -16,6 +16,19 @@
   .language-selector {
     box-sizing: border-box;
     padding: 1ch;
+
+    select {
+      background-color: $background-color;
+      border: 1px solid $grey-color-light;
+      font-size: $base-font-size;
+      height: $social-icon-size;
+      width: (5*$social-icon-size);
+      appearance: none;
+    }
+  }
+
+  .social-link {
+    margin-left: 1ch;
   }
 
   @include media-query($verysmall-scr) {
