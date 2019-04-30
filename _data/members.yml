@@ -4,7 +4,9 @@
       class: "github"
       title: "GitHub"
   picture: "/img/members/yuzo.jpeg"
-  resume: "O Eric é nosso blogueiro zica memo, o grande responsável pelo sucesso do DevSV até hoje! O cara já trabalhou com programação baixo nível, depois se aventurou com Java e foi Javeiro por bastante tempo, e mais recentemente está trabalhando com Python, R e data science... Como era de se esperar, só as tecnologias zica memo! Além disso tudo, ainda tem energia pra manter o nosso blog cheio de vida. =)"
+  resume:
+    - en: ""
+      pt: "O Eric é nosso blogueiro zica memo, o grande responsável pelo sucesso do DevSV até hoje! O cara já trabalhou com programação baixo nível, depois se aventurou com Java e foi Javeiro por bastante tempo, e mais recentemente está trabalhando com Python, R e data science... Como era de se esperar, só as tecnologias zica memo! Além disso tudo, ainda tem energia pra manter o nosso blog cheio de vida. =)"
 
 - name: Francisco Silva
   links:
@@ -12,7 +14,9 @@
       class: "github"
       title: "GitHub"
   picture: "/img/members/chico.jpeg"
-  resume: "O Chico é o grande filósofo da equipe! O cara que sabe sobre a real origem da água! Na parte técnica, ele ama JavaScript de paixão e desenrola muito bem em Linux. Ele já fez umas façanhas do tipo migrar do Windows pra Linux sem ter internet em casa; basicamente baixando os pacotes via APT pra um pendrive no laboratório pra instalar depois no PC dele. Mas a principal característica do Chico é que ele é um cara engraçadão; qualquer tempinho que você tira pra conversar com ele sempre rende muitas risadas!"
+  resume:
+    - en: ""
+      pt: "O Chico é o grande filósofo da equipe! O cara que sabe sobre a real origem da água! Na parte técnica, ele ama JavaScript de paixão e desenrola muito bem em Linux. Ele já fez umas façanhas do tipo migrar do Windows pra Linux sem ter internet em casa; basicamente baixando os pacotes via APT pra um pendrive no laboratório pra instalar depois no PC dele. Mas a principal característica do Chico é que ele é um cara engraçadão; qualquer tempinho que você tira pra conversar com ele sempre rende muitas risadas!"
 
 - name: Victor David Santos
   links:
@@ -20,5 +24,6 @@
       class: "github"
       title: "GitHub"
   picture: "/img/members/victor.jpeg"
-  resume: "O Victor é o nosso engenheiro de foguetes, também conhecido como o cara MUITO AVANÇADO! A fama surgiu porque ele entende de tudo que é parada. O cara é monstrão mesmo. Apesar da polivalência, a praia dele é games, inclusive, ele já desenvolveu vários jogos muito loucos. Eu até sugiro que visitem o site da <a href=\"http://alevagames.com/\">Aleva Games</a> e baixem os jogos, em especial o <a href=\"http://alevagames.com/old-projects.html\">ConnecMan</a> (o Eric Yuzo acha que o ConnecMan é o mais top =D)"
-
+  resume:
+    - en: ""
+      pt: "O Victor é o nosso engenheiro de foguetes, também conhecido como o cara MUITO AVANÇADO! A fama surgiu porque ele entende de tudo que é parada. O cara é monstrão mesmo. Apesar da polivalência, a praia dele é games, inclusive, ele já desenvolveu vários jogos muito loucos. Eu até sugiro que visitem o site da <a href=\"http://alevagames.com/\">Aleva Games</a> e baixem os jogos, em especial o <a href=\"http://alevagames.com/old-projects.html\">ConnecMan</a> (o Eric Yuzo acha que o ConnecMan é o mais top =D)"
