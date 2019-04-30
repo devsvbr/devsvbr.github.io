@@ -3,6 +3,7 @@
 var disqus_config = function () {
   this.page.url = "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}";
   this.page.identifier = "{{ page.url | absolute_url }}";
+  this.language = "{{ page.lang }}";
 };
 (function() {
 var d = document, s = d.createElement('script');
