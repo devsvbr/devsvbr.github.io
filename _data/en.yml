@@ -1,5 +1,7 @@
 text:
+  author: Author
   contact: Contact
+  language: Language
 
 months:
   - Jan
