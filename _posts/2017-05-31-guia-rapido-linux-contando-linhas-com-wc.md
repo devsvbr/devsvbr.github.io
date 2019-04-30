@@ -1,5 +1,4 @@
 ---
-layout: post
 pubid: "post-guia-linux-wc"
 langvisible: false
 comments: true

@@ -1,5 +1,4 @@
 ---
-layout: post
 pubid: "post-regex-pratica-1"
 langvisible: false
 comments: true

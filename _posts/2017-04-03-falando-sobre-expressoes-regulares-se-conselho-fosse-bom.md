@@ -1,5 +1,4 @@
 ---
-layout: post
 pubid: "post-regex-6"
 langvisible: false
 comments: true

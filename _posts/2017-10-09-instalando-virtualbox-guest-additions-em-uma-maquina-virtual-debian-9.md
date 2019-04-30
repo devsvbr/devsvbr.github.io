@@ -1,5 +1,4 @@
 ---
-layout: post
 pubid: "post-vbox-guest-debian9"
 langvisible: false
 comments: true

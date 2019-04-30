@@ -1,5 +1,4 @@
 ---
-layout: post
 pubid: "post-guia-linux-tail"
 langvisible: true
 comments: true

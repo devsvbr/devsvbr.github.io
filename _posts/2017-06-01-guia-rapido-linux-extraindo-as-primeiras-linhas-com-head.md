@@ -1,5 +1,4 @@
 ---
-layout: post
 pubid: "post-guia-linux-head"
 langvisible: true
 comments: true
