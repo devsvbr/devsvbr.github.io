@@ -1,6 +1,7 @@
 ---
 layout: page
-lang: pt
+pubid: "about-team"
+langvisible: true
 title: Quem Somos?
 description: Saiba mais sobre o DevSV e as pessoas que fazem as coisas acontecerem.
 menu: true
@@ -21,13 +22,4 @@ Mas o DevSV não seria nada sem as pessoas que formam a equipe. Bora conhecer um
 
 <h2 class="about-topic">Equipe</h2>
 
-<ul class="members">
-  {% for member in site.data.members %}<li class="member">
-      <div class="member-picture"><img src="{{ member.picture | prepend: site.baseurl }}" alt="Autor {{ member.name }}"></div>
-      <div class="member-info">
-        <h3>{{ member.name }}</h3>
-        <ul class="social-link">{% for link in member.links %}<li><a href="{{ link.url }}"><svg><use xlink:href="{{ site.baseurl }}/img/icons/footer.svg#{{ link.class }}" /></svg></a></li>{% endfor %}</ul>
-        <p class="resume">{{ member.resume }}</p>
-      </div>
-    </li>{% endfor %}
-</ul>
+{% include members.html %}
