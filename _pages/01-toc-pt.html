@@ -1,6 +1,7 @@
 ---
 layout: page
-lang: pt
+pubid: "toc-main"
+langvisible: true
 title: Conteúdo
 description: Confira a lista com todo o conteúdo do blog organizado por tópicos.
 menu: true
@@ -15,7 +16,7 @@ permalink: /pt/toc/
 
 <ul>
 {% for post in site.categories.shell reversed %}
-  {% if post.series == 'Guia Rápido Linux' %}
+  {% if post.series == "Guia Rápido Linux" and post.lang == page.lang %}
     <li>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       {% if post.description %}<p>{{ post.description }}</p>{% endif %}
@@ -36,7 +37,7 @@ permalink: /pt/toc/
 
 <ul>
 {% for post in site.categories.regex reversed %}
-  {% if post.series == 'Falando sobre Expressões Regulares' %}
+  {% if post.series == "Falando sobre Expressões Regulares" and post.lang == page.lang %}
     <li>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       {% if post.description %}<p>{{ post.description }}</p>{% endif %}
@@ -57,7 +58,7 @@ permalink: /pt/toc/
 
 <ul>
 {% for post in site.categories.regex reversed %}
-  {% if post.series == 'Expressões Regulares na Prática' %}
+  {% if post.series == "Expressões Regulares na Prática" and post.lang == page.lang %}
     <li>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       {% if post.description %}<p>{{ post.description }}</p>{% endif %}
