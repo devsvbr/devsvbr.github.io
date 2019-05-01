@@ -2,7 +2,7 @@
   <div class="wrapper">
     {% if page.langvisible %}
       <div class="language-selector">
-        <div>
+        <div class="select-box">
           <label for="footer-language-select">{{ site.data[page.lang].text.language }}</label>
           <select id="footer-language-select" name="language">
             {% for lang in site.data.languages %}

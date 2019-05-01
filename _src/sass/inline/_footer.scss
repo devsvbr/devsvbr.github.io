@@ -1,6 +1,21 @@
 /**
  * Site footer
  */
+.select-box::after {
+  content: '>';
+  color: $brand-color;
+  transform: rotate(90deg);
+  position: absolute;
+  margin-left: -($base-font-size*2);
+  box-sizing: border-box;
+  border-bottom: 1px solid $brand-color;
+  font-size: $base-font-size*1.2;
+  font-weight: 900;
+  height: $social-icon-size;
+  width: $social-icon-size;
+  pointer-events: none;
+}
+
 .page-footer {
   width: 100%;
   margin: 0;
@@ -24,8 +39,9 @@
 
     select {
       background-color: $background-color;
-      border: 1px solid $grey-color-light;
+      border: 1px solid $brand-color;
       font-size: $base-font-size;
+      color: $navbar-color;
       height: $social-icon-size;
       width: (5*$social-icon-size);
       appearance: none;
