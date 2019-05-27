@@ -8,7 +8,7 @@ description: "How to setup a development environment for games with the Ruby lan
 series: "Developing games with Ruby and MiniGL"
 date: 2019-05-27 10:00:00 -0300
 author: Victor David Santos
-categories: [minigl, ruby]
+categories: [ruby, minigl]
 ---
 Hello, dear readers. Welcome to this new series of posts about game development! More specifically, we will talk about game development with the Ruby programming language and the MiniGL library - created by me. :)
 

@@ -7,7 +7,7 @@ description: "Como preparar um ambiente para desenvolvimento de games com a ling
 series: "Desenvolvendo games com Ruby e MiniGL"
 date: 2019-05-27 10:00:00 -0300
 author: Victor David Santos
-categories: [minigl, ruby]
+categories: [ruby, minigl]
 ---
 Olá, caros leitores. Sejam bem-vindos a essa nova série de posts sobre desenvolvimento de games! Mais especificamente, vamos falar sobre desenvolvimento de games com a linguagem de programação Ruby e a biblioteca MiniGL - criada por mim. :)
 
