@@ -9,6 +9,25 @@ menu: true
 permalink: /en/toc/
 ---
 
+<h3>Developing games with Ruby and MiniGL</h3>
+
+<p>A series of posts about fast 2D game development with the Ruby programming language and the MiniGL library.</p>
+
+<p>Posts:</p>
+
+<ul>
+{% for post in site.categories.minigl reversed %}
+  {% if post.series == "Developing games with Ruby and MiniGL" and post.lang == page.lang %}
+    <li>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+<hr/>
+
 <h3>Linux Quick Guide</h3>
 
 <p>A collection of short posts showing how to use some of most useful Linux Shell tools.</p>
