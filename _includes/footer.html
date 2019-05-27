@@ -4,27 +4,29 @@
       <div class="language-selector">
         <div class="select-box">
           <label for="footer-language-select">{{ site.data[page.lang].text.language }}</label>
-          <select id="footer-language-select" name="language">
-            {% for lang in site.data.languages %}
-              {% if page.lang == lang.id %}
-                <option value="{{ page.url }}" selected="selected">{{ lang.label }}</option>
-              {% elsif page.type == "post" %}
-                {% for p in site.posts %}
-                  {% if p.pubid == page.pubid and p.lang == lang.id %}
-                    <option value="{{ p.url | prepend: site.baseurl }}">{{ lang.label }}</option>
-                    {% break %}
-                  {% endif %}
-                {% endfor %}
-              {% else %}
-                {% for p in site.pages %}
-                  {% if p.pubid == page.pubid and p.lang == lang.id %}
-                    <option value="{{ p.url | prepend: site.baseurl }}">{{ lang.label }}</option>
-                    {% break %}
-                  {% endif %}
-                {% endfor %}
-              {% endif %}
-            {% endfor %}
-          </select>
+          <div class="select-inner">
+            <select id="footer-language-select" name="language">
+              {% for lang in site.data.languages %}
+                {% if page.lang == lang.id %}
+                  <option value="{{ page.url }}" selected="selected">{{ lang.label }}</option>
+                {% elsif page.type == "post" %}
+                  {% for p in site.posts %}
+                    {% if p.pubid == page.pubid and p.lang == lang.id %}
+                      <option value="{{ p.url | prepend: site.baseurl }}">{{ lang.label }}</option>
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                {% else %}
+                  {% for p in site.pages %}
+                    {% if p.pubid == page.pubid and p.lang == lang.id %}
+                      <option value="{{ p.url | prepend: site.baseurl }}">{{ lang.label }}</option>
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            </select>
+          </div>
         </div>
       </div>
     {% endif %}

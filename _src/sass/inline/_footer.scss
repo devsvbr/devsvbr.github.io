@@ -1,12 +1,18 @@
 /**
  * Site footer
  */
-.select-box::after {
+.select-inner {
+  position: relative;
+  width: 160px;
+  margin: auto;
+}
+.select-inner::after {
   content: '>';
   color: $brand-color;
   transform: rotate(90deg);
   position: absolute;
-  margin-left: -($base-font-size*2);
+  top: 0;
+  right: 0;
   box-sizing: border-box;
   border-bottom: 1px solid $brand-color;
   font-size: $base-font-size*1.2;
