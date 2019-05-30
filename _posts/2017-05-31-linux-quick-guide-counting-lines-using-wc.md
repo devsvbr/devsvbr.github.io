@@ -5,12 +5,12 @@ langvisible: true
 comments: true
 series: "Linux Quick Guide"
 title: "Counting lines using wc"
-description: "Quick guide on using wc to compute the number of lines of files."
+description: "Quick guide on using wc to compute the number of lines in files."
 date: 2017-05-31 14:44:00 -0300
 author: Eric Yuzo
 categories: [linux, shell]
 ---
-The `wc` command is used to compute the number of lines of a file:
+The `wc` command is used to compute the number of lines in a file:
 
 ```bash
 wc -l [FILE]
@@ -44,4 +44,4 @@ At the creation of `wc` program, the `-c` was in fact used to count characters, 
 
 Now we have a question: is there a way to compute the number of characters in a file?
 
-Yes. it is! You can get the real character count of a file using `-m`, which stands for **multibyte**.
+Yes, it is! You can get the real character count of a file using `-m`, which stands for **multibyte**.
