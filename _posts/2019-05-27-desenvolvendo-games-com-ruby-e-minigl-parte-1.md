@@ -180,3 +180,7 @@ Deverá ser aberta uma janela de 800 por 600 pixels, preenchida de preto. Se iss
 Por hoje é isso, não perca o próximo post da série, quando vamos começar a programar, de verdade, um jogo.
 
 Até a próxima!
+
+---
+
+<span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Parte 2]({% link _posts/2019-05-28-desenvolvendo-games-com-ruby-e-minigl-parte-2.md %})</span>

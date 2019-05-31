@@ -181,3 +181,7 @@ A 800 pixels wide and 600 pixels high window, filled with black, should open. If
 That's all for today. Don't miss the next post of the series, when we will begin programming a game, for real.
 
 See ya!
+
+---
+
+<span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Part 2]({% link _posts/2019-05-28-developing-games-with-ruby-and-minigl-part-2.md %})</span>
