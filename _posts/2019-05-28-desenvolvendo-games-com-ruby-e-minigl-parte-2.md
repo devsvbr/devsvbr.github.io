@@ -233,4 +233,4 @@ Obrigado por acompanharem até aqui, e espero vocês no próximo post!
 ---
 
 <span class="previous-post">[Parte 1 <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({% link _posts/2019-05-27-desenvolvendo-games-com-ruby-e-minigl-parte-1.md %})</span>
-<span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Parte 3]({% link _posts/2019-05-31-desenvolvendo-games-com-ruby-e-minigl-parte-3.md %})</span>
+<span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Parte 3]({% link _posts/2019-06-03-desenvolvendo-games-com-ruby-e-minigl-parte-3.md %})</span>
