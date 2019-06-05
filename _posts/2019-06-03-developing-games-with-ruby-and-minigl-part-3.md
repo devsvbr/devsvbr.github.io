@@ -264,3 +264,4 @@ Try running the game now and you'll see that the face no longer goes through wal
 ---
 
 <span class="previous-post">[Part 2 <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({% link _posts/2019-05-28-developing-games-with-ruby-and-minigl-part-2.md %})</span>
+<span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Parte 4]({% link _posts/2019-06-07-developing-games-with-ruby-and-minigl-part-4.md %})</span>
