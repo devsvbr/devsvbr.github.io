@@ -85,7 +85,7 @@ Atualize seus arquivos caso estejam diferentes disto e vamos começar.
 
 Primeiro, precisamos indicar na tela qual é o ponto final do labirinto. Vamos incluir um novo GameObject no jogo, que representará o final, de modo que possamos checar se o jogador está sobre ele (para isso ele precisa de dimensões físicas, e por isso vamos usar a classe GameObject). Utilizaremos a imagem a seguir (salve como "goal.png" na pasta "data/img"):
 
-![face.png]({{ "/img/posts/2019-06-07-goal.png" | prepend: site.baseurl }})
+![goal.png]({{ "/img/posts/2019-06-07-goal.png" | prepend: site.baseurl }})
 
 Agora, vamos defini-lo no construtor da nossa classe `MyGame` e desenhá-lo na tela:
 
@@ -153,7 +153,7 @@ Porém, apenas com esse código, apesar de sabermos quando o jogador chegou no f
 
 ## Desenhando texto
 
-A MiniGL fornece a classe `TextHelper`, que disponibiliza várias opções de modos diferentes de exibir texto na tela. É possível exibir texto com uma ou mais linhas, alinhar o texto à esquerda, à direita, centralizado ou justificado, utilizar efeito de borda ou sombra no texto, além, claro, de poder definir a fonte, a cor e o tamanho. Para utilizá-la, é necessário primeiro carregar a fonte propriamente dita, que é um tipo de recurso.
+A MiniGL fornece a classe `TextHelper`, que disponibiliza várias opções e modos diferentes de exibir texto na tela. É possível exibir texto com uma ou mais linhas, alinhar o texto à esquerda, à direita, centralizado ou justificado, utilizar efeito de borda ou sombra no texto, além, claro, de poder definir a fonte, a cor e o tamanho. Para utilizá-la, é necessário primeiro carregar a fonte propriamente dita, que é um tipo de recurso.
 
 Há dois caminhos diferentes para carregar uma fonte: pode ser uma fonte do sistema ou ser carregada a partir de um arquivo de fonte (por exemplo '.ttf'). Para carregar uma fonte do sistema:
 
@@ -298,7 +298,7 @@ Salve a imagem acima como "data/img/button.png" e estamos prontos para começar:
 Vamos analisar método a método o que foi alterado:
 * No método `initialize`:
     * Criamos uma nova fonte, `font2`, carregada num tamanho menor para se adequar ao botão.
-    * Criamos o botão em si. Os parâmetros são, nesta ordem, as coordenadas x e y (do canto superior esquerdo, como de costume), a fonte usada para escrever o texto do botão, o texto propriamente dito e o identificador da imagem, utilizando os padrões da classe `Res`.
+    * Criamos o botão em si. Os parâmetros são, nesta ordem, as coordenadas x e y (do canto superior esquerdo, como de costume), a fonte usada para escrever o texto do botão, o texto propriamente dito e o identificador da imagem, como no construtor de `Sprite` ou `GameObject`.
     * Além dos parâmetros do construtor, passamos também um bloco, o qual corresponde à ação de clique no botão. Neste caso, apenas revertemos a variável `@finished` para `false` e voltamos a carinha para sua posição inicial, redefinindo suas propriedades x e y.
 * No método `needs_cursor?`:
     * Este método havia sido removido, mas declaramos ele novamente e agora ele retorna o valor da variável `@finished`, isto é, o cursor do mouse será mostrado apenas quando essa variável for verdadeira.
@@ -402,7 +402,7 @@ end
 MyGame.new.show
 ```
 
-Bem... Conseguimos bastante coisa com essas pouco mais de 80 linhas de código, não? Esse é o objetivo da MiniGL, permitir fazer muito escrevendo pouco. Porém, os posts até aqui demonstraram apenas uma pequena fração do que a MiniGL oferece! Apenas como um rápido exemplo, a classe `Button` oferece muito mais opções de personalização do que foram utilizadas aqui.
+Bem... Conseguimos bastante coisa com essas pouco mais de 80 linhas de código, não? Esse é o objetivo da MiniGL, permitir fazer muito escrevendo pouco. Porém, os posts até aqui demonstraram apenas uma pequena fração do que a MiniGL oferece! Apenas como rápidos exemplos, a classe `Button` oferece muito mais opções de personalização do que foram utilizadas aqui; a classe `TextHelper` oferece métodos para escrever texto de várias linhas numa área delimitada; há outros controle de interface de usuário além de botões... e assim por diante!
 
 Assim, ainda temos um longo caminho pela frente para explorar os demais recursos da biblioteca. Até a próxima!
 
