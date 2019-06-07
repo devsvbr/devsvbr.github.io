@@ -5,7 +5,7 @@ langvisible: true
 title: "Parte 4 - texto e botões"
 description: "Incluindo um objetivo e a possibilidade de reiniciar o jogo."
 series: "Desenvolvendo games com Ruby e MiniGL"
-date: 2019-06-05 10:00:00 -0300
+date: 2019-06-07 17:40:00 -0300
 author: Victor David Santos
 categories: [ruby, minigl]
 ---

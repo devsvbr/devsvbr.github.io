@@ -6,7 +6,7 @@ lang: en
 title: "Part 4 - text and buttons"
 description: "Including an objective and the possibility of restarting the game."
 series: "Developing games with Ruby and MiniGL"
-date: 2019-06-05 10:00:00 -0300
+date: 2019-06-07 17:40:00 -0300
 author: Victor David Santos
 categories: [ruby, minigl]
 ---
@@ -115,7 +115,7 @@ The main news here is the "image gap" parameter being initialized with `Vector.n
 
 Another detail is that we put the instruction `@goal.draw` before `@sprite.draw`, so that the character is drawn "over" the goal, and not the opposite - that could also be achieved by using different "z" indices, but let's keep things as simple as possible for now. Run the game and check it out:
 
-![screenshot]({{ "/img/posts/2019-06-07-screenshot.png" | prepend: site.baseurl }})
+![screenshot]({{ "/img/posts/2019-06-07-screenshot4.png" | prepend: site.baseurl }})
 
 Cool, we already have an area defined as the maze's end. Now let's check if the user reached the goal:
 
@@ -202,7 +202,7 @@ Once the font is loaded (by either of the approaches), we'll create our TextHelp
 
 Here, we create the `@text_helper` variable to store our `TextHelper` instance and, in the draw method, we check the variable that indicates that the player is on the goal (`@finished`). In case it's true, we then call the `write_line` method of the TextHelper, which draws a single line of text. The parameters are the text itself and the reference coordinates - in this case, with the default left alignment, these represent the top-left corner of the drawn text. Run the game, move the face to the goal and you should see something like this:
 
-![screenshot]({{ "/img/posts/2019-06-07-screenshot4.png" | prepend: site.baseurl }})
+![screenshot]({{ "/img/posts/2019-06-07-screenshot5.png" | prepend: site.baseurl }})
 
 Nice, huh? But, this message definitely needs some more highlighting... Let's raise the font size and explore some additional TextHelper options:
 
@@ -225,7 +225,7 @@ Nice, huh? But, this message definitely needs some more highlighting... Let's ra
 ...
 ```
 
-![screenshot]({{ "/img/posts/2019-06-07-screenshot5.png" | prepend: site.baseurl }})
+![screenshot]({{ "/img/posts/2019-06-07-screenshot6.png" | prepend: site.baseurl }})
 
 Way better, right? And what's best: all of that by simply changing some parameters :)
 
@@ -322,7 +322,7 @@ include MiniGL
 class MyGame < GameWindow
   def initialize
     super 800, 600, false
-    self.caption = 'Meu Primeiro Jogo'
+    self.caption = 'My First Game'
     @sprite = GameObject.new(10, 10, 100, 100, :face, Vector.new(0, 0), 2, 3)
     @blinking = false
     @walls = [
@@ -336,10 +336,10 @@ class MyGame < GameWindow
     @goal = GameObject.new(640, 480, 50, 50, :goal, Vector.new(-17, -17))
     
     @finished = false
-    font = Res.font :fonte, 48
+    font = Res.font :font, 48
     @text_helper = TextHelper.new(font)
-    font2 = Res.font :fonte, 20
-    @button = Button.new(325, 330, font2, 'Jogar de novo', :button) do
+    font2 = Res.font :font, 20
+    @button = Button.new(325, 330, font2, 'Play again', :button) do
       @finished = false
       @sprite.x = @sprite.y = 10
     end
@@ -394,7 +394,7 @@ class MyGame < GameWindow
                 w.x + w.w, w.y + w.h, 0xff000000, 0)
     end
     if @finished
-      @text_helper.write_line 'Você venceu!', 400, 276, :center, 0xffff00, 255, :border, 0x000000, 2
+      @text_helper.write_line 'You won!', 400, 276, :center, 0xffff00, 255, :border, 0x000000, 2
       @button.draw
     end
   end
