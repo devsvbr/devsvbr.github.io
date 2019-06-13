@@ -409,3 +409,4 @@ Assim, ainda temos um longo caminho pela frente para explorar os demais recursos
 ---
 
 <span class="previous-post">[Parte 3 <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({% link _posts/2019-06-03-desenvolvendo-games-com-ruby-e-minigl-parte-3.md %})</span>
+<span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Parte 5]({% link _posts/2019-06-14-desenvolvendo-games-com-ruby-e-minigl-parte-5.md %})</span>

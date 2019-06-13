@@ -410,3 +410,4 @@ So, we still got a long way exploring other resources of the library. See you ne
 ---
 
 <span class="previous-post">[Part 3 <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({% link _posts/2019-06-03-developing-games-with-ruby-and-minigl-part-3.md %})</span>
+<span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Part 5]({% link _posts/2019-06-14-developing-games-with-ruby-and-minigl-part-5.md %})</span>
