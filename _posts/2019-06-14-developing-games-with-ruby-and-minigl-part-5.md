@@ -144,7 +144,7 @@ Done! In `update`, we update the camera to center it in the player's position (f
 
 Try running the game now and reaching the goal. Actually challenging now, right? You can change the layout of the maze at will by changing the "level.txt" file, and run the game again without any changes in the code to test other mazes too. :)
 
-_vídeo_
+![traversing the maze]({{ "/img/posts/2019-06-14-gif.gif" | prepend: site.baseurl }})
 
 There's just another detail we left off, because in this example it's not perceptible. Although we only ever see in the screen a small part of the world, this can be way larger and, in the way the game is currently coded, it will try to draw and check collision with every wall, every frame. In a very large scenario, with lots of objets, this could lead to severe performance loss. To avoid that, we will use the grid approach also to determine which walls will be checked for collision and which ones will be drawn. Firstly, when loading the map, let's populate a walls matrix, indexed by the columns and rows of the map:
 

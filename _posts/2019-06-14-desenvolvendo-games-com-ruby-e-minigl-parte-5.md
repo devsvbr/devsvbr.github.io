@@ -143,7 +143,7 @@ Pronto! Em `update`, atualizamos a câmera para centralizá-la na posição do p
 
 Experimente rodar o jogo agora e tentar chegar ao final. Agora é um desafio de verdade, não? Você pode alterar à vontade o "desenho" do labirinto no arquivo "level.txt" e rodar novamente o jogo sem alterar nada no código para testar outros labirintos também. :)
 
-_vídeo_
+![percorrendo o labirinto]({{ "/img/posts/2019-06-14-gif.gif" | prepend: site.baseurl }})
 
 Há apenas mais um detalhe que não levamos em conta, pois neste exemplo nem é perceptível. Apesar de estarmos vendo na tela sempre só uma pequena parte do "mundo", este pode ser muito maior e, da maneira como programamos, o jogo tentará desenhar e checar colisão do jogador com todos os objetos, o tempo todo. Num cenário muito grande, com muitos objetos, isso pode gerar grande perda de performance. Para evitar isso, vamos usar a ideia de grid também para determinar quais paredes serão levadas em conta para a checagem de colisão e quais serão desenhadas. Primeiramente, ao carregar o mapa, vamos popular uma matriz de paredes, indexada por colunas e linhas do mapa:
 
