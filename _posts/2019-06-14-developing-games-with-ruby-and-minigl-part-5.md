@@ -6,7 +6,7 @@ lang: en
 title: "Part 5 - cameras and maps"
 description: "Exploring the camera/viewport control features and creation of maps and grids."
 series: "Developing games with Ruby and MiniGL"
-date: 2019-06-11 08:08:00 -0300
+date: 2019-06-14 23:00:00 -0300
 author: Victor David Santos
 categories: [ruby, minigl]
 ---
