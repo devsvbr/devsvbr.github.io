@@ -339,3 +339,4 @@ That's all for today, people. See you!
 ---
 
 <span class="previous-post">[Part 4 <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({% link _posts/2019-06-07-developing-games-with-ruby-and-minigl-part-4.md %})</span>
+<span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)"> Part 6]({% link _posts/2019-07-06-developing-games-with-ruby-and-minigl-part-6.md %})</span>
