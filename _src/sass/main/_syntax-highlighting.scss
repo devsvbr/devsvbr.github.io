@@ -1,9 +1,11 @@
+@use "sass:math";
+
 /**
  * Syntax highlighting styles
  */
 .highlight {
   background: #fff;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: math.div($spacing-unit, 2);
 
   code { background: #fff }
 

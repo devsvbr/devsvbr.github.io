@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /**
  * Content wrapper
  */
@@ -23,7 +25,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit ($spacing-unit / 2);
+  padding: $spacing-unit math.div($spacing-unit, 2);
 }
 .page-heading {
   font-size: 20px;

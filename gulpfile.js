@@ -2,6 +2,8 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     jpegRecompress = require('imagemin-jpeg-recompress');
 
+var sass = require('gulp-sass')(require('sass'));
+
 var $ = require('gulp-load-plugins')();
 
 
@@ -20,7 +22,7 @@ gulp.task('clean', function() {
 /* CSS */
 gulp.task('main-css', function() {
   return gulp.src('_src/sass/main.scss')
-      .pipe($.sass().on('error', $.sass.logError))
+      .pipe(sass().on('error', sass.logError))
       .pipe($.autoprefixer())
       .pipe($.cssnano({safe: true}))
       .pipe(gulp.dest('css'));
@@ -28,7 +30,7 @@ gulp.task('main-css', function() {
 
 gulp.task('inline-css', function() {
   return gulp.src('_src/sass/inline.scss')
-      .pipe($.sass().on('error', $.sass.logError))
+      .pipe(sass().on('error', sass.logError))
       .pipe($.autoprefixer())
       .pipe($.cssnano({safe: true}))
       .pipe(gulp.dest('_includes'));
@@ -61,7 +63,7 @@ gulp.task('optimize-img', function() {
             ]
           }),
           pngquant({
-            quality: '65-80',
+            quality: [0.65, 0.8],
             speed: 1
           }),
           jpegRecompress({
@@ -83,8 +85,9 @@ gulp.task('optimize-logo', function() {
 
 
 /* Aliases */
-gulp.task('build-css', ['main-css', 'inline-css']);
-gulp.task('build-js', ['loadcss-js', 'minify-js']);
-gulp.task('build-img', ['optimize-logo', 'optimize-img']);
-gulp.task('build', ['build-css', 'build-js', 'build-img']);
-gulp.task('default', $.sequence('clean', 'copy', 'build'));
+gulp.task('build-css', gulp.series('main-css', 'inline-css'));
+gulp.task('build-js', gulp.series('loadcss-js', 'minify-js'));
+gulp.task('build-img', gulp.series('optimize-logo', 'optimize-img'));
+gulp.task('build', gulp.series('build-css', 'build-js', 'build-img'));
+gulp.task('default', gulp.series('clean', 'copy', 'build'));
+
