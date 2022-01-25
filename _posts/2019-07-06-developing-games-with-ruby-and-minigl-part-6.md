@@ -237,4 +237,5 @@ That's all for today, colleagues. See ya (hopefully not long from now)!
 
 ---
 
-<span class="previous-post">[Part 5 <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({% link _posts/2019-06-14-developing-games-with-ruby-and-minigl-part-5.md %})</span>
+<span class="previous-post">[Part 5 <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(previous)">]({% link _posts/2019-06-14-developing-games-with-ruby-and-minigl-part-5.md %})</span>
+<span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(next)"> Part 7]({% link _posts/2022-01-25-developing-games-with-ruby-and-minigl-part-7.md %})</span>

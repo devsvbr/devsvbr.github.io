@@ -235,3 +235,4 @@ Por hoje é só, colegas, até a próxima (que espero que não demore tanto)!
 ---
 
 <span class="previous-post">[Parte 5 <img class="icon32 flipped" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(anterior)">]({% link _posts/2019-06-14-desenvolvendo-games-com-ruby-e-minigl-parte-5.md %})</span>
+<span class="next-post">[<img class="icon32" src="{{ "/img/icons/arrow.svg" | prepend: site.baseurl }}" alt="(próximo)"> Parte 7]({% link _posts/2022-01-25-desenvolvendo-games-com-ruby-e-minigl-parte-7.md %})</span>
