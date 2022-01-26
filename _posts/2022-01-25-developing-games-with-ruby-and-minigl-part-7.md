@@ -20,7 +20,7 @@ Although it's on sale on Steam, the game is open source and fully available on [
 
 First, let's get acquainted with how the game code is organized - download the GitHub repository to your machine in order to follow easily. All of the code files are at the root of the repository, as well as the `data` folder, which is the default MiniGL folder for the game assets (images, sounds, etc.). Inside this folder, the assets are also organized in subfolders that follow MiniGL's conventions, so that I don't need to do any configuration in order to easily load the resources (see [part 2]({% link _posts/2019-05-28-developing-games-with-ruby-and-minigl-part-2.md %}){:target="_blank"}{:rel="noopener noreferrer"} to recall how to load resources with MiniGL).
 
-The entry point is the `game.rb` file, where we control the current state of the game: here we check if the player is at the menu, or at the world map, or in an actual level, and the classes responsible for each of these parts is called to make most of the work. This logic can be observed in the following snippet of the `update` method:
+The entry point is the `game.rb` file, where we control the current state of the game: here we check if the player is at the menu, or at the world map, or in an actual level, and the classes responsible for each of these parts are called to make most of the work. This logic can be observed in the following snippet of the `update` method:
 
 ```ruby
     if SB.state == :presentation
@@ -80,7 +80,7 @@ Another general architecture trait of the game is that most classes include an `
 
 ## Extending GUI elements
 
-In the file `menu.rb` you'll find the declaration and utilization of various GUI (graphical user interface) elements - some provided by MiniGL, like `Button`, and others defined in the game project, like `SavedGameButton` and `MenuText`. The last ones are interesting examples of extensions to MiniGL's GUI elements. Most of these extensions is declared in a different file, `form.rb`, with the most notable one being `FormElement`. It's a module included by all the menu controls that gives them a shared functionality: the visual transition effect that happens when the user changes screens (all controls move to the side with a deaccelerated movement). To better understand what this is all about, try running the game with `ruby game.rb` (you'll need the `minigl` gem installed, version 2.3.5 or greater). Below is the relevant code:
+In the file `menu.rb` you'll find the declaration and utilization of various GUI (graphical user interface) elements - some provided by MiniGL, like `Button`, and others defined in the game project, like `SavedGameButton` and `MenuText`. The last ones are interesting examples of extensions to MiniGL's GUI elements. Most of these extensions are declared in a different file, `form.rb`, with the most notable one being `FormElement`. It's a module included by all the menu controls that gives them a shared functionality: the visual transition effect that happens when the user changes screens (all controls move to the side with a deaccelerated movement). To better understand what this is all about, try running the game with `ruby game.rb` (you'll need the `minigl` gem installed, version 2.3.5 or greater). Below is the relevant code:
 
 ```ruby
   def update_movement
